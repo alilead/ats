@@ -62,7 +62,7 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent font-medium mb-4">
-            📞 Contactez-nous
+            Contactez-nous
           </div>
           <h2 className="text-primary mb-6">
             Prêt à transformer votre propriété ?
@@ -73,74 +73,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* Contact Information */}
-          <div className="lg:col-span-1 space-y-6">
-            <h3 className="text-2xl font-semibold text-primary mb-6">
-              Nos Coordonnées
-            </h3>
-            
-            {contactInfo.map((info, index) => {
-              const Icon = info.icon;
-              return (
-                <Card key={index} className="hover:shadow-md transition-shadow border-border/50">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-accent" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-primary mb-1">
-                          {info.title}
-                        </h4>
-                        <a 
-                          href={info.action}
-                          className="text-accent hover:text-accent/80 transition-colors font-medium block mb-1"
-                        >
-                          {info.content}
-                        </a>
-                        <p className="text-sm text-muted-foreground">
-                          {info.description}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-
-            {/* Business Hours */}
-            <Card className="border-border/50">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Clock className="w-5 h-5 text-accent mr-2" />
-                  Horaires d'ouverture
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Lundi - Vendredi</span>
-                    <span className="text-accent font-medium">8h00 - 18h00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Samedi</span>
-                    <span className="text-accent font-medium">9h00 - 16h00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Dimanche</span>
-                    <span className="text-muted-foreground">Fermé</span>
-                  </div>
-                  <div className="pt-2 mt-2 border-t border-border">
-                    <span className="text-muted-foreground">🚨 Service d'urgence 24/7 disponible</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
+        <div className="grid lg:grid-cols-1 gap-12">
+          {/* Contact Form - Full Width */}
+          <div className="lg:col-span-1">
             <Card className="border-border/50">
               <CardHeader>
                 <CardTitle>Demandez votre devis gratuit</CardTitle>

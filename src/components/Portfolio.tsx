@@ -48,7 +48,7 @@ const Portfolio = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent font-medium mb-4">
-            🏆 Réalisations Premium
+            Réalisations Premium
           </div>
           <h2 className="text-primary mb-6">
             Nos Projets d'Exception

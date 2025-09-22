@@ -36,10 +36,10 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "25+", label: "Années d'expérience", icon: "🏆" },
-    { number: "500+", label: "Projets réalisés", icon: "🏠" },
-    { number: "100%", label: "Satisfaction client", icon: "⭐" },
-    { number: "24/7", label: "Service d'urgence", icon: "🚨" }
+    { number: "25+", label: "Années d'expérience" },
+    { number: "500+", label: "Projets réalisés" },
+    { number: "100%", label: "Satisfaction client" },
+    { number: "24/7", label: "Service d'urgence" }
   ];
 
   return (
@@ -48,7 +48,7 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent font-medium mb-4">
-            💎 Excellence Suisse
+            Excellence Suisse
           </div>
           <h2 className="text-primary mb-6">
             Pourquoi choisir ATS pour vos projets ?
@@ -64,7 +64,6 @@ const About = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl mb-2">{stat.icon}</div>
               <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
               <div className="text-muted-foreground">{stat.label}</div>
             </div>
