@@ -10,55 +10,55 @@ All colors MUST be HSL for semantic consistency.
   :root {
     /* Core Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 220 40% 15%;
+    --foreground: 0 0% 8%;
     
-    /* Premium Brand Palette */
-    --navy-deep: 220 40% 15%;
-    --navy-medium: 220 35% 25%;
-    --gold-warm: 42 88% 65%;
-    --gold-light: 42 95% 85%;
-    --green-fresh: 142 70% 45%;
-    --green-light: 142 50% 85%;
+    /* ATS Brand Palette - Red & Black */
+    --black-deep: 0 0% 8%;
+    --black-medium: 0 0% 15%;
+    --red-brand: 0 84% 55%;
+    --red-light: 0 84% 65%;
+    --gray-light: 0 0% 95%;
+    --gray-medium: 0 0% 85%;
     
     /* Semantic Color System */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 40% 15%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 15%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 220 40% 15%;
+    --primary: 0 0% 8%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 96%;
-    --secondary-foreground: 220 40% 15%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 220 10% 95%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 42 88% 65%;
-    --accent-foreground: 220 40% 15%;
+    --accent: 0 84% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 92%;
-    --ring: 220 40% 15%;
+    --border: 0 0% 88%;
+    --input: 0 0% 92%;
+    --ring: 0 84% 55%;
 
     --radius: 0.75rem;
     
-    /* Premium Design Tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-deep)) 0%, hsl(var(--navy-medium)) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--gold-warm)) 0%, hsl(var(--gold-light)) 100%);
+    /* ATS Design Tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--black-deep)) 0%, hsl(var(--black-medium)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--red-brand)) 0%, hsl(var(--red-light)) 100%);
     --gradient-service: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
     
-    /* Premium Shadows */
-    --shadow-soft: 0 4px 20px hsl(var(--navy-deep) / 0.08);
-    --shadow-medium: 0 8px 30px hsl(var(--navy-deep) / 0.12);
-    --shadow-strong: 0 15px 40px hsl(var(--navy-deep) / 0.15);
-    --shadow-accent: 0 8px 25px hsl(var(--gold-warm) / 0.2);
+    /* ATS Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--black-deep) / 0.08);
+    --shadow-medium: 0 8px 30px hsl(var(--black-deep) / 0.12);
+    --shadow-strong: 0 15px 40px hsl(var(--black-deep) / 0.15);
+    --shadow-accent: 0 8px 25px hsl(var(--red-brand) / 0.2);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -82,34 +82,34 @@ All colors MUST be HSL for semantic consistency.
   }
 
   .dark {
-    /* Dark mode maintains the premium brand palette */
-    --background: 220 45% 8%;
-    --foreground: 220 15% 92%;
+    /* Dark mode with ATS red/black theme */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 220 40% 10%;
-    --card-foreground: 220 15% 92%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 40% 10%;
-    --popover-foreground: 220 15% 92%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 42 88% 65%;
-    --primary-foreground: 220 45% 8%;
+    --primary: 0 84% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 25% 15%;
-    --secondary-foreground: 220 15% 92%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 25% 15%;
-    --muted-foreground: 220 10% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 42 88% 65%;
-    --accent-foreground: 220 45% 8%;
+    --accent: 0 84% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 75% 55%;
-    --destructive-foreground: 220 15% 92%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 220 25% 18%;
-    --input: 220 25% 18%;
-    --ring: 42 88% 65%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 84% 55%;
     
     /* Dark mode shadows */
     --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);

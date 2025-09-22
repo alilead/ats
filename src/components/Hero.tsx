@@ -15,10 +15,10 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="ATS Générale - Services premium pour la maison et le jardin"
+          alt="ATS Générale - Services premium de second œuvre"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40"></div>
       </div>
 
       {/* Content */}
@@ -30,13 +30,13 @@ const Hero = () => {
             </div>
             
             <h1 className="text-white mb-6 font-bold">
-              Votre solution complète pour la 
-              <span className="block text-accent">maison et le jardin</span>
+              Experts en 
+              <span className="block text-accent">Second œuvre</span>
             </h1>
             
             <p className="text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-              Nous transformons votre propriété en l'espace magnifique et fonctionnel 
-              que vous avez toujours imaginé. Une équipe, tous les services, 
+              Votre partenaire de confiance pour tous vos projets de second œuvre 
+              à Genève et ses alentours. Une équipe, tous les services, 
               un résultat exceptionnel.
             </p>
 

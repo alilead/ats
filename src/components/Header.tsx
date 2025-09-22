@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import atsLogo from "@/assets/ats-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,9 +20,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary">
-              ATS <span className="text-accent">Générale</span>
-            </div>
+            <img 
+              src={atsLogo} 
+              alt="ATS Générale Logo"
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}

@@ -51,12 +51,12 @@ const About = () => {
             💎 Excellence Suisse
           </div>
           <h2 className="text-primary mb-6">
-            Pourquoi choisir ATS Générale ?
+            Pourquoi choisir ATS pour vos projets ?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Entretenir votre maison et votre jardin ne devrait pas être compliqué. 
-            Chez ATS Générale, nous simplifions tout cela grâce à une équipe polyvalente 
-            de professionnels qualifiés.
+            Spécialisés dans le second œuvre, nous simplifions vos projets grâce à une équipe 
+            polyvalente de professionnels qualifiés, capables de gérer toutes les tâches 
+            sous un même toit de confiance.
           </p>
         </div>
 

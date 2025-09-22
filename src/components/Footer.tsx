@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import atsLogo from "@/assets/ats-logo.png";
 
 const Footer = () => {
   const services = [
@@ -26,12 +27,16 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="text-2xl font-bold mb-4">
-              ATS <span className="text-accent">Générale</span>
+            <div className="mb-4">
+              <img 
+                src={atsLogo} 
+                alt="ATS Générale Logo"
+                className="h-16 w-auto filter brightness-0 invert"
+              />
             </div>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Votre partenaire de confiance depuis plus de 25 ans pour tous vos 
-              projets de maison et jardin en Suisse romande.
+              projets de second œuvre en Suisse romande.
             </p>
             
             {/* Contact Quick */}
