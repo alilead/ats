@@ -1,4 +1,3 @@
-Commit and push these changes and re-deploy for you (I can run the Netlify deploy again)?
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
