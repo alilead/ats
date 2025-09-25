@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import useLocale from "@/lib/useLocale";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -56,20 +57,21 @@ const Contact = () => {
     }
   ];
 
+  const t = useLocale();
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent font-medium mb-4">
-            Contactez-nous
+            {t.services.headerSmall}
           </div>
-          <h2 className="text-primary mb-6">
-            Prêt à transformer votre propriété ?
+          <h2 className="text-foreground mb-6">
+            {t.services.headerTitle}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Obtenez votre devis gratuit et personnalisé. Notre équipe d'experts 
-            vous accompagne de la conception à la réalisation de votre projet.
+            {t.services.description}
           </p>
         </div>
 
@@ -77,17 +79,17 @@ const Contact = () => {
           {/* Contact Form - Full Width */}
           <div className="lg:col-span-1">
             <Card className="border-border/50">
-              <CardHeader>
-                <CardTitle>Demandez votre devis gratuit</CardTitle>
+                <CardHeader>
+                <CardTitle>{t.hero.ctaPrimary}</CardTitle>
                 <p className="text-muted-foreground">
-                  Remplissez ce formulaire et recevez une réponse personnalisée sous 24h.
+                  {"Remplissez ce formulaire et recevez une réponse personnalisée sous 24h."}
                 </p>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Nom complet *</label>
+                      <label className="text-sm font-medium text-foreground mb-2 block">Nom complet *</label>
                       <Input
                         required
                         value={formData.name}
@@ -96,7 +98,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Email *</label>
+                      <label className="text-sm font-medium text-foreground mb-2 block">Email *</label>
                       <Input
                         required
                         type="email"
@@ -109,7 +111,7 @@ const Contact = () => {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Téléphone</label>
+                      <label className="text-sm font-medium text-foreground mb-2 block">Téléphone</label>
                       <Input
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -117,24 +119,25 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Type de service</label>
-                      <select 
+                      <label className="sr-only">Type de service</label>
+                        <select 
+                        aria-label="Type de service"
                         className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm"
                         value={formData.service}
                         onChange={(e) => setFormData({...formData, service: e.target.value})}
                       >
-                        <option value="">Sélectionnez un service</option>
-                        <option value="construction">Construction & Rénovation</option>
-                        <option value="jardin">Jardin & Aménagement</option>
-                        <option value="entretien">Entretien & Maintenance</option>
-                        <option value="urgence">Service d'urgence</option>
-                        <option value="autre">Autre / Plusieurs services</option>
+                          <option value="">Sélectionnez un service</option>
+                          <option value="construction">Construction & Rénovation</option>
+                          <option value="jardin">Jardin & Aménagement</option>
+                          <option value="entretien">Entretien & Maintenance</option>
+                          <option value="urgence">Service d'urgence</option>
+                          <option value="autre">Autre / Plusieurs services</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Description du projet *</label>
+                    <label className="text-sm font-medium text-foreground mb-2 block">Description du projet *</label>
                     <Textarea
                       required
                       value={formData.message}
@@ -148,9 +151,10 @@ const Contact = () => {
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground flex-1"
+                      variant="accent"
+                      className="flex-1"
                     >
-                      Envoyer ma demande
+                      {t.booking.submit}
                     </Button>
                     
                     <Button 

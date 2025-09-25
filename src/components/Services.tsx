@@ -70,7 +70,7 @@ const Services = () => {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent font-medium mb-4">
             {useLocale().services.headerSmall}
           </div>
-          <h2 className="text-primary mb-6">
+          <h2 className="text-foreground mb-6">
             {useLocale().services.headerTitle}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -113,19 +113,17 @@ const Services = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-accent/5 via-accent/10 to-accent/5 rounded-2xl p-8">
-            <h3 className="text-2xl font-semibold text-primary mb-4">
+            <h3 className="text-2xl font-semibold text-foreground mb-4">
               Besoin d'un service personnalisé ?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Chaque projet est unique. Contactez-nous pour discuter de vos besoins 
               spécifiques et recevoir une consultation gratuite.
             </p>
-            <a href="#contact" className="inline-block">
-              <Button size="lg" variant="accent">
-                {useLocale().services.consultation}
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </a>
+            <Button size="lg" variant="accent" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              {useLocale().services.consultation}
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
           </div>
         </div>
 

@@ -1,16 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
+import useLocale from "@/lib/useLocale";
 
 const Hero = () => {
-  const highlights = [
-    "25+ années d'expérience",
-    "500+ projets réalisés",
-    "Garantie de qualité"
-  ];
+  const { hero } = useLocale();
 
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center pt-20">
+    <section id="accueil" className="relative min-h-[60vh] md:min-h-screen flex items-center pt-16 md:pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -26,23 +23,19 @@ const Hero = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/20 text-accent font-medium mb-6">
-              Votre partenaire de confiance depuis 25 ans
+              {hero.partner}
             </div>
-            
-            <h1 className="text-white mb-6 font-bold">
-              Experts en 
-              <span className="block text-accent">Second œuvre</span>
-            </h1>
-            
-            <p className="text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-              Votre partenaire de confiance pour tous vos projets de second œuvre 
-              à Genève et ses alentours. Une équipe, tous les services, 
-              un résultat exceptionnel.
-            </p>
 
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
+              {hero.titleLine1} <span className="block text-accent">{hero.titleLine2}</span>
+            </h1>
+
+            <p className="mt-4 max-w-2xl text-lg text-white/90 mb-8 leading-relaxed">
+              {hero.description}
+            </p>
             {/* Highlights */}
             <div className="flex flex-wrap gap-4 mb-10">
-              {highlights.map((highlight, index) => (
+              {hero.highlights.map((highlight, index) => (
                 <div key={index} className="flex items-center text-white/90">
                   <CheckCircle className="w-5 h-5 text-accent mr-2" />
                   <span className="font-medium">{highlight}</span>
@@ -51,21 +44,13 @@ const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8"
-              >
-                Demandez votre devis gratuit
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button size="lg" variant="premium" className="font-semibold px-6 md:px-8" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                {hero.ctaPrimary}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
-              >
-                Découvrir nos services
+              <Button size="lg" variant="hero" className="px-6 md:px-8" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                {hero.ctaSecondary}
               </Button>
             </div>
           </div>
