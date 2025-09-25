@@ -32,28 +32,28 @@ const Contact = () => {
     {
       icon: Phone,
       title: t.contact.info.phone.title,
-      content: "+41 77 288 38 38",
+      content: t.contact.info.phone.content,
       action: "tel:+41772883838",
       description: t.contact.info.phone.description
     },
     {
       icon: MessageCircle,
       title: t.contact.info.whatsapp.title,
-      content: "+41 77 288 38 38",
+      content: t.contact.info.whatsapp.content,
       action: "https://wa.me/41772883838",
       description: t.contact.info.whatsapp.description
     },
     {
       icon: Mail,
       title: t.contact.info.email.title,
-      content: "contact@atsgenerale.ch",
+      content: t.contact.info.email.content,
       action: "mailto:contact@atsgenerale.ch",
       description: t.contact.info.email.description
     },
     {
       icon: MapPin,
       title: t.contact.info.address.title,
-      content: "Genève, Suisse",
+      content: t.contact.info.address.content,
       action: "https://maps.google.com/?q=Genève+Suisse",
       description: t.contact.info.address.description
     }
@@ -75,12 +75,46 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-1 gap-12">
-          {/* Contact Form - Full Width */}
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Information Cards */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-semibold mb-6">{t.contact.headerSmall}</h3>
+            <div className="grid gap-6">
+              {contactInfo.map((info, index) => {
+                const Icon = info.icon;
+                return (
+                  <Card key={index} className="border-border/50 hover:shadow-md transition-shadow">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+                            <Icon className="w-6 h-6 text-accent" />
+                          </div>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
+                          <a 
+                            href={info.action}
+                            className="text-accent hover:text-accent/80 font-medium block mb-2 transition-colors"
+                            data-testid={`link-${info.title.toLowerCase()}`}
+                          >
+                            {info.content}
+                          </a>
+                          <p className="text-sm text-muted-foreground">{info.description}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Contact Form */}
           <div className="lg:col-span-1">
             <Card className="border-border/50">
                 <CardHeader>
-                <CardTitle>{t.hero.ctaPrimary}</CardTitle>
+                <CardTitle>{t.contact.headerTitle}</CardTitle>
                 <p className="text-muted-foreground">
                   {t.contact.form.formDescription}
                 </p>
