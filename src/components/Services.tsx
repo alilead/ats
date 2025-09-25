@@ -43,10 +43,10 @@ const Services = () => {
         {/* Services Grid (per audience) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {currentAudience?.categories.map((category) => (
-            <Card key={category.id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden border-border/50 hover:border-accent/50">
-              <div className="p-4">
+            <Card key={category.id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden border-border/50 hover:border-accent/50 h-full">
+              <div className="p-4 h-full flex flex-col">
                 <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
-                <div className="space-y-2 mb-4">
+                <div className="space-y-2 mb-4 flex-grow">
                   {category.items.map((item) => (
                     <div key={item.id} className="flex items-start">
                       <div className="w-2 h-2 rounded-full bg-accent mt-2 mr-3 flex-shrink-0"></div>
@@ -54,7 +54,7 @@ const Services = () => {
                     </div>
                   ))}
                 </div>
-                <Button variant="accent" className="w-full" onClick={() => setSelectedCategory({categoryId: category.id, title: category.title})}>
+                <Button variant="accent" className="w-full mt-auto" onClick={() => setSelectedCategory({categoryId: category.id, title: category.title})}>
                   {t.services.book}
                 </Button>
               </div>
