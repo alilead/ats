@@ -8,13 +8,11 @@ const StructuredData = () => {
       "name": "ATS Générale",
       "description": "Votre solution complète pour la maison et le jardin. Services premium de construction, rénovation, aménagement paysager et entretien à Genève.",
       "url": "https://atsgenerale.ch",
-      "telephone": "+41223456789",
+      "telephone": "+41772883838",
       "email": "contact@atsgenerale.ch",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Avenue de la Paix 15",
         "addressLocality": "Genève",
-        "postalCode": "1202",
         "addressCountry": "CH"
       },
       "geo": {

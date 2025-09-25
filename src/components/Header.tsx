@@ -78,9 +78,9 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+41223456789" className="flex items-center text-white/90 hover:text-accent transition-colors">
+            <a href="tel:+41772883838" className="flex items-center text-white/90 hover:text-accent transition-colors">
               <Phone className="w-4 h-4 mr-2" />
-              +41 22 345 67 89
+              +41 77 288 38 38
             </a>
             <Button variant="accent" className="" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
               <LanguageSelector />
@@ -109,9 +109,9 @@ const Header = () => {
                 </button>
               ))}
               <div className="pt-4 border-t border-border mt-4">
-                <a href="tel:+41223456789" className="flex items-center text-white/90 hover:text-accent transition-colors mb-4">
+                <a href="tel:+41772883838" className="flex items-center text-white/90 hover:text-accent transition-colors mb-4">
                   <Phone className="w-4 h-4 mr-2" />
-                  +41 22 345 67 89
+                  +41 77 288 38 38
                 </a>
                 <Button variant="accent" className="w-full" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
                 <div className="flex gap-2 mt-3">

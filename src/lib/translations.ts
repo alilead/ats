@@ -332,6 +332,35 @@ const en = {
       "Dusting",
       "Other (see notes)"
     ]
+  },
+  footer: {
+    description: "Your trusted partner for over 25 years for all your construction projects in French-speaking Switzerland.",
+    constructionTitle: "Construction & Renovation", 
+    gardenTitle: "Garden & Landscape",
+    navigationTitle: "Navigation",
+    followUsTitle: "Follow us",
+    copyright: "© 2024 ATS Générale. All rights reserved.",
+    legal: "Legal Notice",
+    privacy: "Privacy Policy",
+    terms: "Terms & Conditions",
+    services: {
+      construction: [
+        "Construction & Renovation",
+        "Masonry & Stone",
+        "Painting & Coatings", 
+        "Tiling & Flooring",
+        "Roofing & Insulation",
+        "Plumbing & Electrical"
+      ],
+      garden: [
+        "Landscape Design",
+        "Garden Maintenance",
+        "Planting & Seeding",
+        "Automatic Irrigation",
+        "Outdoor Lighting",
+        "Seasonal Maintenance"
+      ]
+    }
   }
 };
 
@@ -669,6 +698,35 @@ const fr = {
       "Dépoussiérage",
       "Autre (voir notes)"
     ]
+  },
+  footer: {
+    description: "Votre partenaire de confiance depuis plus de 25 ans pour tous vos projets de second œuvre en Suisse romande.",
+    constructionTitle: "Construction & Rénovation", 
+    gardenTitle: "Jardin & Paysage",
+    navigationTitle: "Navigation",
+    followUsTitle: "Suivez-nous",
+    copyright: "© 2024 ATS Générale. Tous droits réservés.",
+    legal: "Mentions légales",
+    privacy: "Politique de confidentialité",
+    terms: "CGV",
+    services: {
+      construction: [
+        "Construction & Rénovation",
+        "Maçonnerie & Pierre",
+        "Peinture & Revêtements",
+        "Carrelage & Sols",
+        "Toiture & Isolation",
+        "Plomberie & Électricité"
+      ],
+      garden: [
+        "Aménagement Paysager",
+        "Entretien de Jardins",
+        "Plantation & Semis",
+        "Arrosage Automatique",
+        "Éclairage Extérieur",
+        "Maintenance Saisonnière"
+      ]
+    }
   }
 };
 

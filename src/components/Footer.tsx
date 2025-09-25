@@ -1,24 +1,9 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import atsLogo from "@/assets/ats-logo.png";
+import { useLocale } from "@/lib/locale-context";
 
 const Footer = () => {
-  const services = [
-    "Construction & Rénovation",
-    "Maçonnerie & Pierre",
-    "Peinture & Revêtements",
-    "Carrelage & Sols",
-    "Toiture & Isolation",
-    "Plomberie & Électricité"
-  ];
-
-  const jardin = [
-    "Aménagement Paysager",
-    "Entretien de Jardins",
-    "Plantation & Semis",
-    "Arrosage Automatique",
-    "Éclairage Extérieur",
-    "Maintenance Saisonnière"
-  ];
+  const t = useLocale();
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -35,15 +20,14 @@ const Footer = () => {
               />
             </div>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Votre partenaire de confiance depuis plus de 25 ans pour tous vos 
-              projets de second œuvre en Suisse romande.
+              {t.footer.description}
             </p>
             
             {/* Contact Quick */}
             <div className="space-y-3">
-              <a href="tel:+41223456789" className="flex items-center hover:text-accent transition-colors">
+              <a href="tel:+41772883838" className="flex items-center hover:text-accent transition-colors">
                 <Phone className="w-4 h-4 mr-3" />
-                +41 22 345 67 89
+                +41 77 288 38 38
               </a>
               <a href="mailto:contact@atsgenerale.ch" className="flex items-center hover:text-accent transition-colors">
                 <Mail className="w-4 h-4 mr-3" />
@@ -51,16 +35,16 @@ const Footer = () => {
               </a>
               <div className="flex items-start">
                 <MapPin className="w-4 h-4 mr-3 mt-1" />
-                <span>Avenue de la Paix 15<br />1202 Genève, Suisse</span>
+                <span>Genève, Suisse</span>
               </div>
             </div>
           </div>
 
           {/* Services Construction */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Construction & Rénovation</h4>
+            <h4 className="font-semibold text-lg mb-6">{t.footer.constructionTitle}</h4>
             <ul className="space-y-2">
-              {services.map((service, index) => (
+              {t.footer.services.construction.map((service, index) => (
                 <li key={index}>
                   <a href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
                     {service}
@@ -72,9 +56,9 @@ const Footer = () => {
 
           {/* Services Jardin */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Jardin & Paysage</h4>
+            <h4 className="font-semibold text-lg mb-6">{t.footer.gardenTitle}</h4>
             <ul className="space-y-2">
-              {jardin.map((service, index) => (
+              {t.footer.services.garden.map((service, index) => (
                 <li key={index}>
                   <a href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
                     {service}
@@ -86,18 +70,18 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Navigation</h4>
+            <h4 className="font-semibold text-lg mb-6">{t.footer.navigationTitle}</h4>
             <ul className="space-y-2 mb-8">
-              <li><a href="#accueil" className="text-primary-foreground/80 hover:text-accent transition-colors">Accueil</a></li>
-              <li><a href="#apropos" className="text-primary-foreground/80 hover:text-accent transition-colors">À Propos</a></li>
-              <li><a href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors">Services</a></li>
-              <li><a href="#realisations" className="text-primary-foreground/80 hover:text-accent transition-colors">Réalisations</a></li>
-              <li><a href="#contact" className="text-primary-foreground/80 hover:text-accent transition-colors">Contact</a></li>
+              <li><a href="#accueil" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.home}</a></li>
+              <li><a href="#apropos" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.about}</a></li>
+              <li><a href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.services}</a></li>
+              <li><a href="#realisations" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.portfolio}</a></li>
+              <li><a href="#contact" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.contact}</a></li>
             </ul>
 
             {/* Social Links */}
             <div>
-              <h5 className="font-medium mb-4">Suivez-nous</h5>
+              <h5 className="font-medium mb-4">{t.footer.followUsTitle}</h5>
               <div className="flex space-x-4">
                 <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors">
                   <Facebook className="w-5 h-5" />
@@ -119,12 +103,12 @@ const Footer = () => {
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/60">
             <div className="mb-4 md:mb-0">
-              © 2024 ATS Générale. Tous droits réservés.
+              {t.footer.copyright}
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="hover:text-accent transition-colors">Mentions légales</a>
-              <a href="#" className="hover:text-accent transition-colors">Politique de confidentialité</a>
-              <a href="#" className="hover:text-accent transition-colors">CGV</a>
+              <a href="#" className="hover:text-accent transition-colors">{t.footer.legal}</a>
+              <a href="#" className="hover:text-accent transition-colors">{t.footer.privacy}</a>
+              <a href="#" className="hover:text-accent transition-colors">{t.footer.terms}</a>
             </div>
           </div>
         </div>
@@ -134,7 +118,7 @@ const Footer = () => {
       <div className="fixed bottom-6 right-6 z-40">
         <div className="flex flex-col space-y-2">
           <a 
-            href="https://wa.me/41789012345"
+            href="https://wa.me/41772883838"
             target="_blank"
             rel="noopener noreferrer"
             className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
@@ -146,7 +130,7 @@ const Footer = () => {
           </a>
           
           <a 
-            href="tel:+41223456789"
+            href="tel:+41772883838"
             className="w-14 h-14 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
             title="Appel urgent"
           >

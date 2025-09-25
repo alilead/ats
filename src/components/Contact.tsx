@@ -32,15 +32,15 @@ const Contact = () => {
     {
       icon: Phone,
       title: t.contact.info.phone.title,
-      content: "+41 22 345 67 89",
-      action: "tel:+41223456789",
+      content: "+41 77 288 38 38",
+      action: "tel:+41772883838",
       description: t.contact.info.phone.description
     },
     {
       icon: MessageCircle,
       title: t.contact.info.whatsapp.title,
-      content: "+41 78 901 23 45",
-      action: "https://wa.me/41789012345",
+      content: "+41 77 288 38 38",
+      action: "https://wa.me/41772883838",
       description: t.contact.info.whatsapp.description
     },
     {
@@ -53,8 +53,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: t.contact.info.address.title,
-      content: "Avenue de la Paix 15, 1202 Genève",
-      action: "https://maps.google.com/?q=Avenue+de+la+Paix+15+1202+Genève",
+      content: "Genève, Suisse",
+      action: "https://maps.google.com/?q=Genève+Suisse",
       description: t.contact.info.address.description
     }
   ];
@@ -161,7 +161,7 @@ const Contact = () => {
                       type="button" 
                       size="lg" 
                       variant="outline"
-                      onClick={() => window.open('tel:+41223456789')}
+                      onClick={() => window.open('tel:+41772883838')}
                     >
                       <Phone className="w-4 h-4 mr-2" />
                       {t.contact.form.call}
