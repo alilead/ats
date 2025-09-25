@@ -224,7 +224,7 @@ const en = {
         title: "Address",
         description: "Service area: Geneva and region"
       }
-    }
+    },
     services: {
       construction: "Construction & Renovation",
       garden: "Garden & Landscaping",
