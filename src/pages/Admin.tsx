@@ -20,6 +20,7 @@ export default function Admin() {
   const [authorized, setAuthorized] = useState(false);
   const [pw, setPw] = useState("");
   const [bookings, setBookings] = useState<any[]>([]);
+  const [contacts, setContacts] = useState<any[]>([]);
   const t = useLocale();
 
   useEffect(() => {
@@ -53,6 +54,9 @@ export default function Admin() {
 
       const raw = localStorage.getItem('bookings');
       setBookings(raw ? JSON.parse(raw) : []);
+      
+      const contactsRaw = localStorage.getItem('contacts');
+      setContacts(contactsRaw ? JSON.parse(contactsRaw) : []);
     }
     load();
   }, []);
@@ -60,6 +64,9 @@ export default function Admin() {
   function refresh() {
     const raw = localStorage.getItem('bookings');
     setBookings(raw ? JSON.parse(raw) : []);
+    
+    const contactsRaw = localStorage.getItem('contacts');
+    setContacts(contactsRaw ? JSON.parse(contactsRaw) : []);
   }
 
   function remove(index:number){
@@ -67,6 +74,14 @@ export default function Admin() {
     const arr = raw ? JSON.parse(raw) : [];
     arr.splice(index,1);
     localStorage.setItem('bookings', JSON.stringify(arr));
+    refresh();
+  }
+
+  function removeContact(index:number){
+    const raw = localStorage.getItem('contacts');
+    const arr = raw ? JSON.parse(raw) : [];
+    arr.splice(index,1);
+    localStorage.setItem('contacts', JSON.stringify(arr));
     refresh();
   }
 
@@ -100,7 +115,7 @@ export default function Admin() {
         <h2 className="text-2xl font-semibold">{t.admin.bookings}</h2>
         <div className="flex gap-2">
           <Button onClick={() => downloadCSV(bookings)}>{t.admin.exportCSV}</Button>
-          <Button variant="outline" onClick={() => { localStorage.removeItem('bookings'); refresh(); }}>{t.admin.clearAll}</Button>
+          <Button variant="outline" onClick={() => { localStorage.removeItem('bookings'); localStorage.removeItem('contacts'); refresh(); }}>{t.admin.clearAll}</Button>
         </div>
       </div>
 
@@ -140,6 +155,48 @@ export default function Admin() {
           </tbody>
         </table>
       </div>
+
+      {/* Contact Form Submissions */}
+      {contacts.length > 0 && (
+        <>
+          <div className="flex items-center justify-between mb-6 mt-12">
+            <h2 className="text-2xl font-semibold">Contact Form Submissions</h2>
+          </div>
+          
+          <div className="overflow-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="text-left">
+                  <th className="p-2">#</th>
+                  <th className="p-2">Name</th>
+                  <th className="p-2">Email</th>
+                  <th className="p-2">Phone</th>
+                  <th className="p-2">Service</th>
+                  <th className="p-2">Message</th>
+                  <th className="p-2">Date</th>
+                  <th className="p-2">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {contacts.map((c, i) => (
+                  <tr key={i} className="border-t">
+                    <td className="p-2 align-top">{i+1}</td>
+                    <td className="p-2 align-top">{c.name}</td>
+                    <td className="p-2 align-top">{c.email}</td>
+                    <td className="p-2 align-top">{c.phone}</td>
+                    <td className="p-2 align-top">{c.service}</td>
+                    <td className="p-2 align-top">{c.message}</td>
+                    <td className="p-2 align-top">{new Date(c.createdAt).toLocaleDateString()}</td>
+                    <td className="p-2 align-top">
+                      <Button variant="outline" size="sm" onClick={() => removeContact(i)}>{t.admin.delete}</Button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
     </div>
   );
 }

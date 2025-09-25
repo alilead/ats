@@ -21,6 +21,23 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Store contact form submission in localStorage for admin to see
+    try {
+      const contactData = {
+        ...formData,
+        type: 'contact',
+        createdAt: new Date().toISOString()
+      };
+      
+      const raw = localStorage.getItem('contacts');
+      const arr = raw ? JSON.parse(raw) : [];
+      arr.unshift(contactData);
+      localStorage.setItem('contacts', JSON.stringify(arr));
+    } catch (e) {
+      console.error('Failed to store contact:', e);
+    }
+    
     toast({
       title: t.contact.form.successTitle,
       description: t.contact.form.successDescription,
@@ -47,7 +64,7 @@ const Contact = () => {
       icon: Mail,
       title: t.contact.info.email.title,
       content: t.contact.info.email.content,
-      action: "mailto:contact@atsgenerale.ch",
+      action: "mailto:info@atsgenerale.ch",
       description: t.contact.info.email.description
     },
     {
