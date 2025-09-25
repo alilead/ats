@@ -4,10 +4,13 @@ import { Menu, X, Phone } from "lucide-react";
 import atsLogo from "@/assets/ats-logo.png";
 import useLocale from "@/lib/useLocale";
 import LanguageSelector from "./LanguageSelector";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useLocale();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
     { label: t.navigation.home, href: "#accueil", id: "accueil" },
@@ -17,12 +20,25 @@ const Header = () => {
     { label: t.navigation.contact, href: "#contact", id: "contact" },
   ];
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
+  const handleNavigation = (id: string) => {
+    // If we're not on the home page, navigate to home first, then scroll
+    if (location.pathname !== '/') {
+      navigate(`/?lang=${t.lang}#${id}`);
+      // Small delay to ensure the page loads before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If we're on home page, just scroll to section
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setIsMenuOpen(false);
   };
 
   return (
@@ -31,11 +47,20 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src={atsLogo} 
-              alt="ATS Générale Logo"
-              className="h-12 w-auto"
-            />
+            <button 
+              onClick={() => {
+                if (location.pathname !== '/') {
+                  navigate(`/?lang=${t.lang}`);
+                }
+              }}
+              className="cursor-pointer"
+            >
+              <img 
+                src={atsLogo} 
+                alt="ATS Générale Logo"
+                className="h-12 w-auto"
+              />
+            </button>
           </div>
 
           {/* Desktop Navigation */}
@@ -43,7 +68,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavigation(item.id)}
                 className="text-white hover:text-accent transition-colors duration-200"
               >
                 {item.label}
@@ -57,7 +82,7 @@ const Header = () => {
               <Phone className="w-4 h-4 mr-2" />
               +41 22 345 67 89
             </a>
-            <Button variant="accent" className="" onClick={() => scrollToSection('contact')}>{t.navigation.freeQuote}</Button>
+            <Button variant="accent" className="" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
               <LanguageSelector />
               <a href="/admin" className="text-white hover:text-accent transition-colors">{t.navigation.admin}</a>
           </div>
@@ -78,7 +103,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleNavigation(item.id)}
                   className="text-white hover:text-accent transition-colors py-2 text-left"
                 >
                   {item.label}
@@ -89,10 +114,28 @@ const Header = () => {
                   <Phone className="w-4 h-4 mr-2" />
                   +41 22 345 67 89
                 </a>
-                <Button variant="accent" className="w-full" onClick={() => scrollToSection('contact')}>{t.navigation.freeQuote}</Button>
+                <Button variant="accent" className="w-full" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
                 <div className="flex gap-2 mt-3">
-                  <button aria-label="Français" onClick={() => t.setLocale('fr')} className={`px-2 py-1 rounded ${t.lang === 'fr' ? 'bg-accent text-white' : 'text-white/80'}`}>🇫🇷</button>
-                  <button aria-label="English" onClick={() => t.setLocale('en')} className={`px-2 py-1 rounded ${t.lang === 'en' ? 'bg-accent text-white' : 'text-white/80'}`}>🇬🇧</button>
+                  <button 
+                    aria-label="Français" 
+                    onClick={() => {
+                      t.setLocale('fr');
+                      setTimeout(() => window.location.reload(), 100);
+                    }} 
+                    className={`px-2 py-1 rounded transition-colors ${t.lang === 'fr' ? 'bg-accent text-white' : 'text-white/80 hover:text-white'}`}
+                  >
+                    🇫🇷
+                  </button>
+                  <button 
+                    aria-label="English" 
+                    onClick={() => {
+                      t.setLocale('en');
+                      setTimeout(() => window.location.reload(), 100);
+                    }} 
+                    className={`px-2 py-1 rounded transition-colors ${t.lang === 'en' ? 'bg-accent text-white' : 'text-white/80 hover:text-white'}`}
+                  >
+                    🇬🇧
+                  </button>
                 </div>
               </div>
             </nav>
