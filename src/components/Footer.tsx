@@ -83,13 +83,31 @@ const Footer = () => {
             <div>
               <h5 className="font-medium mb-4">{t.footer.followUsTitle}</h5>
               <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors">
+                <a 
+                  href="https://www.facebook.com/atsgenerale" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                  aria-label="Facebook"
+                >
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors">
+                <a 
+                  href="https://www.instagram.com/atsgenerale" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                  aria-label="Instagram"
+                >
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors">
+                <a 
+                  href="https://www.linkedin.com/company/atsgenerale" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                  aria-label="LinkedIn"
+                >
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>
@@ -106,9 +124,24 @@ const Footer = () => {
               {t.footer.copyright}
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="hover:text-accent transition-colors">{t.footer.legal}</a>
-              <a href="#" className="hover:text-accent transition-colors">{t.footer.privacy}</a>
-              <a href="#" className="hover:text-accent transition-colors">{t.footer.terms}</a>
+              <button 
+                onClick={() => window.open('/legal', '_blank')}
+                className="hover:text-accent transition-colors cursor-pointer"
+              >
+                {t.footer.legal}
+              </button>
+              <button 
+                onClick={() => window.open('/privacy', '_blank')}
+                className="hover:text-accent transition-colors cursor-pointer"
+              >
+                {t.footer.privacy}
+              </button>
+              <button 
+                onClick={() => window.open('/terms', '_blank')}
+                className="hover:text-accent transition-colors cursor-pointer"
+              >
+                {t.footer.terms}
+              </button>
             </div>
           </div>
         </div>
