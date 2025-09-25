@@ -169,6 +169,7 @@ export default function Admin() {
                 <tr className="text-left">
                   <th className="p-2">#</th>
                   <th className="p-2">Name</th>
+                  <th className="p-2">Company</th>
                   <th className="p-2">Email</th>
                   <th className="p-2">Phone</th>
                   <th className="p-2">Service</th>
@@ -182,6 +183,7 @@ export default function Admin() {
                   <tr key={i} className="border-t">
                     <td className="p-2 align-top">{i+1}</td>
                     <td className="p-2 align-top">{c.name}</td>
+                    <td className="p-2 align-top">{c.entrepriseName || '-'}</td>
                     <td className="p-2 align-top">{c.email}</td>
                     <td className="p-2 align-top">{c.phone}</td>
                     <td className="p-2 align-top">{c.service}</td>

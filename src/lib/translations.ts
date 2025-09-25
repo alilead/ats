@@ -13,7 +13,7 @@ const en = {
     ]
   },
   services: {
-    headerSmall: "Premium Services",
+    headerSmall: "Services adaptés au besoin",
     headerTitle: "Our Complete Services",
     description: "From design to delivery, we cover your home and garden needs with Swiss expertise.",
     book: "Book this service",
@@ -106,7 +106,7 @@ const en = {
           },
           {
             id: "surface-finish",
-            title: "Premium Surface Finish",
+            title: "Finition de Surface Adaptée",
             items: [
               { id: "tile-specialist", title: "Tile specialist" },
               { id: "painting-expert", title: "Painting Expert" },
@@ -142,7 +142,7 @@ const en = {
         title: "Luxury Villa Renovation - Cologny",
         category: "Complete Renovation",
         description: "Complete transformation of a 400m² villa with high-end finishes, panoramic terrace and landscaped garden.",
-        highlights: ["6-month renovation", "Premium materials", "Custom design"]
+        highlights: ["6-month renovation", "Matériaux adaptés", "Custom design"]
       },
       {
         id: 2,
@@ -203,7 +203,7 @@ const en = {
       },
       {
         title: "Unwavering Quality",
-        description: "All work carried out according to the highest standards with premium materials."
+        description: "All work carried out according to the highest standards with materials adapted to your needs."
       },
       {
         title: "Transparent Pricing",
@@ -211,7 +211,7 @@ const en = {
       },
       {
         title: "Swiss Excellence",
-        description: "Over 25 years of experience in premium customer service excellence."
+        description: "Over 25 years of experience in customer service adapted to your needs."
       }
     ],
     mission: {
@@ -383,7 +383,7 @@ const fr = {
     ]
   },
   services: {
-    headerSmall: "Services Premium",
+    headerSmall: "Services adaptés au besoin",
     headerTitle: "Nos Services Complets",
     description: "De la conception à la réalisation, nous couvrons tous vos besoins pour la maison et le jardin avec l'expertise suisse que vous méритez.",
     book: "Réserver ce service",
@@ -476,7 +476,7 @@ const fr = {
           },
           {
             id: "surface-finish",
-            title: "Finition de Surface Premium",
+            title: "Finition de Surface Adaptée",
             items: [
               { id: "tile-specialist", title: "Spécialiste Carrelage" },
               { id: "painting-expert", title: "Expert Peinture" },
@@ -512,7 +512,7 @@ const fr = {
         title: "Rénovation Villa Luxury - Cologny",
         category: "Rénovation Complète",
         description: "Transformation complète d'une villa de 400m² avec finitions haut de gamme, terrasse panoramique et jardin paysager.",
-        highlights: ["Rénovation 6 mois", "Matériaux premium", "Design sur mesure"]
+        highlights: ["Rénovation 6 mois", "Matériaux adaptés", "Design sur mesure"]
       },
       {
         id: 2,

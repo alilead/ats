@@ -14,8 +14,7 @@ const About = () => {
   const stats = [
     { number: "25+", label: t.about.stats.experience },
     { number: "500+", label: t.about.stats.projects },
-    { number: "100%", label: t.about.stats.satisfaction },
-    { number: "24/7", label: t.about.stats.emergency }
+    { number: "100%", label: t.about.stats.satisfaction }
   ];
 
   return (

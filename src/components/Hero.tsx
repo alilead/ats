@@ -44,7 +44,7 @@ const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 mb-8 md:mb-0">
               <Button size="lg" variant="premium" className="font-semibold px-6 md:px-8" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                 {hero.ctaPrimary}
                 <ArrowRight className="ml-2 w-5 h-5" />

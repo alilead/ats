@@ -13,6 +13,7 @@ const Contact = () => {
   
   const [formData, setFormData] = useState({
     name: "",
+    entrepriseName: "",
     email: "",
     phone: "",
     service: "",
@@ -42,7 +43,7 @@ const Contact = () => {
       title: t.contact.form.successTitle,
       description: t.contact.form.successDescription,
     });
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    setFormData({ name: "", entrepriseName: "", email: "", phone: "", service: "", message: "" });
   };
 
   const contactInfo = [
@@ -158,6 +159,18 @@ const Contact = () => {
                         placeholder={t.contact.form.emailPlaceholder}
                       />
                     </div>
+                  </div>
+
+                  {/* Optional Enterprise Name */}
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">
+                      Nom d'entreprise (optionnel) / Company name (optional)
+                    </label>
+                    <Input
+                      value={formData.entrepriseName}
+                      onChange={(e) => setFormData({...formData, entrepriseName: e.target.value})}
+                      placeholder="Nom de votre entreprise / Your company name"
+                    />
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
