@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useLocale } from "@/lib/locale-context";
-import atsLogoNew from "@/assets/ats-logo-new.png";
+import atsLogoContact from "@/assets/ats-logo-contact.png";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -85,7 +85,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <img 
-              src={atsLogoNew} 
+              src={atsLogoContact} 
               alt="ATS Générale Logo"
               className="h-16 w-auto"
             />

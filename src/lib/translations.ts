@@ -581,12 +581,12 @@ const fr = {
       },
       {
         title: "Excellence Suisse",
-        description: "Plus de 25 ans d'expérience dans l'excellence du service à la clientèle adapté."
+        description: "Plus de 25 ans d'expérience allant de la petite réparation, au grand chantier prestigieux."
       }
     ],
     mission: {
       title: "Notre Mission",
-      description: "Fini de jongler avec plusieurs entrepreneurs ou de subir des retards frustrants. Nous offrons un service fluide et coordonné qui vous fait gagner du temps, réduit le stress et fournit des résultats exceptionnels, à chaque fois."
+      description: "Fini de jongler avec plusieurs entrepreneurs ou de subir des retards frustrants. Nous offrons un service fluide et coordonné Sans complications ni compromis sur la qualité, à chaque fois."
     }
   },
   contact: {
