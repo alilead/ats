@@ -1,45 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Zap, Award, Users, Clock, Star } from "lucide-react";
+import useLocale from "@/lib/useLocale";
 
 const About = () => {
-  const guarantees = [
-    {
-      icon: Shield,
-      title: "Transparence et Intégrité",
-      description: "Des évaluations honnêtes et des solutions pratiques adaptées à vos besoins et votre budget."
-    },
-    {
-      icon: Users,
-      title: "Service Polyvalent et Adaptable",
-      description: "Notre équipe expérimentée excelle dans la résolution de problèmes avec une approche flexible."
-    },
-    {
-      icon: Zap,
-      title: "Réponse Rapide",
-      description: "Évaluations rapides et planification efficace pour les réparations urgentes et l'entretien."
-    },
-    {
-      icon: Award,
-      title: "Qualité Inébranlable",
-      description: "Tous les travaux réalisés selon les normes les plus élevées avec des matériaux premium."
-    },
-    {
-      icon: Clock,
-      title: "Tarification Transparente",
-      description: "Devis clairs sans surprises cachées, vous savez toujours à quoi vous attendre."
-    },
-    {
-      icon: Star,
-      title: "Excellence Suisse",
-      description: "Plus de 25 ans d'expérience dans l'excellence du service à la clientèle premium."
-    }
-  ];
+  const t = useLocale();
+
+  const guaranteeIcons = [Shield, Users, Zap, Award, Clock, Star];
+  const guarantees = t.about.guarantees.map((guarantee, index) => ({
+    ...guarantee,
+    icon: guaranteeIcons[index]
+  }));
 
   const stats = [
-    { number: "25+", label: "Années d'expérience" },
-    { number: "500+", label: "Projets réalisés" },
-    { number: "100%", label: "Satisfaction client" },
-    { number: "24/7", label: "Service d'urgence" }
+    { number: "25+", label: t.about.stats.experience },
+    { number: "500+", label: t.about.stats.projects },
+    { number: "100%", label: t.about.stats.satisfaction },
+    { number: "24/7", label: t.about.stats.emergency }
   ];
 
   return (
@@ -48,15 +24,13 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent font-medium mb-4">
-            Excellence Suisse
+            {t.about.headerSmall}
           </div>
-          <h2 className="text-primary mb-6">
-            Pourquoi choisir ATS pour vos projets ?
+          <h2 className="text-foreground mb-6">
+            {t.about.headerTitle}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Spécialisés dans le second œuvre, nous simplifions vos projets grâce à une équipe 
-            polyvalente de professionnels qualifiés, capables de gérer toutes les tâches 
-            sous un même toit de confiance.
+            {t.about.description}
           </p>
         </div>
 
@@ -64,7 +38,7 @@ const About = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
+              <div className="text-3xl font-bold text-foreground mb-2">{stat.number}</div>
               <div className="text-muted-foreground">{stat.label}</div>
             </div>
           ))}
@@ -82,7 +56,7 @@ const About = () => {
                       <Icon className="w-6 h-6 text-accent" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-primary mb-3">
+                      <h3 className="text-lg font-semibold text-foreground mb-3">
                         {guarantee.title}
                       </h3>
                       <p className="text-muted-foreground leading-relaxed">
@@ -99,13 +73,11 @@ const About = () => {
         {/* Mission Statement */}
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-accent/5 via-accent/10 to-accent/5 rounded-2xl p-12">
-            <h3 className="text-2xl font-semibold text-primary mb-4">
-              Notre Mission
+            <h3 className="text-2xl font-semibold text-foreground mb-4">
+              {t.about.mission.title}
             </h3>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              Fini de jongler avec plusieurs entrepreneurs ou de subir des retards frustrants. 
-              Nous offrons un service fluide et coordonné qui vous fait gagner du temps, 
-              réduit le stress et fournit des résultats exceptionnels, à chaque fois.
+              {t.about.mission.description}
             </p>
           </div>
         </div>

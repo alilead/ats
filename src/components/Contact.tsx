@@ -65,13 +65,13 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent font-medium mb-4">
-            {t.services.headerSmall}
+            {t.contact.headerSmall}
           </div>
           <h2 className="text-foreground mb-6">
-            {t.services.headerTitle}
+            {t.contact.headerTitle}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t.services.description}
+            {t.contact.description}
           </p>
         </div>
 
@@ -89,7 +89,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">Nom complet *</label>
+                      <label className="text-sm font-medium text-foreground mb-2 block">{t.contact.form.name}</label>
                       <Input
                         required
                         value={formData.name}
@@ -98,7 +98,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">Email *</label>
+                      <label className="text-sm font-medium text-foreground mb-2 block">{t.contact.form.email}</label>
                       <Input
                         required
                         type="email"
@@ -111,7 +111,7 @@ const Contact = () => {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">Téléphone</label>
+                      <label className="text-sm font-medium text-foreground mb-2 block">{t.contact.form.phone}</label>
                       <Input
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -126,7 +126,7 @@ const Contact = () => {
                         value={formData.service}
                         onChange={(e) => setFormData({...formData, service: e.target.value})}
                       >
-                          <option value="">Sélectionnez un service</option>
+                          <option value="">{t.contact.form.service}</option>
                           <option value="construction">Construction & Rénovation</option>
                           <option value="jardin">Jardin & Aménagement</option>
                           <option value="entretien">Entretien & Maintenance</option>
@@ -137,7 +137,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">Description du projet *</label>
+                    <label className="text-sm font-medium text-foreground mb-2 block">{t.contact.form.message}</label>
                     <Textarea
                       required
                       value={formData.message}
@@ -164,7 +164,7 @@ const Contact = () => {
                       onClick={() => window.open('tel:+41223456789')}
                     >
                       <Phone className="w-4 h-4 mr-2" />
-                      Appeler maintenant
+                      {t.contact.form.call}
                     </Button>
                   </div>
                 </form>
