@@ -36,6 +36,8 @@ export default function useLocale(search?: string) {
       url.searchParams.set('lang', l);
       window.history.replaceState({}, '', url.toString());
       try { window.localStorage.setItem('locale', l); } catch (e) {}
+      // Force a re-render by triggering a custom event
+      window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: l } }));
     }
   };
 

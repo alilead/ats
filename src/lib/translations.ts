@@ -90,6 +90,73 @@ const en = {
       submit: "Submit",
       call: "Call now"
     }
+  },
+  navigation: {
+    home: "Home",
+    about: "About",
+    services: "Services",
+    portfolio: "Projects",
+    contact: "Contact",
+    freeQuote: "Free Quote",
+    admin: "Admin"
+  },
+  admin: {
+    title: "Admin Panel",
+    description: "Enter admin token to view bookings (server mode) or local password.",
+    placeholder: "Enter admin token or password",
+    enter: "Enter",
+    loginWithNetlify: "Login with Netlify",
+    orSignIn: "Or sign in with Netlify Identity for secure admin access.",
+    bookings: "Bookings",
+    exportCSV: "Export CSV",
+    clearAll: "Clear All",
+    delete: "Delete",
+    columns: {
+      number: "#",
+      service: "Service",
+      audience: "Audience",
+      date: "Date",
+      slots: "Slots",
+      name: "Name",
+      email: "Email",
+      phone: "Phone",
+      notes: "Notes",
+      actions: "Actions"
+    }
+  },
+  bookingForm: {
+    transparentPricing: "Transparent pricing:",
+    perHour: "35 CHF/hour",
+    desiredDate: "Desired date",
+    timeSlots: "Time slots (max 4)",
+    address: "Address",
+    streetNumber: "Street and number",
+    postalCode: "Postal code",
+    city: "City",
+    tasks: "Tasks to perform",
+    yourDetails: "Your details",
+    fullName: "Full name",
+    email: "Email",
+    phone: "Phone",
+    comments: "Special comments (optional)",
+    consent: "I agree that my data will be used to process the request",
+    orderNow: "Order now",
+    cancel: "Cancel",
+    alertConsent: "Please accept that your data will be used to process the request.",
+    alertServerSuccess: "Request sent — recorded on server.",
+    alertLocalSuccess: "Request sent — stored locally (server unavailable).",
+    tasksList: [
+      "Vacuum",
+      "Dishes",
+      "Bathroom",
+      "Kitchen/oven",
+      "Windows",
+      "Ironing",
+      "Washing machine",
+      "Floor",
+      "Dusting",
+      "Other (see notes)"
+    ]
   }
 };
 
@@ -185,6 +252,73 @@ const fr = {
       submit: "Envoyer",
       call: "Appeler maintenant"
     }
+  },
+  navigation: {
+    home: "Accueil",
+    about: "À Propos",
+    services: "Services",
+    portfolio: "Réalisations",
+    contact: "Contact",
+    freeQuote: "Devis Gratuit",
+    admin: "Admin"
+  },
+  admin: {
+    title: "Panneau d'administration",
+    description: "Entrez le token administrateur pour voir les réservations (mode serveur) ou le mot de passe local.",
+    placeholder: "Entrez le token admin ou le mot de passe",
+    enter: "Entrer",
+    loginWithNetlify: "Connexion avec Netlify",
+    orSignIn: "Ou connectez-vous avec Netlify Identity pour un accès administrateur sécurisé.",
+    bookings: "Réservations",
+    exportCSV: "Exporter CSV",
+    clearAll: "Tout effacer",
+    delete: "Supprimer",
+    columns: {
+      number: "#",
+      service: "Service",
+      audience: "Public",
+      date: "Date",
+      slots: "Créneaux",
+      name: "Nom",
+      email: "Email",
+      phone: "Téléphone",
+      notes: "Notes",
+      actions: "Actions"
+    }
+  },
+  bookingForm: {
+    transparentPricing: "Tarif transparent :",
+    perHour: "35 CHF/heure",
+    desiredDate: "Date souhaitée",
+    timeSlots: "Créneaux horaires (max 4)",
+    address: "Adresse",
+    streetNumber: "Rue et numéro",
+    postalCode: "Code postal",
+    city: "Ville",
+    tasks: "Tâches à effectuer",
+    yourDetails: "Vos coordonnées",
+    fullName: "Nom complet",
+    email: "Email",
+    phone: "Téléphone",
+    comments: "Commentaires particuliers (optionnel)",
+    consent: "J'accepte que mes données soient utilisées pour traiter ma demande",
+    orderNow: "Commander maintenant",
+    cancel: "Annuler",
+    alertConsent: "Veuillez accepter que vos données soient utilisées pour traiter la demande.",
+    alertServerSuccess: "Demande envoyée — enregistrée sur le serveur.",
+    alertLocalSuccess: "Demande envoyée — stockée localement (serveur indisponible).",
+    tasksList: [
+      "Aspirateur",
+      "Vaisselle",
+      "Salle de bain",
+      "Cuisine/four",
+      "Vitres",
+      "Repassage",
+      "Lave-linge",
+      "Sol",
+      "Dépoussiérage",
+      "Autre (voir notes)"
+    ]
   }
 };
 

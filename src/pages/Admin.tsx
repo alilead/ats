@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import netlifyIdentity from "netlify-identity-widget";
+import useLocale from "@/lib/useLocale";
 
-const ADMIN_PASSWORD = "admin123"; // change in production or wire env var
+const ADMIN_PASSWORD = "ATSadmin56*"; // change in production or wire env var
 
 function downloadCSV(data: any[]) {
   if (!data || data.length === 0) return;
@@ -19,6 +20,7 @@ export default function Admin() {
   const [authorized, setAuthorized] = useState(false);
   const [pw, setPw] = useState("");
   const [bookings, setBookings] = useState<any[]>([]);
+  const t = useLocale();
 
   useEffect(() => {
     async function load() {
@@ -72,10 +74,10 @@ export default function Admin() {
     return (
       <div className="min-h-screen flex items-center justify-center p-8">
         <div className="max-w-md w-full bg-white p-6 rounded shadow">
-          <h3 className="text-lg font-semibold mb-4">Admin Panel</h3>
-          <p className="text-sm text-muted-foreground mb-4">Enter admin token to view bookings (server mode) or local password.</p>
+          <h3 className="text-lg font-semibold mb-4">{t.admin.title}</h3>
+          <p className="text-sm text-muted-foreground mb-4">{t.admin.description}</p>
           <label className="sr-only">Admin token or password</label>
-          <input placeholder="Enter admin token or password" className="w-full mb-4 border rounded px-3 py-2" value={pw} onChange={(e)=>setPw(e.target.value)} />
+          <input placeholder={t.admin.placeholder} className="w-full mb-4 border rounded px-3 py-2" value={pw} onChange={(e)=>setPw(e.target.value)} />
           <div className="flex gap-2 mb-4">
             <Button onClick={() => {
               // first try password mode
@@ -83,10 +85,10 @@ export default function Admin() {
               // store token for server calls
               try { window.localStorage.setItem('admin_token', pw); } catch (e) {}
               setAuthorized(true);
-            }}>Enter</Button>
-            <Button variant="outline" onClick={() => netlifyIdentity.open()}>Login with Netlify</Button>
+            }}>{t.admin.enter}</Button>
+            <Button variant="outline" onClick={() => netlifyIdentity.open()}>{t.admin.loginWithNetlify}</Button>
           </div>
-          <p className="text-xs text-muted-foreground">Or sign in with Netlify Identity for secure admin access.</p>
+          <p className="text-xs text-muted-foreground">{t.admin.orSignIn}</p>
         </div>
       </div>
     );
@@ -95,10 +97,10 @@ export default function Admin() {
   return (
     <div className="p-8">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-semibold">Bookings</h2>
+        <h2 className="text-2xl font-semibold">{t.admin.bookings}</h2>
         <div className="flex gap-2">
-          <Button onClick={() => downloadCSV(bookings)}>Export CSV</Button>
-          <Button variant="outline" onClick={() => { localStorage.removeItem('bookings'); refresh(); }}>Clear All</Button>
+          <Button onClick={() => downloadCSV(bookings)}>{t.admin.exportCSV}</Button>
+          <Button variant="outline" onClick={() => { localStorage.removeItem('bookings'); refresh(); }}>{t.admin.clearAll}</Button>
         </div>
       </div>
 
@@ -106,16 +108,16 @@ export default function Admin() {
         <table className="w-full border-collapse">
           <thead>
             <tr className="text-left">
-              <th className="p-2">#</th>
-              <th className="p-2">Service</th>
-              <th className="p-2">Audience</th>
-              <th className="p-2">Date</th>
-              <th className="p-2">Slots</th>
-              <th className="p-2">Name</th>
-              <th className="p-2">Email</th>
-              <th className="p-2">Phone</th>
-              <th className="p-2">Notes</th>
-              <th className="p-2">Actions</th>
+              <th className="p-2">{t.admin.columns.number}</th>
+              <th className="p-2">{t.admin.columns.service}</th>
+              <th className="p-2">{t.admin.columns.audience}</th>
+              <th className="p-2">{t.admin.columns.date}</th>
+              <th className="p-2">{t.admin.columns.slots}</th>
+              <th className="p-2">{t.admin.columns.name}</th>
+              <th className="p-2">{t.admin.columns.email}</th>
+              <th className="p-2">{t.admin.columns.phone}</th>
+              <th className="p-2">{t.admin.columns.notes}</th>
+              <th className="p-2">{t.admin.columns.actions}</th>
             </tr>
           </thead>
           <tbody>
@@ -131,7 +133,7 @@ export default function Admin() {
                 <td className="p-2 align-top">{b.phone}</td>
                 <td className="p-2 align-top">{b.notes}</td>
                 <td className="p-2 align-top">
-                  <Button variant="outline" size="sm" onClick={() => remove(i)}>Delete</Button>
+                  <Button variant="outline" size="sm" onClick={() => remove(i)}>{t.admin.delete}</Button>
                 </td>
               </tr>
             ))}
