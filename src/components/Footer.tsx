@@ -1,9 +1,29 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import atsLogoNew from "@/assets/ats-logo-new.png";
 import { useLocale } from "@/lib/locale-context";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const t = useLocale();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavigation = (id: string) => {
+    if (location.pathname !== '/') {
+      navigate(`/#${id}`);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -46,9 +66,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {t.footer.services.construction.map((service, index) => (
                 <li key={index}>
-                  <a href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+                  <button 
+                    onClick={() => handleNavigation('services')} 
+                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm text-left cursor-pointer"
+                  >
                     {service}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -60,9 +83,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {t.footer.services.garden.map((service, index) => (
                 <li key={index}>
-                  <a href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors text-sm">
+                  <button 
+                    onClick={() => handleNavigation('services')} 
+                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm text-left cursor-pointer"
+                  >
                     {service}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -72,11 +98,46 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-6">{t.footer.navigationTitle}</h4>
             <ul className="space-y-2 mb-8">
-              <li><a href="#accueil" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.home}</a></li>
-              <li><a href="#apropos" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.about}</a></li>
-              <li><a href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.services}</a></li>
-              <li><a href="#realisations" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.portfolio}</a></li>
-              <li><a href="#contact" className="text-primary-foreground/80 hover:text-accent transition-colors">{t.navigation.contact}</a></li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('accueil')} 
+                  className="text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer text-left"
+                >
+                  {t.navigation.home}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('apropos')} 
+                  className="text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer text-left"
+                >
+                  {t.navigation.about}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('services')} 
+                  className="text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer text-left"
+                >
+                  {t.navigation.services}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('realisations')} 
+                  className="text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer text-left"
+                >
+                  {t.navigation.portfolio}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('contact')} 
+                  className="text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer text-left"
+                >
+                  {t.navigation.contact}
+                </button>
+              </li>
             </ul>
 
             {/* Social Links */}
