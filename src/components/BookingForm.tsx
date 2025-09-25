@@ -172,10 +172,28 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
 
       <h4 className="text-md font-medium mb-2">{t.bookingForm.yourDetails} *</h4>
       <div className="grid grid-cols-2 gap-2 mb-4">
-        <label htmlFor="contact-name" className="sr-only">{t.bookingForm.fullName}</label>
-        <input id="contact-name" value={name} onChange={(e) => setName(e.target.value)} placeholder={t.bookingForm.fullName} aria-required="true" className="border rounded px-3 py-2" />
-        <label htmlFor="contact-email" className="sr-only">{t.bookingForm.email}</label>
-        <input id="contact-email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t.bookingForm.email} aria-required="true" className="border rounded px-3 py-2" />
+        <label htmlFor="contact-name" className="sr-only">
+          {audience === 'commercial' ? 'Nom d\'entreprise / Company Name' : t.bookingForm.fullName}
+        </label>
+        <input 
+          id="contact-name" 
+          value={name} 
+          onChange={(e) => setName(e.target.value)} 
+          placeholder={audience === 'commercial' ? 'Nom d\'entreprise / Company Name' : t.bookingForm.fullName} 
+          aria-required="true" 
+          className="border rounded px-3 py-2" 
+        />
+        <label htmlFor="contact-email" className="sr-only">
+          {audience === 'commercial' ? 'Email d\'entreprise / Company Email' : t.bookingForm.email}
+        </label>
+        <input 
+          id="contact-email" 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+          placeholder={audience === 'commercial' ? 'Email d\'entreprise / Company Email' : t.bookingForm.email} 
+          aria-required="true" 
+          className="border rounded px-3 py-2" 
+        />
       </div>
       <label htmlFor="contact-phone" className="sr-only">{t.bookingForm.phone}</label>
       <input id="contact-phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t.bookingForm.phone} className="w-full mb-4 border rounded px-3 py-2" />
