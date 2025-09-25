@@ -186,19 +186,19 @@ const Footer = () => {
             </div>
             <div className="flex space-x-6">
               <button 
-                onClick={() => window.open('/legal', '_blank')}
+                onClick={() => alert('Page en construction - Merci de nous contacter pour plus d\'informations.')}
                 className="hover:text-accent transition-colors cursor-pointer"
               >
                 {t.footer.legal}
               </button>
               <button 
-                onClick={() => window.open('/privacy', '_blank')}
+                onClick={() => alert('Page en construction - Merci de nous contacter pour plus d\'informations.')}
                 className="hover:text-accent transition-colors cursor-pointer"
               >
                 {t.footer.privacy}
               </button>
               <button 
-                onClick={() => window.open('/terms', '_blank')}
+                onClick={() => alert('Page en construction - Merci de nous contacter pour plus d\'informations.')}
                 className="hover:text-accent transition-colors cursor-pointer"
               >
                 {t.footer.terms}
