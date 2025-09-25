@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
 import { useLocale } from "@/lib/locale-context";
-import atsLogoDevis from "@/assets/ats-logo-devis.png";
 
 const Hero = () => {
   const { hero } = useLocale();
@@ -42,15 +41,6 @@ const Hero = () => {
                   <span className="font-medium">{highlight}</span>
                 </div>
               ))}
-            </div>
-
-            {/* Logo above CTA */}
-            <div className="flex justify-center mb-6">
-              <img 
-                src={atsLogoDevis} 
-                alt="ATS Logo"
-                className="h-12 w-auto"
-              />
             </div>
 
             {/* CTAs */}
