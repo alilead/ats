@@ -20,6 +20,73 @@ const en = {
     consultation: "Free Consultation",
     audienceResidential: "Residential",
     audienceCommercial: "Commercial",
+    customService: "Need a personalized service?",
+    customDescription: "Every project is unique. Contact us to discuss your specific needs and receive a free consultation.",
+    servicesData: {
+      residential: {
+        label: "Residential",
+        categories: {
+          construction: {
+            title: "Construction & Renovation",
+            items: [
+              "Interior renovation",
+              "Plastering and drywall", 
+              "Flooring & tiling",
+              "Painting & coatings",
+              "Bathroom & kitchen refit"
+            ]
+          },
+          garden: {
+            title: "Garden & Landscaping",
+            items: [
+              "Landscape design",
+              "Planting & turf",
+              "Patios & terraces", 
+              "Irrigation systems",
+              "Seasonal maintenance"
+            ]
+          },
+          maintenance: {
+            title: "Home Maintenance",
+            items: [
+              "Plumbing & electrics",
+              "Preventive maintenance",
+              "Emergency repairs"
+            ]
+          }
+        }
+      },
+      commercial: {
+        label: "Commercial",
+        categories: {
+          fitout: {
+            title: "Fit-out & Interior Works",
+            items: [
+              "Shop & office fit-out",
+              "Partitioning & ceilings",
+              "Acoustic treatment",
+              "Commercial flooring"
+            ]
+          },
+          civil: {
+            title: "Civil & Site Works",
+            items: [
+              "Minor structural works",
+              "Facade repairs",
+              "External hardscapes"
+            ]
+          },
+          services: {
+            title: "Facilities & Maintenance",
+            items: [
+              "Scheduled building maintenance",
+              "Property management support",
+              "Emergency response & repairs"
+            ]
+          }
+        }
+      }
+    }
   },
   portfolio: {
     header: "Our Exceptional Projects",
@@ -182,6 +249,73 @@ const fr = {
     consultation: "Consultation Gratuite",
     audienceResidential: "Résidentiel",
     audienceCommercial: "Commercial",
+    customService: "Besoin d'un service personnalisé ?",
+    customDescription: "Chaque projet est unique. Contactez-nous pour discuter de vos besoins spécifiques et recevoir une consultation gratuite.",
+    servicesData: {
+      residential: {
+        label: "Résidentiel",
+        categories: {
+          construction: {
+            title: "Construction & Rénovation",
+            items: [
+              "Rénovation intérieure",
+              "Plâtrerie et cloisons sèches",
+              "Revêtements de sol et carrelage",
+              "Peinture et finitions",
+              "Réfection salle de bain et cuisine"
+            ]
+          },
+          garden: {
+            title: "Jardin & Aménagement Paysager",
+            items: [
+              "Conception paysagère",
+              "Plantation et gazon",
+              "Terrasses et patios",
+              "Systèmes d'arrosage",
+              "Maintenance saisonnière"
+            ]
+          },
+          maintenance: {
+            title: "Entretien Domicile",
+            items: [
+              "Plomberie et électricité",
+              "Maintenance préventive",
+              "Réparations d'urgence"
+            ]
+          }
+        }
+      },
+      commercial: {
+        label: "Commercial",
+        categories: {
+          fitout: {
+            title: "Aménagement & Travaux Intérieurs",
+            items: [
+              "Aménagement boutiques et bureaux",
+              "Cloisonnement et plafonds",
+              "Traitement acoustique",
+              "Revêtements commerciaux"
+            ]
+          },
+          civil: {
+            title: "Travaux Civils & de Chantier",
+            items: [
+              "Travaux structurels mineurs",
+              "Réparations de façade",
+              "Aménagements extérieurs"
+            ]
+          },
+          services: {
+            title: "Installations & Maintenance",
+            items: [
+              "Maintenance programmée des bâtiments",
+              "Support gestion de propriété",
+              "Intervention d'urgence et réparations"
+            ]
+          }
+        }
+      }
+    }
   },
   portfolio: {
     header: "Nos Projets d'Exception",
