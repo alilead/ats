@@ -18,8 +18,8 @@ const en = {
     description: "From design to delivery, we cover your home and garden needs with Swiss expertise.",
     book: "Book this service",
     consultation: "Free Consultation",
-    audienceResidential: "Residential",
-    audienceCommercial: "Commercial",
+    audienceResidential: "Individuals", 
+    audienceCommercial: "Management Companies",
     customServiceTitle: "Need a personalized service?",
     customServiceDescription: "Every project is unique. Contact us to discuss your specific needs and receive a free consultation.",
     serviceData: {
@@ -27,67 +27,58 @@ const en = {
         label: "Residential",
         categories: [
           {
-            id: "res-construction",
-            title: "Construction & Renovation",
+            id: "construction-services",
+            title: "Construction Services",
             items: [
-              { id: "r-1", title: "Interior renovation" },
-              { id: "r-2", title: "Plastering and drywall" },
-              { id: "r-3", title: "Flooring & tiling" },
-              { id: "r-4", title: "Painting & coatings" },
-              { id: "r-5", title: "Bathroom & kitchen refit" }
+              { id: "masonry", title: "Masonry" },
+              { id: "paint-coatings", title: "Paint & Coatings" },
+              { id: "plastering", title: "Plastering" },
+              { id: "tile", title: "Tile" },
+              { id: "floor-coverings", title: "Installation of Floor Coverings" },
+              { id: "roof", title: "Roof" },
+              { id: "insulation", title: "Insulation Services" }
             ]
           },
           {
-            id: "res-garden",
-            title: "Garden & Landscaping",
+            id: "high-end-interior",
+            title: "High-end Interior Construction Services",
             items: [
-              { id: "r-6", title: "Landscape design" },
-              { id: "r-7", title: "Planting & turf" },
-              { id: "r-8", title: "Patios & terraces" },
-              { id: "r-9", title: "Irrigation systems" },
-              { id: "r-10", title: "Seasonal maintenance" }
-            ]
-          },
-          {
-            id: "res-maintenance",
-            title: "Home Maintenance",
-            items: [
-              { id: "r-11", title: "Plumbing & electrics" },
-              { id: "r-12", title: "Preventive maintenance" },
-              { id: "r-13", title: "Emergency repairs" }
+              { id: "wooden-parquet", title: "Wooden parquet" },
+              { id: "custom-carpentry", title: "Custom Carpentry" },
+              { id: "luxury-carpet", title: "Luxury Carpet Installation" }
             ]
           }
         ]
       },
       commercial: {
-        label: "Commercial",
+        label: "Management Companies",
         categories: [
           {
-            id: "com-fitout",
-            title: "Fit-out & Interior Works",
+            id: "property-management",
+            title: "Complete Property Management",
             items: [
-              { id: "c-1", title: "Shop & office fit-out" },
-              { id: "c-2", title: "Partitioning & ceilings" },
-              { id: "c-3", title: "Acoustic treatment" },
-              { id: "c-4", title: "Commercial flooring" }
+              { id: "general-maintenance", title: "General Maintenance" },
+              { id: "house-maintenance", title: "House maintenance" },
+              { id: "gardening-services", title: "Gardening Services" }
             ]
           },
           {
-            id: "com-civil",
-            title: "Civil & Site Works",
+            id: "surface-finish",
+            title: "Premium Surface Finish",
             items: [
-              { id: "c-5", title: "Minor structural works" },
-              { id: "c-6", title: "Facade repairs" },
-              { id: "c-7", title: "External hardscapes" }
+              { id: "tile-specialist", title: "Tile specialist" },
+              { id: "painting-expert", title: "Painting Expert" },
+              { id: "ornamental-plasterwork", title: "Ornamental Plasterwork" }
             ]
           },
           {
-            id: "com-services",
-            title: "Facilities & Maintenance",
+            id: "exterior-construction",
+            title: "Expertise in Exterior Construction",
             items: [
-              { id: "c-8", title: "Scheduled building maintenance" },
-              { id: "c-9", title: "Property management support" },
-              { id: "c-10", title: "Emergency response & repairs" }
+              { id: "excellence-roofing", title: "Excellence in Roofing" },
+              { id: "advanced-waterproofing", title: "Advanced Waterproofing" },
+              { id: "facade-renovation", title: "Renovation of the facade" },
+              { id: "ecological-building", title: "Ecological Building" }
             ]
           }
         ]
@@ -322,8 +313,8 @@ const fr = {
     description: "De la conception à la réalisation, nous couvrons tous vos besoins pour la maison et le jardin avec l'expertise suisse que vous méритez.",
     book: "Réserver ce service",
     consultation: "Consultation Gratuite",
-    audienceResidential: "Résidentiel",
-    audienceCommercial: "Commercial",
+    audienceResidential: "Particuliers",
+    audienceCommercial: "Sociétés de Gestion",
     customServiceTitle: "Besoin d'un service personnalisé ?",
     customServiceDescription: "Chaque projet est unique. Contactez-nous pour discuter de vos besoins spécifiques et recevoir une consultation gratuite.",
     serviceData: {
@@ -331,67 +322,58 @@ const fr = {
         label: "Résidentiel",
         categories: [
           {
-            id: "res-construction",
-            title: "Construction & Rénovation",
+            id: "construction-services",
+            title: "Services de Construction",
             items: [
-              { id: "r-1", title: "Rénovation intérieure" },
-              { id: "r-2", title: "Plâtrerie et cloisons sèches" },
-              { id: "r-3", title: "Revêtements de sol & carrelage" },
-              { id: "r-4", title: "Peinture & revêtements" },
-              { id: "r-5", title: "Rénovation salle de bain & cuisine" }
+              { id: "masonry", title: "Maçonnerie" },
+              { id: "paint-coatings", title: "Peinture & Revêtements" },
+              { id: "plastering", title: "Plâtrerie" },
+              { id: "tile", title: "Carrelage" },
+              { id: "floor-coverings", title: "Installation de Revêtements de Sol" },
+              { id: "roof", title: "Toiture" },
+              { id: "insulation", title: "Services d'Isolation" }
             ]
           },
           {
-            id: "res-garden",
-            title: "Jardin & Aménagement Paysager",
+            id: "high-end-interior",
+            title: "Services de Construction Intérieure Haut de Gamme",
             items: [
-              { id: "r-6", title: "Conception paysagère" },
-              { id: "r-7", title: "Plantation & engazonnement" },
-              { id: "r-8", title: "Terrasses & patios" },
-              { id: "r-9", title: "Systèmes d'irrigation" },
-              { id: "r-10", title: "Maintenance saisonnière" }
-            ]
-          },
-          {
-            id: "res-maintenance",
-            title: "Entretien Domestique",
-            items: [
-              { id: "r-11", title: "Plomberie & électricité" },
-              { id: "r-12", title: "Maintenance préventive" },
-              { id: "r-13", title: "Réparations d'urgence" }
+              { id: "wooden-parquet", title: "Parquet en bois" },
+              { id: "custom-carpentry", title: "Menuiserie Sur Mesure" },
+              { id: "luxury-carpet", title: "Installation de Tapis de Luxe" }
             ]
           }
         ]
       },
       commercial: {
-        label: "Commercial",
+        label: "Sociétés de Gestion",
         categories: [
           {
-            id: "com-fitout",
-            title: "Aménagement & Travaux Intérieurs",
+            id: "property-management",
+            title: "Gestion Immobilière Complète",
             items: [
-              { id: "c-1", title: "Aménagement magasin & bureau" },
-              { id: "c-2", title: "Cloisons & faux plafonds" },
-              { id: "c-3", title: "Traitement acoustique" },
-              { id: "c-4", title: "Revêtements commerciaux" }
+              { id: "general-maintenance", title: "Maintenance Générale" },
+              { id: "house-maintenance", title: "Entretien de Maison" },
+              { id: "gardening-services", title: "Services de Jardinage" }
             ]
           },
           {
-            id: "com-civil",
-            title: "Travaux Civils & Site",
+            id: "surface-finish",
+            title: "Finition de Surface Premium",
             items: [
-              { id: "c-5", title: "Travaux structurels mineurs" },
-              { id: "c-6", title: "Réparations de façade" },
-              { id: "c-7", title: "Aménagements extérieurs" }
+              { id: "tile-specialist", title: "Spécialiste Carrelage" },
+              { id: "painting-expert", title: "Expert Peinture" },
+              { id: "ornamental-plasterwork", title: "Plâtrerie Ornementale" }
             ]
           },
           {
-            id: "com-services",
-            title: "Installations & Maintenance",
+            id: "exterior-construction",
+            title: "Expertise en Construction Extérieure",
             items: [
-              { id: "c-8", title: "Maintenance programmée bâtiments" },
-              { id: "c-9", title: "Support gestion immobilière" },
-              { id: "c-10", title: "Intervention d'urgence & réparations" }
+              { id: "excellence-roofing", title: "Excellence en Toiture" },
+              { id: "advanced-waterproofing", title: "Étanchéité Avancée" },
+              { id: "facade-renovation", title: "Rénovation de Façade" },
+              { id: "ecological-building", title: "Construction Écologique" }
             ]
           }
         ]

@@ -10,7 +10,7 @@ import after3 from "@/assets/service-construction.jpg";
 import before4 from "@/assets/service-garden.jpg";
 import after4 from "@/assets/hero-home.jpg";
 
-import useLocale from "@/lib/useLocale";
+import { useLocale } from "@/lib/locale-context";
 
 const Portfolio = () => {
   const t = useLocale();

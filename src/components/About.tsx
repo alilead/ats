@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Zap, Award, Users, Clock, Star } from "lucide-react";
-import useLocale from "@/lib/useLocale";
+import { useLocale } from "@/lib/locale-context";
 
 const About = () => {
   const t = useLocale();

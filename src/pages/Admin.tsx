@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import netlifyIdentity from "netlify-identity-widget";
-import useLocale from "@/lib/useLocale";
+import { useLocale } from "@/lib/locale-context";
 
 const ADMIN_PASSWORD = "ATSadmin56*"; // change in production or wire env var
 

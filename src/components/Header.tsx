@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import atsLogo from "@/assets/ats-logo.png";
-import useLocale from "@/lib/useLocale";
+import { useLocale } from "@/lib/locale-context";
 import LanguageSelector from "./LanguageSelector";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const t = useLocale();
+  const { setLocale, ...t } = useLocale();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ const Header = () => {
   const handleNavigation = (id: string) => {
     // If we're not on the home page, navigate to home first, then scroll
     if (location.pathname !== '/') {
-      navigate(`/?lang=${t.lang}#${id}`);
+      navigate(`/#${id}`);
       // Small delay to ensure the page loads before scrolling
       setTimeout(() => {
         const element = document.getElementById(id);
@@ -50,7 +50,7 @@ const Header = () => {
             <button 
               onClick={() => {
                 if (location.pathname !== '/') {
-                  navigate(`/?lang=${t.lang}`);
+                  navigate('/');
                 }
               }}
               className="cursor-pointer"
@@ -118,20 +118,14 @@ const Header = () => {
                 <div className="flex gap-2 mt-3">
                   <button 
                     aria-label="Français" 
-                    onClick={() => {
-                      t.setLocale('fr');
-                      setTimeout(() => window.location.reload(), 100);
-                    }} 
+                    onClick={() => setLocale('fr')} 
                     className={`px-2 py-1 rounded transition-colors ${t.lang === 'fr' ? 'bg-accent text-white' : 'text-white/80 hover:text-white'}`}
                   >
                     🇫🇷
                   </button>
                   <button 
                     aria-label="English" 
-                    onClick={() => {
-                      t.setLocale('en');
-                      setTimeout(() => window.location.reload(), 100);
-                    }} 
+                    onClick={() => setLocale('en')} 
                     className={`px-2 py-1 rounded transition-colors ${t.lang === 'en' ? 'bg-accent text-white' : 'text-white/80 hover:text-white'}`}
                   >
                     🇬🇧

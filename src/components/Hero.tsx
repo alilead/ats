@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
-import useLocale from "@/lib/useLocale";
+import { useLocale } from "@/lib/locale-context";
 
 const Hero = () => {
   const { hero } = useLocale();

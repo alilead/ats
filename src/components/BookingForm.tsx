@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import useLocale from "@/lib/useLocale";
+import { useLocale } from "@/lib/locale-context";
 
 type BookingFormProps = {
+  categoryId?: string;
   service?: string;
   onClose?: () => void;
   audience?: 'residential' | 'commercial';
@@ -21,7 +22,7 @@ const timeSlots = [
   "17:00-18:00",
 ];
 
-export default function BookingForm({ service, onClose, audience }: BookingFormProps) {
+export default function BookingForm({ categoryId, service, onClose, audience }: BookingFormProps) {
   const t = useLocale();
   const [date, setDate] = useState("");
   const [selectedSlots, setSelectedSlots] = useState<string[]>([]);
@@ -36,6 +37,25 @@ export default function BookingForm({ service, onClose, audience }: BookingFormP
   const [consent, setConsent] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const dateRef = useRef<HTMLInputElement | null>(null);
+
+  // Get filtered services based on category
+  const getAvailableServices = () => {
+    if (!categoryId || !audience) {
+      return [...t.bookingForm.tasksList, t.contact.services.other || "Other"];
+    }
+    
+    const audienceData = t.services.serviceData[audience];
+    const category = audienceData?.categories.find(cat => cat.id === categoryId);
+    
+    if (category) {
+      const categoryServices = category.items.map(item => item.title);
+      return [...categoryServices, t.contact.services.other || "Other"];
+    }
+    
+    return [...t.bookingForm.tasksList, t.contact.services.other || "Other"];
+  };
+
+  const availableServices = getAvailableServices();
 
   useEffect(() => {
     // scroll the form into view within the modal and focus the date input
@@ -139,7 +159,7 @@ export default function BookingForm({ service, onClose, audience }: BookingFormP
       <fieldset className="mb-4">
         <legend className="block mb-2 text-sm font-medium">{t.bookingForm.tasks} <span aria-hidden="true">*</span></legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2" role="group" aria-label={t.bookingForm.tasks}>
-          {t.bookingForm.tasksList.map((task) => (
+          {availableServices.map((task) => (
             <button
               key={task}
               type="button"

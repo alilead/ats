@@ -6,11 +6,11 @@ import gardenImage from "@/assets/service-garden.jpg";
 import maintenanceImage from "@/assets/service-maintenance.jpg";
 import { useState, useEffect } from "react";
 import BookingForm from "@/components/BookingForm";
-import useLocale from "@/lib/useLocale";
+import { useLocale } from "@/lib/locale-context";
 const Services = () => {
   const t = useLocale();
 
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<{categoryId: string, title: string} | null>(null);
   const [audience, setAudience] = useState<'residential' | 'commercial'>('residential');
   const currentAudience = t.services.serviceData[audience];
 
@@ -54,7 +54,7 @@ const Services = () => {
                     </div>
                   ))}
                 </div>
-                <Button variant="accent" className="w-full" onClick={() => setSelectedService(category.title)}>
+                <Button variant="accent" className="w-full" onClick={() => setSelectedCategory({categoryId: category.id, title: category.title})}>
                   {t.services.book}
                 </Button>
               </div>
@@ -79,11 +79,11 @@ const Services = () => {
         </div>
 
         {/* Booking Modal */}
-        {selectedService && (
-          <div className="fixed inset-0 z-50 overflow-auto bg-black/50" role="dialog" aria-modal="true" onClick={() => setSelectedService(null)}>
+        {selectedCategory && (
+          <div className="fixed inset-0 z-50 overflow-auto bg-black/50" role="dialog" aria-modal="true" onClick={() => setSelectedCategory(null)}>
             <div className="min-h-screen flex items-start md:items-center justify-center py-8 px-4">
               <div className="max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
-                <BookingForm service={selectedService} audience={audience} onClose={() => setSelectedService(null)} />
+                <BookingForm categoryId={selectedCategory.categoryId} service={selectedCategory.title} audience={audience} onClose={() => setSelectedCategory(null)} />
               </div>
             </div>
           </div>

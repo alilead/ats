@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import useLocale from "@/lib/useLocale";
+import { useLocale } from "@/lib/locale-context";
 
 const Contact = () => {
   const { toast } = useToast();
