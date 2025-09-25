@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
-import atsLogo from "@/assets/ats-logo.png";
+import newLogo from "@/assets/new-logo.jpeg";
 import { useLocale } from "@/lib/locale-context";
 import LanguageSelector from "./LanguageSelector";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -44,7 +44,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <button 
@@ -56,15 +56,15 @@ const Header = () => {
               className="cursor-pointer"
             >
               <img 
-                src={atsLogo} 
+                src={newLogo} 
                 alt="ATS Générale Logo"
-                className="h-12 w-auto"
+                className="h-8 md:h-12 w-auto"
               />
             </button>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -82,8 +82,8 @@ const Header = () => {
               <Phone className="w-4 h-4 mr-2" />
               +41 77 288 38 38
             </a>
-            <Button variant="accent" className="" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
-              <LanguageSelector />
+            <Button variant="accent" className="mx-2" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
+            <LanguageSelector />
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,24 +97,24 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border">
-            <nav className="flex flex-col space-y-4">
+          <div className="lg:hidden py-6 border-t border-border">
+            <nav className="flex flex-col space-y-6">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavigation(item.id)}
-                  className="text-black hover:text-accent transition-colors py-2 text-left"
+                  className="text-black hover:text-accent transition-colors py-3 text-left text-lg"
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="pt-4 border-t border-border mt-4">
-                <a href="tel:+41772883838" className="flex items-center text-black/90 hover:text-accent transition-colors mb-4">
-                  <Phone className="w-4 h-4 mr-2" />
+              <div className="pt-6 border-t border-border mt-6">
+                <a href="tel:+41772883838" className="flex items-center text-black/90 hover:text-accent transition-colors mb-6 text-lg">
+                  <Phone className="w-5 h-5 mr-3" />
                   +41 77 288 38 38
                 </a>
-                <Button variant="accent" className="w-full" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
-                <div className="flex gap-2 mt-3">
+                <Button variant="accent" className="w-full mb-4" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
+                <div className="flex gap-3 mt-4">
                   <button 
                     aria-label="Français" 
                     onClick={() => setLocale('fr')} 
