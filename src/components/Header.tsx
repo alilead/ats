@@ -84,7 +84,6 @@ const Header = () => {
             </a>
             <Button variant="accent" className="" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
               <LanguageSelector />
-              <a href="/admin" className="text-white hover:text-accent transition-colors">{t.navigation.admin}</a>
           </div>
 
           {/* Mobile Menu Button */}
