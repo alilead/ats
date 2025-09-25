@@ -9,6 +9,8 @@ import useLocale from "@/lib/useLocale";
 
 const Contact = () => {
   const { toast } = useToast();
+  const t = useLocale();
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,35 +31,33 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Téléphone",
+      title: t.contact.info.phone.title,
       content: "+41 22 345 67 89",
       action: "tel:+41223456789",
-      description: "Lun-Ven 8h-18h, Sam 9h-16h"
+      description: t.contact.info.phone.description
     },
     {
       icon: MessageCircle,
-      title: "WhatsApp",
+      title: t.contact.info.whatsapp.title,
       content: "+41 78 901 23 45",
       action: "https://wa.me/41789012345",
-      description: "Réponse rapide 7j/7"
+      description: t.contact.info.whatsapp.description
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t.contact.info.email.title,
       content: "contact@atsgenerale.ch",
       action: "mailto:contact@atsgenerale.ch",
-      description: "Réponse sous 24h"
+      description: t.contact.info.email.description
     },
     {
       icon: MapPin,
-      title: "Adresse",
+      title: t.contact.info.address.title,
       content: "Avenue de la Paix 15, 1202 Genève",
       action: "https://maps.google.com/?q=Avenue+de+la+Paix+15+1202+Genève",
-      description: "Zone de service : Genève et région"
+      description: t.contact.info.address.description
     }
   ];
-
-  const t = useLocale();
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-muted/30 to-background">
@@ -119,9 +119,9 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="sr-only">Type de service</label>
+                      <label className="sr-only">{t.contact.form.serviceLabel}</label>
                         <select 
-                        aria-label="Type de service"
+                        aria-label={t.contact.form.serviceLabel}
                         className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm"
                         value={formData.service}
                         onChange={(e) => setFormData({...formData, service: e.target.value})}

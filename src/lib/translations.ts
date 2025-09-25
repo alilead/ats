@@ -204,8 +204,27 @@ const en = {
       messagePlaceholder: "Describe your project, your needs, desired timelines...",
       successTitle: "Message sent!",
       successDescription: "We will contact you as soon as possible.",
-      formDescription: "Fill out this form and receive a personalized response within 24h."
+      formDescription: "Fill out this form and receive a personalized response within 24h.",
+      serviceLabel: "Service type"
     },
+    info: {
+      phone: {
+        title: "Phone",
+        description: "Mon-Fri 8am-6pm, Sat 9am-4pm"
+      },
+      whatsapp: {
+        title: "WhatsApp", 
+        description: "Fast response 7 days a week"
+      },
+      email: {
+        title: "Email",
+        description: "Response within 24 hours"
+      },
+      address: {
+        title: "Address",
+        description: "Service area: Geneva and region"
+      }
+    }
     services: {
       construction: "Construction & Renovation",
       garden: "Garden & Landscaping",
@@ -489,7 +508,26 @@ const fr = {
       messagePlaceholder: "Décrivez votre projet, vos besoins, échéances souhaitées...",
       successTitle: "Message envoyé !",
       successDescription: "Nous vous contacterons dans les plus brefs délais.",
-      formDescription: "Remplissez ce formulaire et recevez une réponse personnalisée sous 24h."
+      formDescription: "Remplissez ce formulaire et recevez une réponse personnalisée sous 24h.",
+      serviceLabel: "Type de service"
+    },
+    info: {
+      phone: {
+        title: "Téléphone",
+        description: "Lun-Ven 8h-18h, Sam 9h-16h"
+      },
+      whatsapp: {
+        title: "WhatsApp", 
+        description: "Réponse rapide 7j/7"
+      },
+      email: {
+        title: "Email",
+        description: "Réponse sous 24h"
+      },
+      address: {
+        title: "Adresse",
+        description: "Zone de service : Genève et région"
+      }
     },
     services: {
       construction: "Construction & Rénovation",
