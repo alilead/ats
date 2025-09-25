@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
-import newLogo from "@/assets/new-logo.jpeg";
+import atsLogoNew from "@/assets/ats-logo-new.png";
 import { useLocale } from "@/lib/locale-context";
 import LanguageSelector from "./LanguageSelector";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -56,7 +56,7 @@ const Header = () => {
               className="cursor-pointer"
             >
               <img 
-                src={newLogo} 
+                src={atsLogoNew} 
                 alt="ATS Générale Logo"
                 className="h-8 md:h-12 w-auto"
               />
