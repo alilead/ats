@@ -14,44 +14,15 @@ import useLocale from "@/lib/useLocale";
 
 const Portfolio = () => {
   const t = useLocale();
-  const projects = [
-    {
-      id: 1,
-      title: "Rénovation Villa Luxury - Cologny",
-      category: "Rénovation Complète",
-      description: "Transformation complète d'une villa de 400m² avec finitions haut de gamme, terrasse panoramique et jardin paysager.",
-  beforeImage: before1,
-  afterImage: after1,
-      highlights: ["Rénovation 6 mois", "Matériaux premium", "Design sur mesure"]
-    },
-    {
-      id: 2,
-      title: "Aménagement Jardin Contemporain - Genève",
-      category: "Aménagement Paysager",
-      description: "Création d'un jardin contemporain avec piscine naturelle, éclairage intégré et système d'arrosage automatique.",
-  beforeImage: before2,
-  afterImage: after2,
-      highlights: ["Piscine écologique", "Éclairage LED", "Irrigation smart"]
-    },
-    {
-      id: 3,
-      title: "Rénovation Penthouse - Centre Genève",
-      category: "Rénovation Intérieure",
-      description: "Modernisation complète d'un penthouse avec cuisine ouverte, sols en marbre et système domotique intégré.",
-  beforeImage: before3,
-  afterImage: after3,
-      highlights: ["Domotique avancée", "Marbre italien", "Design moderne"]
-    },
-    {
-      id: 4,
-      title: "Extension Maison Familiale - Nyon",
-      category: "Construction",
-      description: "Extension de 80m² avec véranda bioclimatique, bureau et suite parentale avec vue sur le lac Léman.",
-  beforeImage: before4,
-  afterImage: after4,
-      highlights: ["Vue lac Léman", "Véranda bioclimatique", "Suite parentale"]
-    }
-  ];
+  
+  const beforeImages = [before1, before2, before3, before4];
+  const afterImages = [after1, after2, after3, after4];
+  
+  const projects = t.portfolio.projects.map((project, index) => ({
+    ...project,
+    beforeImage: beforeImages[index],
+    afterImage: afterImages[index]
+  }));
 
   return (
   <section id="realisations" className="py-12 md:py-20 bg-gradient-to-b from-background to-muted/30">
@@ -63,7 +34,7 @@ const Portfolio = () => {
           </div>
           <h2 className="text-foreground mb-6">{t.portfolio.header}</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {"Découvrez quelques-unes de nos réalisations les plus remarquables, témoins de notre expertise et de notre engagement envers l'excellence."}
+            {t.portfolio.description}
           </p>
         </div>
 
@@ -78,22 +49,22 @@ const Portfolio = () => {
                   <div className="relative overflow-hidden">
                     <img 
                       src={project.beforeImage} 
-                      alt="Avant transformation"
+                      alt={t.portfolio.before}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                      Avant
+                      {t.portfolio.before}
                     </div>
                   </div>
                   {/* After */}
                   <div className="relative overflow-hidden">
                     <img 
                       src={project.afterImage} 
-                      alt="Après transformation"
+                      alt={t.portfolio.after}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute bottom-2 right-2 bg-accent text-accent-foreground text-xs px-2 py-1 rounded">
-                      Après
+                      {t.portfolio.after}
                     </div>
                   </div>
                 </div>
@@ -137,7 +108,7 @@ const Portfolio = () => {
                 </div>
 
                 <Button variant="outline" className="w-full group/btn">
-                  Découvrir ce projet
+                  {t.portfolio.projectCta}
                   <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
@@ -149,11 +120,10 @@ const Portfolio = () => {
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl p-8">
             <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Votre projet nous intéresse
+              {t.portfolio.interestTitle}
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Chaque projet est unique et mérite une attention particulière. 
-              Parlons de vos ambitions et créons ensemble quelque chose d'exceptionnel.
+              {t.portfolio.interestDescription}
             </p>
             <Button size="lg" variant="accent" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               {t.services.consultation}

@@ -20,8 +20,8 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message envoyé !",
-      description: "Nous vous contacterons dans les plus brefs délais.",
+      title: t.contact.form.successTitle,
+      description: t.contact.form.successDescription,
     });
     setFormData({ name: "", email: "", phone: "", service: "", message: "" });
   };
@@ -82,7 +82,7 @@ const Contact = () => {
                 <CardHeader>
                 <CardTitle>{t.hero.ctaPrimary}</CardTitle>
                 <p className="text-muted-foreground">
-                  {"Remplissez ce formulaire et recevez une réponse personnalisée sous 24h."}
+                  {t.contact.form.formDescription}
                 </p>
               </CardHeader>
               <CardContent>
@@ -94,7 +94,7 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        placeholder="Votre nom et prénom"
+                        placeholder={t.contact.form.namePlaceholder}
                       />
                     </div>
                     <div>
@@ -104,7 +104,7 @@ const Contact = () => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        placeholder="votre.email@exemple.com"
+                        placeholder={t.contact.form.emailPlaceholder}
                       />
                     </div>
                   </div>
@@ -115,7 +115,7 @@ const Contact = () => {
                       <Input
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        placeholder="+41 xx xxx xx xx"
+                        placeholder={t.contact.form.phonePlaceholder}
                       />
                     </div>
                     <div>
@@ -127,11 +127,11 @@ const Contact = () => {
                         onChange={(e) => setFormData({...formData, service: e.target.value})}
                       >
                           <option value="">{t.contact.form.service}</option>
-                          <option value="construction">Construction & Rénovation</option>
-                          <option value="jardin">Jardin & Aménagement</option>
-                          <option value="entretien">Entretien & Maintenance</option>
-                          <option value="urgence">Service d'urgence</option>
-                          <option value="autre">Autre / Plusieurs services</option>
+                          <option value="construction">{t.contact.services.construction}</option>
+                          <option value="jardin">{t.contact.services.garden}</option>
+                          <option value="entretien">{t.contact.services.maintenance}</option>
+                          <option value="urgence">{t.contact.services.emergency}</option>
+                          <option value="autre">{t.contact.services.other}</option>
                       </select>
                     </div>
                   </div>
@@ -142,7 +142,7 @@ const Contact = () => {
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      placeholder="Décrivez votre projet, vos besoins, échéances souhaitées..."
+                      placeholder={t.contact.form.messagePlaceholder}
                       rows={5}
                     />
                   </div>
@@ -154,7 +154,7 @@ const Contact = () => {
                       variant="accent"
                       className="flex-1"
                     >
-                      {t.booking.submit}
+                      {t.contact.form.submit}
                     </Button>
                     
                     <Button 

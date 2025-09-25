@@ -20,10 +20,119 @@ const en = {
     consultation: "Free Consultation",
     audienceResidential: "Residential",
     audienceCommercial: "Commercial",
+    customServiceTitle: "Need a personalized service?",
+    customServiceDescription: "Every project is unique. Contact us to discuss your specific needs and receive a free consultation.",
+    serviceData: {
+      residential: {
+        label: "Residential",
+        categories: [
+          {
+            id: "res-construction",
+            title: "Construction & Renovation",
+            items: [
+              { id: "r-1", title: "Interior renovation" },
+              { id: "r-2", title: "Plastering and drywall" },
+              { id: "r-3", title: "Flooring & tiling" },
+              { id: "r-4", title: "Painting & coatings" },
+              { id: "r-5", title: "Bathroom & kitchen refit" }
+            ]
+          },
+          {
+            id: "res-garden",
+            title: "Garden & Landscaping",
+            items: [
+              { id: "r-6", title: "Landscape design" },
+              { id: "r-7", title: "Planting & turf" },
+              { id: "r-8", title: "Patios & terraces" },
+              { id: "r-9", title: "Irrigation systems" },
+              { id: "r-10", title: "Seasonal maintenance" }
+            ]
+          },
+          {
+            id: "res-maintenance",
+            title: "Home Maintenance",
+            items: [
+              { id: "r-11", title: "Plumbing & electrics" },
+              { id: "r-12", title: "Preventive maintenance" },
+              { id: "r-13", title: "Emergency repairs" }
+            ]
+          }
+        ]
+      },
+      commercial: {
+        label: "Commercial",
+        categories: [
+          {
+            id: "com-fitout",
+            title: "Fit-out & Interior Works",
+            items: [
+              { id: "c-1", title: "Shop & office fit-out" },
+              { id: "c-2", title: "Partitioning & ceilings" },
+              { id: "c-3", title: "Acoustic treatment" },
+              { id: "c-4", title: "Commercial flooring" }
+            ]
+          },
+          {
+            id: "com-civil",
+            title: "Civil & Site Works",
+            items: [
+              { id: "c-5", title: "Minor structural works" },
+              { id: "c-6", title: "Facade repairs" },
+              { id: "c-7", title: "External hardscapes" }
+            ]
+          },
+          {
+            id: "com-services",
+            title: "Facilities & Maintenance",
+            items: [
+              { id: "c-8", title: "Scheduled building maintenance" },
+              { id: "c-9", title: "Property management support" },
+              { id: "c-10", title: "Emergency response & repairs" }
+            ]
+          }
+        ]
+      }
+    }
   },
   portfolio: {
     header: "Our Exceptional Projects",
     cta: "Discover this project",
+    description: "Discover some of our most remarkable achievements, witnesses to our expertise and our commitment to excellence.",
+    projectCta: "Discover this project",
+    interestTitle: "Your project interests us",
+    interestDescription: "Every project is unique and deserves special attention. Let's talk about your ambitions and create something exceptional together.",
+    before: "Before",
+    after: "After",
+    projects: [
+      {
+        id: 1,
+        title: "Luxury Villa Renovation - Cologny",
+        category: "Complete Renovation",
+        description: "Complete transformation of a 400m² villa with high-end finishes, panoramic terrace and landscaped garden.",
+        highlights: ["6-month renovation", "Premium materials", "Custom design"]
+      },
+      {
+        id: 2,
+        title: "Contemporary Garden Design - Geneva",
+        category: "Landscape Architecture",
+        description: "Creation of a contemporary garden with natural pool, integrated lighting and automatic irrigation system.",
+        highlights: ["Ecological pool", "LED lighting", "Smart irrigation"]
+      },
+      {
+        id: 3,
+        title: "Penthouse Renovation - Geneva Center",
+        category: "Interior Renovation",
+        description: "Complete modernization of a penthouse with open kitchen, marble floors and integrated home automation system.",
+        highlights: ["Advanced automation", "Italian marble", "Modern design"]
+      },
+      {
+        id: 4,
+        title: "Family Home Extension - Nyon",
+        category: "Construction",
+        description: "80m² extension with bioclimatic conservatory, office and master suite with Lake Geneva view.",
+        highlights: ["Lake Geneva view", "Bioclimatic conservatory", "Master suite"]
+      }
+    ]
   },
   booking: {
     title: "Book a service",
@@ -88,7 +197,21 @@ const en = {
       service: "Select a service",
       message: "Project description *",
       submit: "Submit",
-      call: "Call now"
+      call: "Call now",
+      namePlaceholder: "Your first and last name",
+      emailPlaceholder: "your.email@example.com",
+      phonePlaceholder: "+41 xx xxx xx xx",
+      messagePlaceholder: "Describe your project, your needs, desired timelines...",
+      successTitle: "Message sent!",
+      successDescription: "We will contact you as soon as possible.",
+      formDescription: "Fill out this form and receive a personalized response within 24h."
+    },
+    services: {
+      construction: "Construction & Renovation",
+      garden: "Garden & Landscaping",
+      maintenance: "Maintenance & Upkeep",
+      emergency: "Emergency service",
+      other: "Other / Multiple services"
     }
   },
   navigation: {
@@ -177,15 +300,124 @@ const fr = {
   services: {
     headerSmall: "Services Premium",
     headerTitle: "Nos Services Complets",
-    description: "De la conception à la réalisation, nous couvrons tous vos besoins pour la maison et le jardin avec l'expertise suisse que vous méнитеz.",
+    description: "De la conception à la réalisation, nous couvrons tous vos besoins pour la maison et le jardin avec l'expertise suisse que vous méритez.",
     book: "Réserver ce service",
     consultation: "Consultation Gratuite",
     audienceResidential: "Résidentiel",
     audienceCommercial: "Commercial",
+    customServiceTitle: "Besoin d'un service personnalisé ?",
+    customServiceDescription: "Chaque projet est unique. Contactez-nous pour discuter de vos besoins spécifiques et recevoir une consultation gratuite.",
+    serviceData: {
+      residential: {
+        label: "Résidentiel",
+        categories: [
+          {
+            id: "res-construction",
+            title: "Construction & Rénovation",
+            items: [
+              { id: "r-1", title: "Rénovation intérieure" },
+              { id: "r-2", title: "Plâtrerie et cloisons sèches" },
+              { id: "r-3", title: "Revêtements de sol & carrelage" },
+              { id: "r-4", title: "Peinture & revêtements" },
+              { id: "r-5", title: "Rénovation salle de bain & cuisine" }
+            ]
+          },
+          {
+            id: "res-garden",
+            title: "Jardin & Aménagement Paysager",
+            items: [
+              { id: "r-6", title: "Conception paysagère" },
+              { id: "r-7", title: "Plantation & engazonnement" },
+              { id: "r-8", title: "Terrasses & patios" },
+              { id: "r-9", title: "Systèmes d'irrigation" },
+              { id: "r-10", title: "Maintenance saisonnière" }
+            ]
+          },
+          {
+            id: "res-maintenance",
+            title: "Entretien Domestique",
+            items: [
+              { id: "r-11", title: "Plomberie & électricité" },
+              { id: "r-12", title: "Maintenance préventive" },
+              { id: "r-13", title: "Réparations d'urgence" }
+            ]
+          }
+        ]
+      },
+      commercial: {
+        label: "Commercial",
+        categories: [
+          {
+            id: "com-fitout",
+            title: "Aménagement & Travaux Intérieurs",
+            items: [
+              { id: "c-1", title: "Aménagement magasin & bureau" },
+              { id: "c-2", title: "Cloisons & faux plafonds" },
+              { id: "c-3", title: "Traitement acoustique" },
+              { id: "c-4", title: "Revêtements commerciaux" }
+            ]
+          },
+          {
+            id: "com-civil",
+            title: "Travaux Civils & Site",
+            items: [
+              { id: "c-5", title: "Travaux structurels mineurs" },
+              { id: "c-6", title: "Réparations de façade" },
+              { id: "c-7", title: "Aménagements extérieurs" }
+            ]
+          },
+          {
+            id: "com-services",
+            title: "Installations & Maintenance",
+            items: [
+              { id: "c-8", title: "Maintenance programmée bâtiments" },
+              { id: "c-9", title: "Support gestion immobilière" },
+              { id: "c-10", title: "Intervention d'urgence & réparations" }
+            ]
+          }
+        ]
+      }
+    }
   },
   portfolio: {
     header: "Nos Projets d'Exception",
     cta: "Découvrir ce projet",
+    description: "Découvrez quelques-unes de nos réalisations les plus remarquables, témoins de notre expertise et de notre engagement envers l'excellence.",
+    projectCta: "Découvrir ce projet",
+    interestTitle: "Votre projet nous intéresse",
+    interestDescription: "Chaque projet est unique et mérite une attention particulière. Parlons de vos ambitions et créons ensemble quelque chose d'exceptionnel.",
+    before: "Avant",
+    after: "Après",
+    projects: [
+      {
+        id: 1,
+        title: "Rénovation Villa Luxury - Cologny",
+        category: "Rénovation Complète",
+        description: "Transformation complète d'une villa de 400m² avec finitions haut de gamme, terrasse panoramique et jardin paysager.",
+        highlights: ["Rénovation 6 mois", "Matériaux premium", "Design sur mesure"]
+      },
+      {
+        id: 2,
+        title: "Aménagement Jardin Contemporain - Genève",
+        category: "Aménagement Paysager",
+        description: "Création d'un jardin contemporain avec piscine naturelle, éclairage intégré et système d'arrosage automatique.",
+        highlights: ["Piscine écologique", "Éclairage LED", "Irrigation smart"]
+      },
+      {
+        id: 3,
+        title: "Rénovation Penthouse - Centre Genève",
+        category: "Rénovation Intérieure",
+        description: "Modernisation complète d'un penthouse avec cuisine ouverte, sols en marbre et système domotique intégré.",
+        highlights: ["Domotique avancée", "Marbre italien", "Design moderne"]
+      },
+      {
+        id: 4,
+        title: "Extension Maison Familiale - Nyon",
+        category: "Construction",
+        description: "Extension de 80m² avec véranda bioclimatique, bureau et suite parentale avec vue sur le lac Léman.",
+        highlights: ["Vue lac Léman", "Véranda bioclimatique", "Suite parentale"]
+      }
+    ]
   },
   booking: {
     title: "Commander un service",
@@ -250,7 +482,21 @@ const fr = {
       service: "Sélectionnez un service",
       message: "Description du projet *",
       submit: "Envoyer",
-      call: "Appeler maintenant"
+      call: "Appeler maintenant",
+      namePlaceholder: "Votre nom et prénom",
+      emailPlaceholder: "votre.email@exemple.com",
+      phonePlaceholder: "+41 xx xxx xx xx",
+      messagePlaceholder: "Décrivez votre projet, vos besoins, échéances souhaitées...",
+      successTitle: "Message envoyé !",
+      successDescription: "Nous vous contacterons dans les plus brefs délais.",
+      formDescription: "Remplissez ce formulaire et recevez une réponse personnalisée sous 24h."
+    },
+    services: {
+      construction: "Construction & Rénovation",
+      garden: "Jardin & Aménagement",
+      maintenance: "Entretien & Maintenance",
+      emergency: "Service d'urgence",
+      other: "Autre / Plusieurs services"
     }
   },
   navigation: {

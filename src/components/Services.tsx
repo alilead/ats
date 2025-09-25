@@ -7,60 +7,12 @@ import maintenanceImage from "@/assets/service-maintenance.jpg";
 import { useState, useEffect } from "react";
 import BookingForm from "@/components/BookingForm";
 import useLocale from "@/lib/useLocale";
-import servicesData, { AudienceServices } from "@/lib/servicesData";
-
 const Services = () => {
-  const serviceCategories = [
-    {
-      title: "Construction & Rénovation",
-      image: constructionImage,
-      description: "Solutions complètes pour vos projets de construction et rénovation intérieure/extérieure.",
-      services: [
-        "Maçonnerie et travaux de pierre",
-        "Peinture & revêtements spécialisés",
-        "Plâtrerie et cloisons sèches",
-        "Carrelage de précision",
-        "Installation de revêtements de sol",
-        "Services de toiture complets",
-        "Isolation thermique et acoustique"
-      ],
-      color: "accent"
-    },
-    {
-      title: "Jardin & Aménagement Paysager",
-      image: gardenImage,
-      description: "Création et entretien d'espaces verts exceptionnels pour sublimer votre propriété.",
-      services: [
-        "Conception paysagère sur mesure",
-        "Plantation et aménagement",
-        "Entretien de jardins premium",
-        "Installation d'arrosage automatique",
-        "Création de terrasses et allées",
-        "Éclairage paysager",
-        "Maintenance saisonnière"
-      ],
-      color: "green-fresh"
-    },
-    {
-      title: "Entretien & Services Complets",
-      image: maintenanceImage,
-      description: "Services d'entretien professionnels pour maintenir votre propriété en parfait état.",
-      services: [
-        "Plomberie et électricité",
-        "Nettoyage professionnel",
-        "Maintenance préventive",
-        "Services de déménagement",
-        "Réparations d'urgence",
-        "Entretien régulier",
-        "Gestion complète de propriété"
-      ],
-      color: "navy-medium"
-    }
-  ];
+  const t = useLocale();
 
   const [selectedService, setSelectedService] = useState<string | null>(null);
-  const [audience, setAudience] = useState<'residential' | 'commercial'>(servicesData[0].key);
-  const currentAudience: AudienceServices | undefined = servicesData.find(s => s.key === audience);
+  const [audience, setAudience] = useState<'residential' | 'commercial'>('residential');
+  const currentAudience = t.services.serviceData[audience];
 
   return (
   <section id="services" className="py-12 md:py-20 bg-gradient-to-b from-muted/30 to-background">
@@ -68,23 +20,23 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent font-medium mb-4">
-            {useLocale().services.headerSmall}
+            {t.services.headerSmall}
           </div>
           <h2 className="text-foreground mb-6">
-            {useLocale().services.headerTitle}
+            {t.services.headerTitle}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {useLocale().services.description}
+            {t.services.description}
           </p>
         </div>
 
         {/* Audience selector */}
         <div className="flex justify-center gap-4 mb-8">
           <button onClick={() => setAudience('residential')} className={`px-4 py-2 rounded-full border ${audience === 'residential' ? 'bg-accent text-white' : 'bg-white/30 text-primary'}`}>
-            {useLocale().services.audienceResidential}
+            {t.services.audienceResidential}
           </button>
           <button onClick={() => setAudience('commercial')} className={`px-4 py-2 rounded-full border ${audience === 'commercial' ? 'bg-accent text-white' : 'bg-white/30 text-primary'}`}>
-            {useLocale().services.audienceCommercial}
+            {t.services.audienceCommercial}
           </button>
         </div>
 
@@ -103,7 +55,7 @@ const Services = () => {
                   ))}
                 </div>
                 <Button variant="accent" className="w-full" onClick={() => setSelectedService(category.title)}>
-                  {useLocale().services.book}
+                  {t.services.book}
                 </Button>
               </div>
             </Card>
@@ -114,14 +66,13 @@ const Services = () => {
         <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-accent/5 via-accent/10 to-accent/5 rounded-2xl p-8">
             <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Besoin d'un service personnalisé ?
+              {t.services.customServiceTitle}
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Chaque projet est unique. Contactez-nous pour discuter de vos besoins 
-              spécifiques et recevoir une consultation gratuite.
+              {t.services.customServiceDescription}
             </p>
             <Button size="lg" variant="accent" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              {useLocale().services.consultation}
+              {t.services.consultation}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
