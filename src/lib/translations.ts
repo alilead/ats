@@ -47,6 +47,48 @@ const en = {
               { id: "custom-carpentry", title: "Custom Carpentry" },
               { id: "luxury-carpet", title: "Luxury Carpet Installation" }
             ]
+          },
+          {
+            id: "gardening-landscaping",
+            title: "Gardening and Landscaping Services",
+            items: [
+              { id: "lawn-maintenance", title: "Lawn Maintenance and Care" },
+              { id: "tree-shrub-care", title: "Tree and Shrub Care" },
+              { id: "landscape-design", title: "Landscape Design" },
+              { id: "external-cleaning", title: "External Cleaning" }
+            ]
+          },
+          {
+            id: "renovation-work",
+            title: "Renovation Work",
+            items: [
+              { id: "general-repairs", title: "General Repairs" },
+              { id: "assembly-furniture", title: "Assembly of Furniture" },
+              { id: "handyman-services", title: "Handyman Services" },
+              { id: "plumbing-services", title: "Plumbing Services" },
+              { id: "locksmith-services", title: "Locksmith Services" }
+            ]
+          },
+          {
+            id: "cleaning-maintenance",
+            title: "Cleaning & Maintenance",
+            items: [
+              { id: "residential-cleaning", title: "Residential Cleaning" },
+              { id: "disinfection-services", title: "Disinfection Services" },
+              { id: "office-maintenance", title: "Office Maintenance" },
+              { id: "cleaning-after-construction", title: "Cleaning After Construction" },
+              { id: "window-cleaning", title: "Window Cleaning" },
+              { id: "building-maintenance", title: "Building Maintenance" }
+            ]
+          },
+          {
+            id: "relocation-services",
+            title: "Relocation Services",
+            items: [
+              { id: "moving-services", title: "Fast and Reliable Moving Services" },
+              { id: "reliable-relocation", title: "Reliable Relocation Services" },
+              { id: "van-rental", title: "Van Rental Services" }
+            ]
           }
         ]
       },
@@ -341,6 +383,48 @@ const fr = {
               { id: "wooden-parquet", title: "Parquet en bois" },
               { id: "custom-carpentry", title: "Menuiserie Sur Mesure" },
               { id: "luxury-carpet", title: "Installation de Tapis de Luxe" }
+            ]
+          },
+          {
+            id: "gardening-landscaping",
+            title: "Services de Jardinage et Paysagisme",
+            items: [
+              { id: "lawn-maintenance", title: "Entretien et Soin de la Pelouse" },
+              { id: "tree-shrub-care", title: "Soins des Arbres et Arbustes" },
+              { id: "landscape-design", title: "Conception Paysagère" },
+              { id: "external-cleaning", title: "Nettoyage Extérieur" }
+            ]
+          },
+          {
+            id: "renovation-work",
+            title: "Travaux de Rénovation",
+            items: [
+              { id: "general-repairs", title: "Réparations Générales" },
+              { id: "assembly-furniture", title: "Montage de Meubles" },
+              { id: "handyman-services", title: "Services de Bricolage" },
+              { id: "plumbing-services", title: "Services de Plomberie" },
+              { id: "locksmith-services", title: "Services de Serrurerie" }
+            ]
+          },
+          {
+            id: "cleaning-maintenance",
+            title: "Nettoyage et Maintenance",
+            items: [
+              { id: "residential-cleaning", title: "Nettoyage Résidentiel" },
+              { id: "disinfection-services", title: "Services de Désinfection" },
+              { id: "office-maintenance", title: "Maintenance de Bureau" },
+              { id: "cleaning-after-construction", title: "Nettoyage Après Construction" },
+              { id: "window-cleaning", title: "Nettoyage de Vitres" },
+              { id: "building-maintenance", title: "Maintenance de Bâtiment" }
+            ]
+          },
+          {
+            id: "relocation-services",
+            title: "Services de Déménagement",
+            items: [
+              { id: "moving-services", title: "Services de Déménagement Rapides et Fiables" },
+              { id: "reliable-relocation", title: "Services de Relocalisation Fiables" },
+              { id: "van-rental", title: "Location de Camionnettes" }
             ]
           }
         ]

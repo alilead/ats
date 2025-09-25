@@ -17,6 +17,15 @@ This is a React/TypeScript frontend application for ATS (All Trade Services), a 
   - Added HMR client port configuration for Replit's proxy
   - Set up workflow for frontend development
   - Configured deployment settings for autoscale
+- **2025-09-25**: Comprehensive service additions and improvements
+  - Added 4 new service categories for Individuals section:
+    - Gardening and Landscaping Services (Lawn Maintenance, Tree & Shrub Care, Landscape Design, External Cleaning)
+    - Renovation Work (General Repairs, Furniture Assembly, Handyman Services, Plumbing, Locksmith)
+    - Cleaning & Maintenance (Residential Cleaning, Disinfection, Office Maintenance, Construction Cleanup, Window Cleaning, Building Maintenance)
+    - Relocation Services (Moving Services, Reliable Relocation, Van Rental)
+  - All services available in both French and English
+  - Centralized LocaleProvider implemented for reliable language switching
+  - Service filtering by category with "Other" option functionality
 
 ## Key Features
 - Multi-language support (language selector)
