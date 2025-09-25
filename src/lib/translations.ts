@@ -243,18 +243,22 @@ const en = {
     info: {
       phone: {
         title: "Phone",
+        content: "+41 77 288 38 38",
         description: "Mon-Fri 8am-6pm, Sat 9am-4pm"
       },
       whatsapp: {
-        title: "WhatsApp", 
+        title: "WhatsApp",
+        content: "+41 77 288 38 38", 
         description: "Fast response 7 days a week"
       },
       email: {
         title: "Email",
+        content: "contact@atsgenerale.ch",
         description: "Response within 24 hours"
       },
       address: {
         title: "Address",
+        content: "Geneva, Switzerland",
         description: "Service area: Geneva and region"
       }
     },
@@ -609,18 +613,22 @@ const fr = {
     info: {
       phone: {
         title: "Téléphone",
+        content: "+41 77 288 38 38",
         description: "Lun-Ven 8h-18h, Sam 9h-16h"
       },
       whatsapp: {
-        title: "WhatsApp", 
+        title: "WhatsApp",
+        content: "+41 77 288 38 38", 
         description: "Réponse rapide 7j/7"
       },
       email: {
         title: "Email",
+        content: "contact@atsgenerale.ch",
         description: "Réponse sous 24h"
       },
       address: {
         title: "Adresse",
+        content: "Genève, Suisse",
         description: "Zone de service : Genève et région"
       }
     },
