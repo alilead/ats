@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
-import atsLogo from "@/assets/ats-logo.png";
+import newLogo from "@/assets/new-logo.jpeg";
 import { useLocale } from "@/lib/locale-context";
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-4">
               <img 
-                src={atsLogo} 
+                src={newLogo} 
                 alt="ATS Générale Logo"
                 className="h-16 w-auto filter brightness-0 invert"
               />
