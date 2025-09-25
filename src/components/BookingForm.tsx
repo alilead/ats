@@ -126,8 +126,6 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
   return (
   <div ref={containerRef} className="max-h-[85vh] overflow-auto">
     <form onSubmit={submit} className="max-w-2xl w-full bg-white p-4 md:p-6 rounded-2xl shadow-lg">
-      <div className="mb-4 text-sm text-muted-foreground">{t.bookingForm.transparentPricing} <span className="font-semibold text-accent">{t.bookingForm.perHour}</span></div>
-
       <h3 className="text-xl font-semibold mb-4">{service ?? t.booking.title} {audience ? `· ${audience}` : ''}</h3>
 
   <label htmlFor="booking-date" className="block mb-2 text-sm font-medium">{t.bookingForm.desiredDate} <span aria-hidden="true">*</span></label>
