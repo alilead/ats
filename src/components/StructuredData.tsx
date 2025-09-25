@@ -6,10 +6,10 @@ const StructuredData = () => {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "ATS Générale",
-      "description": "Votre solution complète pour la maison et le jardin. Services premium de construction, rénovation, aménagement paysager et entretien à Genève.",
+      "description": "Votre solution complète pour la maison et le jardin. Services adaptés au besoin de construction, rénovation, aménagement paysager et entretien à Genève.",
       "url": "https://atsgenerale.ch",
       "telephone": "+41772883838",
-      "email": "contact@atsgenerale.ch",
+      "email": "info@atsgenerale.ch",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Genève",

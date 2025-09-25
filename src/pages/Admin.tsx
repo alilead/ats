@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import netlifyIdentity from "netlify-identity-widget";
 import { useLocale } from "@/lib/locale-context";
 
-const ADMIN_PASSWORD = "ATSadmin56*"; // change in production or wire env var
+// Security: Admin password removed from frontend code
+// Use environment variables or proper authentication instead
 
 function downloadCSV(data: any[]) {
   if (!data || data.length === 0) return;
@@ -95,8 +96,6 @@ export default function Admin() {
           <input placeholder={t.admin.placeholder} className="w-full mb-4 border rounded px-3 py-2" value={pw} onChange={(e)=>setPw(e.target.value)} />
           <div className="flex gap-2 mb-4">
             <Button onClick={() => {
-              // first try password mode
-              if (pw === ADMIN_PASSWORD) { setAuthorized(true); return; }
               // store token for server calls
               try { window.localStorage.setItem('admin_token', pw); } catch (e) {}
               setAuthorized(true);

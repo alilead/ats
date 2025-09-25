@@ -253,7 +253,7 @@ const en = {
       },
       email: {
         title: "Email",
-        content: "contact@atsgenerale.ch",
+        content: "info@atsgenerale.ch",
         description: "Response within 24 hours"
       },
       address: {
@@ -573,7 +573,7 @@ const fr = {
       },
       {
         title: "Qualité Inébranlable",
-        description: "Tous les travaux réalisés selon les normes les plus élevées avec des matériaux premium."
+        description: "Tous les travaux réalisés selon les normes les plus élevées avec des matériaux adaptés."
       },
       {
         title: "Tarification Transparente",
@@ -581,7 +581,7 @@ const fr = {
       },
       {
         title: "Excellence Suisse",
-        description: "Plus de 25 ans d'expérience dans l'excellence du service à la clientèle premium."
+        description: "Plus de 25 ans d'expérience dans l'excellence du service à la clientèle adapté."
       }
     ],
     mission: {
@@ -623,7 +623,7 @@ const fr = {
       },
       email: {
         title: "Email",
-        content: "contact@atsgenerale.ch",
+        content: "info@atsgenerale.ch",
         description: "Réponse sous 24h"
       },
       address: {

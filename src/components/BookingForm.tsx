@@ -86,10 +86,12 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
       postal,
       city,
       selectedTasks,
-      name,
-      email,
+      name: audience === 'commercial' ? name : name, // Will show as Company Name for commercial
+      email: audience === 'commercial' ? email : email, // Will show as Company Email for commercial
       phone,
       notes,
+      // Add explicit tracking for form type
+      formType: audience === 'commercial' ? 'commercial' : 'residential'
     };
     const submitToServer = async () => {
       try {
