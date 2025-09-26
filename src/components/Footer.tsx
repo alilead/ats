@@ -1,5 +1,4 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
-import atsLogoNew from "@/assets/ats-logo-new.png";
 import { useLocale } from "@/lib/locale-context";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -32,13 +31,6 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
-              <img 
-                src={atsLogoNew} 
-                alt="ATS Générale Logo"
-                className="h-16 w-auto"
-              />
-            </div>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               {t.footer.description}
             </p>

@@ -15,7 +15,7 @@ const en = {
   services: {
     headerSmall: "Services adaptés au besoin",
     headerTitle: "Our Complete Services",
-    description: "From design to delivery, we cover your home and garden needs with Swiss expertise.",
+    description: "From conception to completion, we offer a comprehensive solution for all your residential and commercial projects with our renowned Swiss expertise.",
     book: "Book this service",
     consultation: "Free Consultation",
     audienceResidential: "Individuals", 
