@@ -147,6 +147,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                         placeholder={t.contact.form.namePlaceholder}
+                        className="w-full"
                       />
                     </div>
                     <div>
@@ -157,6 +158,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
                         placeholder={t.contact.form.emailPlaceholder}
+                        className="w-full"
                       />
                     </div>
                   </div>
@@ -164,12 +166,13 @@ const Contact = () => {
                   {/* Optional Enterprise Name */}
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">
-                      Nom d'entreprise (optionnel) / Company name (optional)
+                      Nom d'entreprise (optionnel)
                     </label>
                     <Input
                       value={formData.entrepriseName}
                       onChange={(e) => setFormData({...formData, entrepriseName: e.target.value})}
-                      placeholder="Nom de votre entreprise / Your company name"
+                      placeholder="Nom de votre entreprise"
+                      className="w-full"
                     />
                   </div>
 
@@ -180,11 +183,12 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                         placeholder={t.contact.form.phonePlaceholder}
+                        className="w-full"
                       />
                     </div>
                     <div>
-                      <label className="sr-only">{t.contact.form.serviceLabel}</label>
-                        <select 
+                      <label className="text-sm font-medium text-foreground mb-2 block">{t.contact.form.serviceLabel}</label>
+                      <select 
                         aria-label={t.contact.form.serviceLabel}
                         className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm"
                         value={formData.service}
@@ -208,6 +212,7 @@ const Contact = () => {
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                       placeholder={t.contact.form.messagePlaceholder}
                       rows={5}
+                      className="w-full resize-none"
                     />
                   </div>
 

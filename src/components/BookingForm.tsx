@@ -151,9 +151,9 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
 
       <label htmlFor="addr-street" className="block mb-2 text-sm font-medium">{t.bookingForm.address} <span aria-hidden="true">*</span></label>
       <input id="addr-street" value={address} onChange={(e) => setAddress(e.target.value)} placeholder={t.bookingForm.streetNumber} aria-required="true" className="w-full mb-2 border rounded px-3 py-2" />
-      <div className="flex gap-2 mb-4">
-        <input id="addr-postal" value={postal} onChange={(e) => setPostal(e.target.value)} placeholder={t.bookingForm.postalCode} aria-required="true" className="flex-1 border rounded px-3 py-2" />
-        <input id="addr-city" value={city} onChange={(e) => setCity(e.target.value)} placeholder={t.bookingForm.city} aria-required="true" className="flex-2 border rounded px-3 py-2" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+        <input id="addr-postal" value={postal} onChange={(e) => setPostal(e.target.value)} placeholder={t.bookingForm.postalCode} aria-required="true" className="w-full border rounded px-3 py-2" />
+        <input id="addr-city" value={city} onChange={(e) => setCity(e.target.value)} placeholder={t.bookingForm.city} aria-required="true" className="w-full border rounded px-3 py-2" />
       </div>
 
       <fieldset className="mb-4">
@@ -164,7 +164,7 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
               key={task}
               type="button"
               onClick={() => toggleTask(task)}
-              className={`text-sm px-3 py-2 rounded-md border ${selectedTasks.includes(task) ? 'bg-accent text-accent-foreground border-accent' : 'bg-muted/50 text-muted-foreground border-border'}`}
+              className={`w-full text-sm px-3 py-2 rounded-md border text-center ${selectedTasks.includes(task) ? 'bg-accent text-accent-foreground border-accent' : 'bg-muted/50 text-muted-foreground border-border'}`}
             >
               {task}
             </button>
@@ -173,34 +173,34 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
       </fieldset>
 
       <h4 className="text-md font-medium mb-2">{t.bookingForm.yourDetails} *</h4>
-      <div className="grid grid-cols-2 gap-2 mb-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
         <label htmlFor="contact-name" className="sr-only">
-          {audience === 'commercial' ? 'Nom d\'entreprise / Company Name' : t.bookingForm.fullName}
+          {audience === 'commercial' ? 'Nom d\'entreprise' : t.bookingForm.fullName}
         </label>
         <input 
           id="contact-name" 
           value={name} 
           onChange={(e) => setName(e.target.value)} 
-          placeholder={audience === 'commercial' ? 'Nom d\'entreprise / Company Name' : t.bookingForm.fullName} 
+          placeholder={audience === 'commercial' ? 'Nom d\'entreprise' : t.bookingForm.fullName} 
           aria-required="true" 
-          className="border rounded px-3 py-2" 
+          className="w-full border rounded px-3 py-2" 
         />
         <label htmlFor="contact-email" className="sr-only">
-          {audience === 'commercial' ? 'Email d\'entreprise / Company Email' : t.bookingForm.email}
+          {audience === 'commercial' ? 'Email d\'entreprise' : t.bookingForm.email}
         </label>
         <input 
           id="contact-email" 
           value={email} 
           onChange={(e) => setEmail(e.target.value)} 
-          placeholder={audience === 'commercial' ? 'Email d\'entreprise / Company Email' : t.bookingForm.email} 
+          placeholder={audience === 'commercial' ? 'Email d\'entreprise' : t.bookingForm.email} 
           aria-required="true" 
-          className="border rounded px-3 py-2" 
+          className="w-full border rounded px-3 py-2" 
         />
       </div>
       <label htmlFor="contact-phone" className="sr-only">{t.bookingForm.phone}</label>
       <input id="contact-phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t.bookingForm.phone} className="w-full mb-4 border rounded px-3 py-2" />
 
-      <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={t.bookingForm.comments} className="w-full mb-4 border rounded px-3 py-2" rows={3} />
+      <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={t.bookingForm.comments} className="w-full mb-4 border rounded px-3 py-2 resize-none" rows={3} />
 
       <label className="flex items-center gap-2 mb-4">
         <input id="consent" type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} aria-required="true" />

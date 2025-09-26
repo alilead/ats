@@ -49,9 +49,9 @@ const Footer = () => {
                 <Phone className="w-4 h-4 mr-3" />
                 +41 77 288 38 38
               </a>
-              <a href="mailto:contact@atsgenerale.ch" className="flex items-center hover:text-accent transition-colors">
+              <a href="mailto:info@atsgenerale.ch" className="flex items-center hover:text-accent transition-colors">
                 <Mail className="w-4 h-4 mr-3" />
-                contact@atsgenerale.ch
+                info@atsgenerale.ch
               </a>
               <div className="flex items-start">
                 <MapPin className="w-4 h-4 mr-3 mt-1" />
