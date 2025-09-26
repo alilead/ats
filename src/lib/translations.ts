@@ -586,7 +586,7 @@ const fr = {
     ],
     mission: {
       title: "Notre Mission",
-      description: "Fini de jongler avec plusieurs entrepreneurs ou de subir des retards frustrants. Nous offrons un service fluide et coordonné Sans complications ni compromis sur la qualité, à chaque fois."
+      description: "Fini de jongler avec plusieurs entrepreneurs ou de subir des retards frustrants. Nous offrons un service fluide et coordonné sans complications ni compromis sur la qualité, à chaque fois."
     }
   },
   contact: {
