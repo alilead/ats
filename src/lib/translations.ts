@@ -436,7 +436,8 @@ const fr = {
               { id: "assembly-furniture", title: "Montage de Meubles" },
               { id: "handyman-services", title: "Services de Bricolage" },
               { id: "plumbing-services", title: "Services de Plomberie" },
-              { id: "locksmith-services", title: "Services de Serrurerie" }
+              { id: "locksmith-services", title: "Services de Serrurerie" },
+              { id: "eco-energy-renovation", title: "Services rénovation écoénergétique" }
             ]
           },
           {
@@ -619,7 +620,7 @@ const fr = {
       whatsapp: {
         title: "WhatsApp",
         content: "+41 77 288 38 38", 
-        description: "Réponse rapide 7j/7"
+        description: "Évaluation rapide 7j/7"
       },
       email: {
         title: "Email",
@@ -708,7 +709,7 @@ const fr = {
     ]
   },
   footer: {
-    description: "Votre partenaire de confiance depuis plus de 25 ans pour tous vos projets de second œuvre en Suisse romande.",
+    description: "Votre partenaire de confiance avec plus de 25 ans d'expérience pour tous vos projets de second œuvre en Suisse romande.",
     constructionTitle: "Construction & Rénovation", 
     gardenTitle: "Jardin & Paysage",
     navigationTitle: "Navigation",
