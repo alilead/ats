@@ -89,43 +89,67 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-black hover:text-accent transition-colors"
+            className="lg:hidden p-2 text-black hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded"
+            aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            data-testid="mobile-menu-toggle"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden py-6 border-t border-border">
-            <nav className="flex flex-col space-y-6">
+        <div className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="py-6 border-t border-border">
+            <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavigation(item.id)}
-                  className="text-black hover:text-accent transition-colors py-3 text-left text-lg"
+                  className="text-black hover:text-accent transition-colors py-2 text-left text-base w-full"
+                  data-testid={`mobile-nav-${item.id}`}
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="pt-6 border-t border-border mt-6">
-                <a href="tel:+41772883838" className="flex items-center text-black/90 hover:text-accent transition-colors mb-6 text-lg">
-                  <Phone className="w-5 h-5 mr-3" />
+              <div className="pt-4 border-t border-border mt-4">
+                <a 
+                  href="tel:+41772883838" 
+                  className="flex items-center text-black/90 hover:text-accent transition-colors mb-4 text-base"
+                  data-testid="mobile-phone-link"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
                   +41 77 288 38 38
                 </a>
-                <Button variant="accent" className="w-full mb-4" onClick={() => handleNavigation('contact')}>{t.navigation.freeQuote}</Button>
-                <div className="flex gap-3 mt-4">
+                <Button 
+                  variant="accent" 
+                  className="w-full mb-4" 
+                  onClick={() => handleNavigation('contact')}
+                  data-testid="mobile-cta-button"
+                >
+                  {t.navigation.freeQuote}
+                </Button>
+                <div className="flex gap-2 mt-3">
                   <button 
                     aria-label="Français" 
-                    onClick={() => setLocale('fr')} 
-                    className={`px-2 py-1 rounded transition-colors ${t.lang === 'fr' ? 'bg-accent text-white' : 'text-black/80 hover:text-black'}`}
+                    onClick={() => {
+                      setLocale('fr');
+                      setIsMenuOpen(false);
+                    }} 
+                    className={`px-3 py-2 rounded transition-colors ${t.lang === 'fr' ? 'bg-accent text-white' : 'text-black/80 hover:text-black'}`}
+                    data-testid="mobile-lang-fr"
                   >
                     🇫🇷
                   </button>
                   <button 
                     aria-label="English" 
-                    onClick={() => setLocale('en')} 
-                    className={`px-2 py-1 rounded transition-colors ${t.lang === 'en' ? 'bg-accent text-white' : 'text-black/80 hover:text-black'}`}
+                    onClick={() => {
+                      setLocale('en');
+                      setIsMenuOpen(false);
+                    }} 
+                    className={`px-3 py-2 rounded transition-colors ${t.lang === 'en' ? 'bg-accent text-white' : 'text-black/80 hover:text-black'}`}
+                    data-testid="mobile-lang-en"
                   >
                     🇬🇧
                   </button>
@@ -133,7 +157,7 @@ const Header = () => {
               </div>
             </nav>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
