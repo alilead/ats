@@ -585,10 +585,10 @@ const fr = {
       },
       {
         id: 4,
-        title: "Extension Maison Familiale - Nyon",
-        category: "Construction",
-        description: "Extension de 80m² avec véranda bioclimatique, bureau et suite parentale avec vue sur le lac Léman.",
-        highlights: ["Vue lac Léman", "Véranda bioclimatique", "Suite parentale"]
+        title: "Aménagement Jardin Contemporain - Genève",
+        category: "Aménagement Paysager",
+        description: "Création d'un jardin contemporain avec piscine naturelle, éclairage intégré et système d'arrosage automatique.",
+        highlights: ["Piscine écologique", "Éclairage LED", "Irrigation smart"]
       }
     ]
   },
@@ -599,7 +599,7 @@ const fr = {
     address: "Address *",
     tasks: "Tâches à effectuer *",
     contact: "Vos coordonnées *",
-    submit: "Commander maintenant",
+    submit: "Réservez maintenant",
     cancel: "Annuler",
     consent: "J'accepte que mes données soient utilisées pour traiter ma demande *",
   },
@@ -792,7 +792,7 @@ const fr = {
     phone: "Téléphone",
     comments: "Commentaires particuliers (optionnel)",
     consent: "J'accepte que mes données soient utilisées pour traiter ma demande",
-    orderNow: "Commander maintenant",
+    orderNow: "Réservez maintenant",
     cancel: "Annuler",
     alertConsent: "Veuillez accepter que vos données soient utilisées pour traiter la demande.",
     alertServerSuccess: "Demande envoyée — enregistrée sur le serveur.",

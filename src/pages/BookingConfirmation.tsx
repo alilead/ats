@@ -6,7 +6,7 @@ import { useLocale } from "@/lib/locale-context";
 
 const BookingConfirmation = () => {
   const navigate = useNavigate();
-  const [countdown, setCountdown] = useState(15);
+  const [countdown, setCountdown] = useState(30);
   const [isNavigating, setIsNavigating] = useState(false);
 
   // Safely get translations with fallbacks
