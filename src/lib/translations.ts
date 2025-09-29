@@ -67,7 +67,7 @@ const en = {
               { id: "handyman-services", title: "Handyman Services" },
               { id: "plumbing-services", title: "Plumbing Services" },
               { id: "locksmith-services", title: "Locksmith Services" },
-              { id: "eco-energy-renovation", title: "Eco-energy Renovation Services" }
+              { id: "eco-energy-renovation", title: "Eco-energy Renovation" }
             ]
           },
           {
@@ -199,8 +199,8 @@ const en = {
         description: "Our experienced team excels in problem solving with a flexible approach."
       },
       {
-        title: "Quick Response",
-        description: "Quick assessments and efficient planning for urgent repairs and maintenance."
+        title: "Immediate Response", 
+        description: "Quick assessment and efficient planning for urgent repairs and maintenance."
       },
       {
         title: "Unwavering Quality",
@@ -424,7 +424,7 @@ const fr = {
             title: "Services de Construction Intérieure Haut de Gamme",
             items: [
               { id: "wooden-parquet", title: "Parquet en bois" },
-              { id: "custom-carpentry", title: "Menuiserie Sur Mesure" },
+              { id: "custom-carpentry", title: "Menuiserie sur Mesure" },
               { id: "luxury-carpet", title: "Installation de Tapis de Luxe" }
             ]
           },
@@ -447,7 +447,7 @@ const fr = {
               { id: "handyman-services", title: "Services de Bricolage" },
               { id: "plumbing-services", title: "Services de Plomberie" },
               { id: "locksmith-services", title: "Services de Serrurerie" },
-              { id: "eco-energy-renovation", title: "Services rénovation écoénergétique" }
+              { id: "eco-energy-renovation", title: "Rénovation Eco-Energétique" }
             ]
           },
           {
@@ -579,8 +579,8 @@ const fr = {
         description: "Notre équipe expérimentée excelle dans la résolution de problèmes avec une approche flexible."
       },
       {
-        title: "Réponse Rapide",
-        description: "Évaluations rapides et planification efficace pour les réparations urgentes et l'entretien."
+        title: "Réponse Immédiate",
+        description: "Évaluation rapide et planification efficace pour les réparations urgentes et l'entretien."
       },
       {
         title: "Qualité Inébranlable",

@@ -1,14 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ArrowRight } from "lucide-react";
-import before1 from "@/assets/service-construction.jpg";
-import after1 from "@/assets/hero-home.jpg";
-import before2 from "@/assets/service-garden.jpg";
-import after2 from "@/assets/service-maintenance.jpg";
-import before3 from "@/assets/service-maintenance.jpg";
-import after3 from "@/assets/service-construction.jpg";
-import before4 from "@/assets/service-garden.jpg";
-import after4 from "@/assets/hero-home.jpg";
+import before1 from "@/assets/stock_images/luxury_villa_renovat_6dfb72c1.jpg";
+import after1 from "@/assets/stock_images/luxury_villa_renovat_4cd24c1c.jpg";
+import before2 from "@/assets/stock_images/modern_contemporary__ffb4fb1e.jpg";
+import after2 from "@/assets/stock_images/modern_contemporary__941c660b.jpg";
+import before3 from "@/assets/stock_images/luxury_penthouse_int_63c96942.jpg";
+import after3 from "@/assets/stock_images/luxury_penthouse_int_c5775bd2.jpg";
+import before4 from "@/assets/stock_images/house_extension_cons_34b2671b.jpg";
+import after4 from "@/assets/stock_images/house_extension_cons_50caa822.jpg";
 
 import { useLocale } from "@/lib/locale-context";
 
