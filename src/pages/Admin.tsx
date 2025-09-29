@@ -149,41 +149,129 @@ export default function Admin() {
         </div>
       </div>
 
-      <div className="overflow-auto">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="text-left">
-              <th className="p-2">{t.admin.columns.number}</th>
-              <th className="p-2">{t.admin.columns.service}</th>
-              <th className="p-2">{t.admin.columns.audience}</th>
-              <th className="p-2">{t.admin.columns.date}</th>
-              <th className="p-2">{t.admin.columns.slots}</th>
-              <th className="p-2">{t.admin.columns.name}</th>
-              <th className="p-2">{t.admin.columns.email}</th>
-              <th className="p-2">{t.admin.columns.phone}</th>
-              <th className="p-2">{t.admin.columns.notes}</th>
-              <th className="p-2">{t.admin.columns.actions}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bookings.map((b, i) => (
-              <tr key={i} className="border-t">
-                <td className="p-2 align-top">{i+1}</td>
-                <td className="p-2 align-top">{b.service}</td>
-                <td className="p-2 align-top">{b.audience}</td>
-                <td className="p-2 align-top">{b.date}</td>
-                <td className="p-2 align-top">{(b.selectedSlots || []).join(', ')}</td>
-                <td className="p-2 align-top">{b.name}</td>
-                <td className="p-2 align-top">{b.email}</td>
-                <td className="p-2 align-top">{b.phone}</td>
-                <td className="p-2 align-top">{b.notes}</td>
-                <td className="p-2 align-top">
-                  <Button variant="outline" size="sm" onClick={() => remove(i)}>{t.admin.delete}</Button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="space-y-4">
+        {bookings.length === 0 ? (
+          <div className="text-center py-8 text-muted-foreground">
+            No bookings found
+          </div>
+        ) : (
+          bookings.map((b, i) => (
+            <div key={b.id || i} className="bg-white border rounded-lg p-6 shadow-sm">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    Booking #{b.id || (i + 1)} - {b.service || 'Service not specified'}
+                  </h3>
+                  <div className="flex items-center gap-4 text-sm text-gray-500 mt-1">
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+                      {b.audience === 'commercial' ? 'Commercial' : 'Residential'}
+                    </span>
+                    {b.createdAt && (
+                      <span>
+                        Created: {new Date(b.createdAt).toLocaleString('fr-FR', {
+                          day: '2-digit',
+                          month: '2-digit', 
+                          year: 'numeric',
+                          hour: '2-digit',
+                          minute: '2-digit'
+                        })}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={() => remove(i)}
+                  className="text-red-600 border-red-200 hover:bg-red-50"
+                >
+                  {t.admin.delete}
+                </Button>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Customer Information */}
+                <div className="space-y-3">
+                  <h4 className="font-medium text-gray-900 border-b pb-1">
+                    {b.audience === 'commercial' ? 'Company Information' : 'Customer Information'}
+                  </h4>
+                  <div className="space-y-2 text-sm">
+                    <div>
+                      <span className="font-medium text-gray-600">
+                        {b.audience === 'commercial' ? 'Company Name:' : 'Name:'}
+                      </span>
+                      <span className="ml-2">{b.name}</span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-600">
+                        {b.audience === 'commercial' ? 'Company Email:' : 'Email:'}
+                      </span>
+                      <span className="ml-2">
+                        <a href={`mailto:${b.email}`} className="text-blue-600 hover:underline">
+                          {b.email}
+                        </a>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-600">Phone:</span>
+                      <span className="ml-2">
+                        <a href={`tel:${b.phone}`} className="text-blue-600 hover:underline">
+                          {b.phone}
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Service Details */}
+                <div className="space-y-3">
+                  <h4 className="font-medium text-gray-900 border-b pb-1">Service Details</h4>
+                  <div className="space-y-2 text-sm">
+                    <div>
+                      <span className="font-medium text-gray-600">Date:</span>
+                      <span className="ml-2">{b.date}</span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-600">Time Slots:</span>
+                      <span className="ml-2">{(b.selectedSlots || []).join(', ') || 'Not specified'}</span>
+                    </div>
+                    {b.selectedTasks && b.selectedTasks.length > 0 && (
+                      <div>
+                        <span className="font-medium text-gray-600">Selected Tasks:</span>
+                        <div className="ml-2 mt-1">
+                          {b.selectedTasks.map((task, idx) => (
+                            <span key={idx} className="inline-block bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs mr-1 mb-1">
+                              {task}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Address Information */}
+                <div className="space-y-3">
+                  <h4 className="font-medium text-gray-900 border-b pb-1">Service Address</h4>
+                  <div className="space-y-1 text-sm">
+                    <div>{b.address}</div>
+                    <div>{b.postal} {b.city}</div>
+                  </div>
+                </div>
+
+                {/* Additional Notes */}
+                {b.notes && (
+                  <div className="space-y-3">
+                    <h4 className="font-medium text-gray-900 border-b pb-1">Additional Notes</h4>
+                    <div className="text-sm text-gray-700 bg-gray-50 p-3 rounded">
+                      {b.notes}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))
+        )}
       </div>
 
       {/* Contact Form Submissions */}
