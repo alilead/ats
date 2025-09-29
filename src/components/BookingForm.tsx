@@ -101,8 +101,13 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
           method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
         });
         if (resp.ok) {
-          onClose?.();
-          navigate("/confirmation");
+          if (onClose) {
+            onClose();
+            // Small delay to ensure form closes properly before navigation
+            setTimeout(() => navigate("/confirmation"), 100);
+          } else {
+            navigate("/confirmation");
+          }
           return true;
         }
         console.warn('Server rejected booking, falling back to localStorage');
@@ -122,8 +127,13 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
       } catch (e) {
         console.error(e);
       }
-      onClose?.();
-      navigate("/confirmation");
+      if (onClose) {
+        onClose();
+        // Small delay to ensure form closes properly before navigation
+        setTimeout(() => navigate("/confirmation"), 100);
+      } else {
+        navigate("/confirmation");
+      }
     }
   }
 

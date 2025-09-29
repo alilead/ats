@@ -6,14 +6,46 @@ import { useLocale } from "@/lib/locale-context";
 
 const BookingConfirmation = () => {
   const navigate = useNavigate();
-  const t = useLocale();
   const [countdown, setCountdown] = useState(15);
+  const [isNavigating, setIsNavigating] = useState(false);
+
+  // Safely get translations with fallbacks
+  let t: any;
+  try {
+    t = useLocale();
+  } catch (error) {
+    console.error('Locale context error:', error);
+    // Fallback translations
+    t = {
+      confirmation: {
+        title: "Demande envoyée avec succès !",
+        description: "Merci pour votre demande de devis. Notre équipe vous contactera dans les plus brefs délais pour discuter de votre projet.",
+        emailNote: "Vous recevrez une confirmation par email sous peu.",
+        autoRedirect: "Redirection automatique dans",
+        seconds: "secondes",
+        backHome: "Retour à l'accueil",
+        questionsText: "Questions ? Contactez-nous au"
+      }
+    };
+  }
 
   useEffect(() => {
+    if (isNavigating) return; // Prevent multiple timers
+
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
-          navigate("/");
+          setIsNavigating(true);
+          // Small delay to ensure state is updated
+          setTimeout(() => {
+            try {
+              navigate("/");
+            } catch (error) {
+              console.error('Navigation error:', error);
+              // Fallback to window location
+              window.location.href = "/";
+            }
+          }, 100);
           return 0;
         }
         return prev - 1;
@@ -21,10 +53,34 @@ const BookingConfirmation = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [navigate]);
+  }, [navigate, isNavigating]);
 
   const handleBackHome = () => {
-    navigate("/");
+    if (isNavigating) return; // Prevent double navigation
+    
+    setIsNavigating(true);
+    try {
+      navigate("/");
+    } catch (error) {
+      console.error('Navigation error:', error);
+      // Fallback to window location
+      window.location.href = "/";
+    }
+  };
+
+  // Safe translation access with fallbacks
+  const getTranslation = (key: string, fallback: string) => {
+    try {
+      const keys = key.split('.');
+      let value = t;
+      for (const k of keys) {
+        value = value?.[k];
+      }
+      return value || fallback;
+    } catch (error) {
+      console.error('Translation error for key:', key, error);
+      return fallback;
+    }
   };
 
   return (
@@ -38,15 +94,15 @@ const BookingConfirmation = () => {
         {/* Thank You Message */}
         <div className="space-y-4">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            {t.confirmation.title}
+            {getTranslation('confirmation.title', 'Demande envoyée avec succès !')}
           </h1>
           
           <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-            {t.confirmation.description}
+            {getTranslation('confirmation.description', 'Merci pour votre demande de devis. Notre équipe vous contactera dans les plus brefs délais pour discuter de votre projet.')}
           </p>
 
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            {t.confirmation.emailNote}
+            {getTranslation('confirmation.emailNote', 'Vous recevrez une confirmation par email sous peu.')}
           </p>
         </div>
 
@@ -55,7 +111,7 @@ const BookingConfirmation = () => {
           <div className="flex items-center justify-center space-x-2 text-blue-600 dark:text-blue-400">
             <Clock className="w-5 h-5" />
             <span className="text-sm font-medium" aria-live="polite" data-testid="countdown-timer">
-              {t.confirmation.autoRedirect} {countdown} {t.confirmation.seconds}
+              {getTranslation('confirmation.autoRedirect', 'Redirection automatique dans')} {countdown} {getTranslation('confirmation.seconds', 'secondes')}
             </span>
           </div>
         </div>
@@ -63,19 +119,20 @@ const BookingConfirmation = () => {
         {/* Back to Home Button */}
         <Button 
           onClick={handleBackHome}
-          className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+          disabled={isNavigating}
+          className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
           data-testid="button-back-home"
         >
           <Home className="w-5 h-5" />
           <span>
-            {t.confirmation.backHome}
+            {getTranslation('confirmation.backHome', 'Retour à l\'accueil')}
           </span>
         </Button>
 
         {/* Contact Info */}
         <div className="pt-4 border-t border-gray-200 dark:border-gray-600">
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            {t.confirmation.questionsText}
+            {getTranslation('confirmation.questionsText', 'Questions ? Contactez-nous au')}
             <br />
             <a href="tel:+41772883838" className="text-red-600 hover:text-red-700 font-medium">
               +41 77 288 38 38
