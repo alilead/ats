@@ -304,6 +304,15 @@ const en = {
       actions: "Actions"
     }
   },
+  confirmation: {
+    title: "Request sent successfully!",
+    description: "Thank you for your quote request. Our team will contact you as soon as possible to discuss your project.",
+    emailNote: "You will receive an email confirmation shortly.",
+    autoRedirect: "Auto-redirect in",
+    seconds: "seconds",
+    backHome: "Back to Home",
+    questionsText: "Questions? Contact us at"
+  },
   bookingForm: {
     transparentPricing: "Transparent pricing:",
     perHour: "35 CHF/hour",
@@ -674,6 +683,15 @@ const fr = {
       notes: "Notes",
       actions: "Actions"
     }
+  },
+  confirmation: {
+    title: "Demande envoyée avec succès !",
+    description: "Merci pour votre demande de devis. Notre équipe vous contactera dans les plus brefs délais pour discuter de votre projet.",
+    emailNote: "Vous recevrez une confirmation par email sous peu.",
+    autoRedirect: "Redirection automatique dans",
+    seconds: "secondes",
+    backHome: "Retour à l'accueil",
+    questionsText: "Questions ? Contactez-nous au"
   },
   bookingForm: {
     transparentPricing: "Tarif transparent :",

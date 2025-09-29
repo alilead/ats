@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/lib/locale-context";
+import { useNavigate } from "react-router-dom";
 
 type BookingFormProps = {
   categoryId?: string;
@@ -24,6 +25,7 @@ const timeSlots = [
 
 export default function BookingForm({ categoryId, service, onClose, audience }: BookingFormProps) {
   const t = useLocale();
+  const navigate = useNavigate();
   const [date, setDate] = useState("");
   const [selectedSlots, setSelectedSlots] = useState<string[]>([]);
   const [address, setAddress] = useState("");
@@ -99,8 +101,8 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
           method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
         });
         if (resp.ok) {
-          alert(t.bookingForm.alertServerSuccess);
           onClose?.();
+          navigate("/confirmation");
           return true;
         }
         console.warn('Server rejected booking, falling back to localStorage');
@@ -120,8 +122,8 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
       } catch (e) {
         console.error(e);
       }
-      alert(t.bookingForm.alertLocalSuccess);
       onClose?.();
+      navigate("/confirmation");
     }
   }
 
