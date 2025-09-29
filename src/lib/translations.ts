@@ -385,7 +385,7 @@ const fr = {
   services: {
     headerSmall: "Services adaptés au besoin",
     headerTitle: "Nos Services Complets",
-    description: "De la conception à la réalisation, nous couvrons tous vos besoins pour la maison et le jardin avec l'expertise suisse que vous méритez.",
+    description: "De la conception à la réalisation, nous couvrons tous vos besoins pour la maison et le jardin grâce à notre expertise suisse.",
     book: "Réserver ce service",
     consultation: "Consultation Gratuite",
     audienceResidential: "Particuliers",
