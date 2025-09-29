@@ -194,12 +194,70 @@ const Contact = () => {
                         value={formData.service}
                         onChange={(e) => setFormData({...formData, service: e.target.value})}
                       >
-                          <option value="">{t.contact.form.service}</option>
-                          <option value="construction">{t.contact.services.construction}</option>
-                          <option value="jardin">{t.contact.services.garden}</option>
-                          <option value="entretien">{t.contact.services.maintenance}</option>
-                          <option value="urgence">{t.contact.services.emergency}</option>
-                          <option value="autre">{t.contact.services.other}</option>
+                        <option value="">{t.contact.form.service}</option>
+                        
+                        <optgroup label={t.contact.form.individuals}>
+                          {/* Construction Services */}
+                          <option value="masonry">{t.contact.form.masonry}</option>
+                          <option value="paint-coatings">{t.contact.form.paintCoatings}</option>
+                          <option value="plastering">{t.contact.form.plastering}</option>
+                          <option value="tile">{t.contact.form.tile}</option>
+                          <option value="floor-coverings">{t.contact.form.floorCoverings}</option>
+                          <option value="roof">{t.contact.form.roof}</option>
+                          <option value="insulation">{t.contact.form.insulation}</option>
+                          
+                          {/* High-end Interior */}
+                          <option value="wooden-parquet">{t.contact.form.woodenParquet}</option>
+                          <option value="custom-carpentry">{t.contact.form.customCarpentry}</option>
+                          <option value="luxury-carpet">{t.contact.form.luxuryCarpet}</option>
+                          
+                          {/* Gardening and Landscaping */}
+                          <option value="lawn-maintenance">{t.contact.form.lawnMaintenance}</option>
+                          <option value="tree-shrub-care">{t.contact.form.treeShrubCare}</option>
+                          <option value="landscape-design">{t.contact.form.landscapeDesign}</option>
+                          <option value="external-cleaning">{t.contact.form.externalCleaning}</option>
+                          
+                          {/* Renovation Work */}
+                          <option value="general-repairs">{t.contact.form.generalRepairs}</option>
+                          <option value="assembly-furniture">{t.contact.form.assemblyFurniture}</option>
+                          <option value="handyman-services">{t.contact.form.handymanServices}</option>
+                          <option value="plumbing-services">{t.contact.form.plumbingServices}</option>
+                          <option value="locksmith-services">{t.contact.form.locksmithServices}</option>
+                          <option value="eco-energy-renovation">{t.contact.form.ecoEnergyRenovation}</option>
+                          
+                          {/* Cleaning & Maintenance */}
+                          <option value="residential-cleaning">{t.contact.form.residentialCleaning}</option>
+                          <option value="disinfection-services">{t.contact.form.disinfectionServices}</option>
+                          <option value="office-maintenance">{t.contact.form.officeMaintenance}</option>
+                          <option value="cleaning-after-construction">{t.contact.form.cleaningAfterConstruction}</option>
+                          <option value="window-cleaning">{t.contact.form.windowCleaning}</option>
+                          <option value="building-maintenance">{t.contact.form.buildingMaintenance}</option>
+                          
+                          {/* Relocation Services */}
+                          <option value="moving-services">{t.contact.form.movingServices}</option>
+                          <option value="reliable-relocation">{t.contact.form.reliableRelocation}</option>
+                          <option value="van-rental">{t.contact.form.vanRental}</option>
+                        </optgroup>
+                        
+                        <optgroup label={t.contact.form.companies}>
+                          {/* Property Management */}
+                          <option value="general-maintenance">{t.contact.form.generalMaintenance}</option>
+                          <option value="house-maintenance">{t.contact.form.houseMaintenance}</option>
+                          <option value="gardening-services">{t.contact.form.gardeningServices}</option>
+                          
+                          {/* Surface Finish */}
+                          <option value="tile-specialist">{t.contact.form.tileSpecialist}</option>
+                          <option value="painting-expert">{t.contact.form.paintingExpert}</option>
+                          <option value="ornamental-plasterwork">{t.contact.form.ornamentalPlasterwork}</option>
+                          
+                          {/* Exterior Construction */}
+                          <option value="excellence-roofing">{t.contact.form.excellenceRoofing}</option>
+                          <option value="advanced-waterproofing">{t.contact.form.advancedWaterproofing}</option>
+                          <option value="facade-renovation">{t.contact.form.facadeRenovation}</option>
+                          <option value="ecological-building">{t.contact.form.ecologicalBuilding}</option>
+                        </optgroup>
+                        
+                        <option value="other">{t.contact.form.other}</option>
                       </select>
                     </div>
                   </div>
