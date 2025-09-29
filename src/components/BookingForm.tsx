@@ -95,7 +95,7 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
     };
     const submitToServer = async () => {
       try {
-        const resp = await fetch('/.netlify/functions/submit-booking', {
+        const resp = await fetch('/api/submit-booking', {
           method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
         });
         if (resp.ok) {
