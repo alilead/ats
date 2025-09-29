@@ -1,6 +1,6 @@
 const en = {
   hero: {
-    partner: "Your trusted partner for 25 years",
+    partner: "Your trusted partner with 25+ years of experience",
     titleLine1: "Experts in",
     titleLine2: "Home & Garden",
     description: "Your partner for every home and garden project in Geneva and nearby. One team, every service, exceptional results.",
@@ -66,7 +66,8 @@ const en = {
               { id: "assembly-furniture", title: "Assembly of Furniture" },
               { id: "handyman-services", title: "Handyman Services" },
               { id: "plumbing-services", title: "Plumbing Services" },
-              { id: "locksmith-services", title: "Locksmith Services" }
+              { id: "locksmith-services", title: "Locksmith Services" },
+              { id: "eco-energy-renovation", title: "Eco-energy Renovation Services" }
             ]
           },
           {
@@ -249,7 +250,7 @@ const en = {
       whatsapp: {
         title: "WhatsApp",
         content: "+41 77 288 38 38", 
-        description: "Fast response 7 days a week"
+        description: "Quick assessment 7 days a week"
       },
       email: {
         title: "Email",
@@ -338,7 +339,7 @@ const en = {
     ]
   },
   footer: {
-    description: "Your trusted partner for over 25 years for all your construction projects in French-speaking Switzerland.",
+    description: "Your trusted partner with over 25 years of experience for all your construction projects in French-speaking Switzerland.",
     constructionTitle: "Construction & Renovation", 
     gardenTitle: "Garden & Landscape",
     navigationTitle: "Navigation",
