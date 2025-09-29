@@ -9,7 +9,11 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "node server/index.js"
+    "start": "node --loader tsx server/index.ts",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -50,6 +54,7 @@
     "date-fns": "^3.6.0",
     "drizzle-kit": "^0.31.5",
     "drizzle-orm": "^0.44.5",
+    "drizzle-zod": "^0.8.3",
     "embla-carousel-react": "^8.6.0",
     "express": "^5.1.0",
     "input-otp": "^1.4.2",
@@ -67,6 +72,7 @@
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.20.6",
     "vaul": "^0.9.9",
     "ws": "^8.18.3",
     "zod": "^3.25.76"
