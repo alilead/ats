@@ -26,48 +26,79 @@ export default function Admin() {
 
   useEffect(() => {
     async function load() {
-      // If Netlify Identity is available and a user is logged in, use the JWT for server calls
       try {
-        const user = netlifyIdentity.currentUser();
-        if (user && user.token) {
-          const jwt = user.token.access_token || user.token;
-          const resp = await fetch('/.netlify/functions/list-bookings', { headers: { Authorization: `Bearer ${jwt}` } });
-          if (resp.ok) {
-            const data = await resp.json();
-            setBookings(data || []);
-            return;
-          }
+        // Try to fetch bookings from database API first
+        const bookingsResp = await fetch('/api/bookings');
+        if (bookingsResp.ok) {
+          const bookingsData = await bookingsResp.json();
+          setBookings(bookingsData || []);
+        } else {
+          // Fallback to localStorage if API fails
+          console.warn('Database API not available, using localStorage');
+          const raw = localStorage.getItem('bookings');
+          setBookings(raw ? JSON.parse(raw) : []);
         }
 
-        // Fallback to admin_token stored in localStorage (existing flow)
-        const token = (window && window.localStorage && window.localStorage.getItem('admin_token')) || '';
-        if (token) {
-          const resp2 = await fetch('/.netlify/functions/list-bookings', { headers: { 'x-admin-token': token } });
-          if (resp2.ok) {
-            const data = await resp2.json();
-            setBookings(data || []);
-            return;
+        // Try to fetch contacts from database API
+        try {
+          const contactsResp = await fetch('/api/contacts');
+          if (contactsResp.ok) {
+            const contactsData = await contactsResp.json();
+            setContacts(contactsData || []);
+          } else {
+            // Fallback to localStorage if API fails
+            const contactsRaw = localStorage.getItem('contacts');
+            setContacts(contactsRaw ? JSON.parse(contactsRaw) : []);
           }
+        } catch (e) {
+          // Fallback to localStorage for contacts
+          const contactsRaw = localStorage.getItem('contacts');
+          setContacts(contactsRaw ? JSON.parse(contactsRaw) : []);
         }
       } catch (e) {
-        // fallback to localStorage
+        console.warn('API not available, using localStorage:', e);
+        // Complete fallback to localStorage
+        const raw = localStorage.getItem('bookings');
+        setBookings(raw ? JSON.parse(raw) : []);
+        
+        const contactsRaw = localStorage.getItem('contacts');
+        setContacts(contactsRaw ? JSON.parse(contactsRaw) : []);
+      }
+    }
+    load();
+  }, []);
+
+  async function refresh() {
+    try {
+      // Try to fetch from database API first
+      const bookingsResp = await fetch('/api/bookings');
+      if (bookingsResp.ok) {
+        const bookingsData = await bookingsResp.json();
+        setBookings(bookingsData || []);
+      } else {
+        // Fallback to localStorage
+        const raw = localStorage.getItem('bookings');
+        setBookings(raw ? JSON.parse(raw) : []);
       }
 
+      const contactsResp = await fetch('/api/contacts');
+      if (contactsResp.ok) {
+        const contactsData = await contactsResp.json();
+        setContacts(contactsData || []);
+      } else {
+        // Fallback to localStorage
+        const contactsRaw = localStorage.getItem('contacts');
+        setContacts(contactsRaw ? JSON.parse(contactsRaw) : []);
+      }
+    } catch (e) {
+      console.warn('API refresh failed, using localStorage:', e);
+      // Complete fallback to localStorage
       const raw = localStorage.getItem('bookings');
       setBookings(raw ? JSON.parse(raw) : []);
       
       const contactsRaw = localStorage.getItem('contacts');
       setContacts(contactsRaw ? JSON.parse(contactsRaw) : []);
     }
-    load();
-  }, []);
-
-  function refresh() {
-    const raw = localStorage.getItem('bookings');
-    setBookings(raw ? JSON.parse(raw) : []);
-    
-    const contactsRaw = localStorage.getItem('contacts');
-    setContacts(contactsRaw ? JSON.parse(contactsRaw) : []);
   }
 
   function remove(index:number){
