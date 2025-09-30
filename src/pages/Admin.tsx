@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import netlifyIdentity from "netlify-identity-widget";
 import { useLocale } from "@/lib/locale-context";
 
 // Security: Admin password removed from frontend code
@@ -130,10 +129,9 @@ export default function Admin() {
               // store token for server calls
               try { window.localStorage.setItem('admin_token', pw); } catch (e) {}
               setAuthorized(true);
-            }}>{t.admin.enter}</Button>
-            <Button variant="outline" onClick={() => netlifyIdentity.open()}>{t.admin.loginWithNetlify}</Button>
+            }} className="w-full">{t.admin.enter}</Button>
           </div>
-          <p className="text-xs text-muted-foreground">{t.admin.orSignIn}</p>
+          <p className="text-xs text-muted-foreground">{t.admin.vercelNote}</p>
         </div>
       </div>
     );
