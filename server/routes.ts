@@ -1,6 +1,7 @@
 import express from 'express';
 import { insertBookingSchema } from '@shared/schema';
 import { storage } from './storage';
+import { sendBookingConfirmationEmails } from './email';
 
 const router = express.Router();
 
@@ -19,6 +20,24 @@ router.post('/api/submit-booking', async (req, res) => {
 
     // Create booking using storage interface
     const booking = await storage.createBooking(validationResult.data);
+    
+    // Send confirmation emails (don't block the response on email sending)
+    sendBookingConfirmationEmails({
+      service: req.body.service || 'Service non spécifié',
+      audience: req.body.audience || 'residential',
+      date: req.body.date || '',
+      selectedSlots: req.body.selectedSlots || [],
+      address: req.body.address || '',
+      postal: req.body.postal || '',
+      city: req.body.city || '',
+      selectedTasks: req.body.selectedTasks || [],
+      name: req.body.name || '',
+      email: req.body.email || '',
+      phone: req.body.phone || '',
+      notes: req.body.notes,
+    }).catch(err => {
+      console.error('Failed to send confirmation emails:', err);
+    });
     
     res.status(200).json({ 
       ok: true, 
