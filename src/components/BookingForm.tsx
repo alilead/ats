@@ -138,22 +138,22 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
   }
 
   return (
-  <div ref={containerRef} className="max-h-[85vh] overflow-auto">
-    <form onSubmit={submit} className="max-w-2xl w-full bg-white p-4 md:p-6 rounded-2xl shadow-lg">
-      <h3 className="text-xl font-semibold mb-4">{service ?? t.booking.title} {audience ? `· ${audience}` : ''}</h3>
+  <div ref={containerRef} className="max-h-[90vh] md:max-h-[85vh] overflow-y-auto">
+    <form onSubmit={submit} className="max-w-2xl w-full bg-white dark:bg-gray-900 p-4 md:p-6 rounded-xl md:rounded-2xl shadow-lg">
+      <h3 className="text-lg md:text-xl font-semibold mb-4 text-gray-900 dark:text-white">{service ?? t.booking.title} {audience ? `· ${audience}` : ''}</h3>
 
-  <label htmlFor="booking-date" className="block mb-2 text-sm font-medium">{t.bookingForm.desiredDate} <span aria-hidden="true">*</span></label>
-  <input id="booking-date" ref={dateRef} value={date} onChange={(e) => setDate(e.target.value)} type="date" aria-required="true" className="w-full mb-4 border rounded px-3 py-2 text-sm" />
+  <label htmlFor="booking-date" className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">{t.bookingForm.desiredDate} <span aria-hidden="true">*</span></label>
+  <input id="booking-date" ref={dateRef} value={date} onChange={(e) => setDate(e.target.value)} type="date" aria-required="true" className="w-full mb-4 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white" />
 
       <fieldset className="mb-4">
-        <legend className="block mb-2 text-sm font-medium">{t.bookingForm.timeSlots}</legend>
-        <div className="flex flex-wrap gap-2" role="group" aria-label={t.bookingForm.timeSlots}>
+        <legend className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">{t.bookingForm.timeSlots}</legend>
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2" role="group" aria-label={t.bookingForm.timeSlots}>
           {timeSlots.map((slot) => (
             <button
               type="button"
               key={slot}
               onClick={() => toggleSlot(slot)}
-              className={`px-3 py-1.5 rounded-md text-sm border ${selectedSlots.includes(slot) ? 'bg-accent text-accent-foreground border-accent' : 'bg-muted/50 text-muted-foreground border-border'}`}
+              className={`px-3 py-2 rounded-md text-xs sm:text-sm border transition-colors ${selectedSlots.includes(slot) ? 'bg-accent text-accent-foreground border-accent' : 'bg-muted/50 text-muted-foreground border-border hover:bg-muted'}`}
             >
               {slot}
             </button>
@@ -161,22 +161,22 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
         </div>
       </fieldset>
 
-      <label htmlFor="addr-street" className="block mb-2 text-sm font-medium">{t.bookingForm.address} <span aria-hidden="true">*</span></label>
-      <input id="addr-street" value={address} onChange={(e) => setAddress(e.target.value)} placeholder={t.bookingForm.streetNumber} aria-required="true" className="w-full mb-2 border rounded px-3 py-2" />
+      <label htmlFor="addr-street" className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">{t.bookingForm.address} <span aria-hidden="true">*</span></label>
+      <input id="addr-street" value={address} onChange={(e) => setAddress(e.target.value)} placeholder={t.bookingForm.streetNumber} aria-required="true" className="w-full mb-2 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
-        <input id="addr-postal" value={postal} onChange={(e) => setPostal(e.target.value)} placeholder={t.bookingForm.postalCode} aria-required="true" className="w-full border rounded px-3 py-2" />
-        <input id="addr-city" value={city} onChange={(e) => setCity(e.target.value)} placeholder={t.bookingForm.city} aria-required="true" className="w-full border rounded px-3 py-2" />
+        <input id="addr-postal" value={postal} onChange={(e) => setPostal(e.target.value)} placeholder={t.bookingForm.postalCode} aria-required="true" className="w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400" />
+        <input id="addr-city" value={city} onChange={(e) => setCity(e.target.value)} placeholder={t.bookingForm.city} aria-required="true" className="w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400" />
       </div>
 
       <fieldset className="mb-4">
-        <legend className="block mb-2 text-sm font-medium">{t.bookingForm.tasks} <span aria-hidden="true">*</span></legend>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2" role="group" aria-label={t.bookingForm.tasks}>
+        <legend className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">{t.bookingForm.tasks} <span aria-hidden="true">*</span></legend>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-48 overflow-y-auto pr-2" role="group" aria-label={t.bookingForm.tasks}>
           {availableServices.map((task) => (
             <button
               key={task}
               type="button"
               onClick={() => toggleTask(task)}
-              className={`w-full text-sm px-3 py-2 rounded-md border text-center ${selectedTasks.includes(task) ? 'bg-accent text-accent-foreground border-accent' : 'bg-muted/50 text-muted-foreground border-border'}`}
+              className={`w-full text-xs sm:text-sm px-3 py-2 rounded-md border text-center transition-colors ${selectedTasks.includes(task) ? 'bg-accent text-accent-foreground border-accent' : 'bg-muted/50 text-muted-foreground border-border hover:bg-muted'}`}
             >
               {task}
             </button>
@@ -184,7 +184,7 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
         </div>
       </fieldset>
 
-      <h4 className="text-md font-medium mb-2">{t.bookingForm.yourDetails} *</h4>
+      <h4 className="text-base font-medium mb-2 text-gray-900 dark:text-white">{t.bookingForm.yourDetails} *</h4>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
         <label htmlFor="contact-name" className="sr-only">
           {audience === 'commercial' ? 'Nom d\'entreprise' : t.bookingForm.fullName}
@@ -195,7 +195,7 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
           onChange={(e) => setName(e.target.value)} 
           placeholder={audience === 'commercial' ? 'Nom d\'entreprise' : t.bookingForm.fullName} 
           aria-required="true" 
-          className="w-full border rounded px-3 py-2" 
+          className="w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400" 
         />
         <label htmlFor="contact-email" className="sr-only">
           {audience === 'commercial' ? 'Email d\'entreprise' : t.bookingForm.email}
@@ -206,22 +206,22 @@ export default function BookingForm({ categoryId, service, onClose, audience }: 
           onChange={(e) => setEmail(e.target.value)} 
           placeholder={audience === 'commercial' ? 'Email d\'entreprise' : t.bookingForm.email} 
           aria-required="true" 
-          className="w-full border rounded px-3 py-2" 
+          className="w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400" 
         />
       </div>
       <label htmlFor="contact-phone" className="sr-only">{t.bookingForm.phone}</label>
-      <input id="contact-phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t.bookingForm.phone} className="w-full mb-4 border rounded px-3 py-2" />
+      <input id="contact-phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t.bookingForm.phone} className="w-full mb-4 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400" />
 
-      <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={t.bookingForm.comments} className="w-full mb-4 border rounded px-3 py-2 resize-none" rows={3} />
+      <textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={t.bookingForm.comments} className="w-full mb-4 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 resize-none" rows={3} />
 
-      <label className="flex items-center gap-2 mb-4">
-        <input id="consent" type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} aria-required="true" />
-        <span className="text-sm">{t.bookingForm.consent} <span aria-hidden="true">*</span></span>
+      <label className="flex items-start gap-2 mb-6">
+        <input id="consent" type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} aria-required="true" className="mt-1" />
+        <span className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">{t.bookingForm.consent} <span aria-hidden="true">*</span></span>
       </label>
 
-      <div className="flex flex-col sm:flex-row items-center gap-4">
-        <Button type="submit" variant="accent">{t.bookingForm.orderNow}</Button>
-        <Button type="button" variant="outline" onClick={onClose}>{t.bookingForm.cancel}</Button>
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+        <Button type="submit" variant="accent" className="w-full sm:flex-1">{t.bookingForm.orderNow}</Button>
+        <Button type="button" variant="outline" className="w-full sm:w-auto" onClick={onClose}>{t.bookingForm.cancel}</Button>
       </div>
     </form>
   </div>

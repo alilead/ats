@@ -80,8 +80,8 @@ const Services = () => {
 
         {/* Booking Modal */}
         {selectedCategory && (
-          <div className="fixed inset-0 z-50 overflow-auto bg-black/50" role="dialog" aria-modal="true" onClick={() => setSelectedCategory(null)}>
-            <div className="min-h-screen flex items-start md:items-center justify-center py-8 px-4">
+          <div className="fixed inset-0 z-50 overflow-auto bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" onClick={() => setSelectedCategory(null)}>
+            <div className="min-h-screen flex items-start md:items-center justify-center p-2 sm:p-4 md:py-8">
               <div className="max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
                 <BookingForm categoryId={selectedCategory.categoryId} service={selectedCategory.title} audience={audience} onClose={() => setSelectedCategory(null)} />
               </div>
