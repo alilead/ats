@@ -1,14 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ArrowRight } from "lucide-react";
-import before1 from "@/assets/stock_images/luxury_villa_exterio_636a2745.jpg";
-import after1 from "@/assets/stock_images/luxury_villa_exterio_b3fa6be6.jpg";
-import before2 from "@/assets/stock_images/modern_contemporary__ffb4fb1e.jpg";
-import after2 from "@/assets/stock_images/modern_contemporary__941c660b.jpg";
-import before3 from "@/assets/stock_images/luxury_penthouse_int_63c96942.jpg";
-import after3 from "@/assets/stock_images/luxury_penthouse_int_c5775bd2.jpg";
-import before4 from "@/assets/stock_images/garden_landscaping_b_20703f5a.jpg";
-import after4 from "@/assets/stock_images/beautiful_garden_lan_b0529901.jpg";
+import before1 from "@/assets/stock_images/villa_before_new.png";
+import after1 from "@/assets/stock_images/luxury_villa_after_new.png";
+import before2 from "@/assets/stock_images/interior_before_new.png";
+import after2 from "@/assets/stock_images/modern_kitchen_after_new.png";
+import before3 from "@/assets/stock_images/construction_before_new.png";
+import after3 from "@/assets/stock_images/construction_before_2_new.png";
+import before4 from "@/assets/stock_images/exterior_before_new.png";
+import after4 from "@/assets/stock_images/exterior_renovation_after_new.png";
 
 import { useLocale } from "@/lib/locale-context";
 

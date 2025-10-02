@@ -143,28 +143,28 @@ const en = {
         title: "Luxury Villa Renovation - Cologny",
         category: "Complete Renovation",
         description: "Complete transformation of a 400m² villa with high-end finishes, panoramic terrace and landscaped garden.",
-        highlights: ["6-month renovation", "Matériaux adaptés", "Custom design"]
+        highlights: ["6-month renovation", "Premium materials", "Custom design"]
       },
       {
         id: 2,
-        title: "Contemporary Garden Design - Geneva",
-        category: "Landscape Architecture",
-        description: "Creation of a contemporary garden with natural pool, integrated lighting and automatic irrigation system.",
-        highlights: ["Ecological pool", "LED lighting", "Smart irrigation"]
+        title: "Modern Kitchen Renovation - Geneva",
+        category: "Interior Renovation",
+        description: "Complete kitchen and dining area modernization with contemporary design, premium appliances and elegant finishes.",
+        highlights: ["Modern appliances", "Elegant finishes", "Open concept"]
       },
       {
         id: 3,
-        title: "Penthouse Renovation - Geneva Center",
-        category: "Interior Renovation",
-        description: "Complete modernization of a penthouse with open kitchen, marble floors and integrated home automation system.",
-        highlights: ["Advanced automation", "Italian marble", "Modern design"]
+        title: "Commercial Construction - Geneva Center",
+        category: "Construction",
+        description: "Large-scale commercial building construction with modern architectural elements and advanced infrastructure systems.",
+        highlights: ["Modern architecture", "Advanced systems", "Commercial grade"]
       },
       {
         id: 4,
-        title: "Family Home Extension - Nyon",
-        category: "Construction",
-        description: "80m² extension with bioclimatic conservatory, office and master suite with Lake Geneva view.",
-        highlights: ["Lake Geneva view", "Bioclimatic conservatory", "Master suite"]
+        title: "Exterior Renovation - Nyon",
+        category: "Exterior Renovation",
+        description: "Complete exterior transformation with modern two-tone design, updated windows and contemporary landscaping.",
+        highlights: ["Modern design", "Updated windows", "Contemporary finish"]
       }
     ]
   },
@@ -563,31 +563,31 @@ const fr = {
     projects: [
       {
         id: 1,
-        title: "Rénovation Villa Luxury - Cologny",
+        title: "Rénovation Villa de Luxe - Cologny",
         category: "Rénovation Complète",
         description: "Transformation complète d'une villa de 400m² avec finitions haut de gamme, terrasse panoramique et jardin paysager.",
-        highlights: ["Rénovation 6 mois", "Matériaux adaptés", "Design sur mesure"]
+        highlights: ["Rénovation 6 mois", "Matériaux premium", "Design sur mesure"]
       },
       {
         id: 2,
-        title: "Aménagement Jardin Contemporain - Genève",
-        category: "Aménagement Paysager",
-        description: "Création d'un jardin contemporain avec piscine naturelle, éclairage intégré et système d'arrosage automatique.",
-        highlights: ["Piscine écologique", "Éclairage LED", "Irrigation smart"]
+        title: "Rénovation Cuisine Moderne - Genève",
+        category: "Rénovation Intérieure",
+        description: "Modernisation complète de la cuisine et salle à manger avec design contemporain, électroménagers premium et finitions élégantes.",
+        highlights: ["Électroménagers modernes", "Finitions élégantes", "Concept ouvert"]
       },
       {
         id: 3,
-        title: "Rénovation Penthouse - Centre Genève",
-        category: "Rénovation Intérieure",
-        description: "Modernisation complète d'un penthouse avec cuisine ouverte, sols en marbre et système domotique intégré.",
-        highlights: ["Domotique avancée", "Marbre italien", "Design moderne"]
+        title: "Construction Commerciale - Centre Genève",
+        category: "Construction",
+        description: "Construction d'immeuble commercial de grande envergure avec éléments architecturaux modernes et systèmes d'infrastructure avancés.",
+        highlights: ["Architecture moderne", "Systèmes avancés", "Qualité commerciale"]
       },
       {
         id: 4,
-        title: "Aménagement Jardin Contemporain - Genève",
-        category: "Aménagement Paysager",
-        description: "Création d'un jardin contemporain avec piscine naturelle, éclairage intégré et système d'arrosage automatique.",
-        highlights: ["Piscine écologique", "Éclairage LED", "Irrigation smart"]
+        title: "Rénovation Extérieure - Nyon",
+        category: "Rénovation Extérieure",
+        description: "Transformation extérieure complète avec design moderne bicolore, fenêtres rénovées et aménagement paysager contemporain.",
+        highlights: ["Design moderne", "Fenêtres rénovées", "Finition contemporaine"]
       }
     ]
   },
