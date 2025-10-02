@@ -140,31 +140,31 @@ const en = {
     projects: [
       {
         id: 1,
-        title: "Luxury Villa with Lake View - Cologny",
+        title: "Luxury Villa Renovation - Cologny",
         category: "Complete Renovation",
-        description: "Stunning villa renovation with panoramic lake views, elegant arched architecture, and premium landscaping. Features classical design elements with modern amenities.",
-        highlights: ["Lake Geneva views", "Classical architecture", "Premium finishes"]
+        description: "Complete transformation of a 400m² villa with high-end finishes, panoramic terrace and landscaped garden. Features classical architecture with modern amenities and stunning lake views.",
+        highlights: ["6-month renovation", "Premium materials", "Lake Geneva views"]
       },
       {
         id: 2,
-        title: "Luxury Penthouse Renovation - Geneva Center",
+        title: "Modern Kitchen Renovation - Geneva",
         category: "Interior Renovation",
-        description: "Complete modernization of a penthouse with open kitchen, marble floors and integrated home automation system. Features advanced automation and Italian marble finishes.",
-        highlights: ["Advanced automation", "Italian marble", "Modern design"]
+        description: "Complete kitchen and dining area modernization with contemporary design, premium appliances and elegant finishes. Features open-concept layout with sophisticated lighting.",
+        highlights: ["Modern appliances", "Elegant finishes", "Open concept"]
       },
       {
         id: 3,
-        title: "Large-Scale Construction Project - Geneva Center",
+        title: "Commercial Construction - Geneva Center",
         category: "Construction",
-        description: "Major commercial construction project showcasing our expertise in large-scale building. Features modern infrastructure, advanced systems, and professional construction management.",
-        highlights: ["Large-scale project", "Professional team", "Modern infrastructure"]
+        description: "Large-scale commercial building construction with modern architectural elements and advanced infrastructure systems. Features professional construction management and quality execution.",
+        highlights: ["Modern architecture", "Advanced systems", "Professional team"]
       },
       {
         id: 4,
-        title: "Luxury Villa Exterior Renovation - Cologny",
+        title: "Exterior Renovation - Nyon",
         category: "Exterior Renovation",
-        description: "Complete exterior transformation of a luxury villa with classical architecture, premium materials, and elegant landscaping. Features panoramic views and sophisticated design elements.",
-        highlights: ["Classical architecture", "Premium materials", "Panoramic views"]
+        description: "Complete exterior transformation with modern design, updated windows and contemporary landscaping. Features attention to detail and professional execution.",
+        highlights: ["Modern design", "Updated windows", "Professional execution"]
       }
     ]
   },
@@ -563,31 +563,31 @@ const fr = {
     projects: [
       {
         id: 1,
-        title: "Villa de Luxe avec Vue sur le Lac - Cologny",
+        title: "Rénovation Villa de Luxe - Cologny",
         category: "Rénovation Complète",
-        description: "Rénovation exceptionnelle d'une villa avec vue panoramique sur le lac, architecture élégante en arcades et aménagement paysager premium. Allie éléments classiques et équipements modernes.",
-        highlights: ["Vue sur le Léman", "Architecture classique", "Finitions premium"]
+        description: "Transformation complète d'une villa de 400m² avec finitions haut de gamme, terrasse panoramique et jardin paysager. Architecture classique avec équipements modernes et vue sur le Léman.",
+        highlights: ["Rénovation 6 mois", "Matériaux premium", "Vue sur le Léman"]
       },
       {
         id: 2,
-        title: "Rénovation Penthouse de Luxe - Centre Genève",
+        title: "Rénovation Cuisine Moderne - Genève",
         category: "Rénovation Intérieure",
-        description: "Modernisation complète d'un penthouse avec cuisine ouverte, sols en marbre et système domotique intégré. Domotique avancée et finitions en marbre italien.",
-        highlights: ["Domotique avancée", "Marbre italien", "Design moderne"]
+        description: "Modernisation complète de la cuisine et salle à manger avec design contemporain, électroménagers premium et finitions élégantes. Concept ouvert avec éclairage sophistiqué.",
+        highlights: ["Électroménagers modernes", "Finitions élégantes", "Concept ouvert"]
       },
       {
         id: 3,
-        title: "Projet de Construction d'Envergure - Centre Genève",
+        title: "Construction Commerciale - Centre Genève",
         category: "Construction",
-        description: "Projet de construction commerciale majeur démontrant notre expertise en construction de grande envergure. Infrastructure moderne, systèmes avancés et gestion professionnelle.",
-        highlights: ["Projet d'envergure", "Équipe professionnelle", "Infrastructure moderne"]
+        description: "Construction d'immeuble commercial de grande envergure avec éléments architecturaux modernes et systèmes d'infrastructure avancés. Gestion professionnelle et exécution de qualité.",
+        highlights: ["Architecture moderne", "Systèmes avancés", "Équipe professionnelle"]
       },
       {
         id: 4,
-        title: "Rénovation Extérieure Villa de Luxe - Cologny",
+        title: "Rénovation Extérieure - Nyon",
         category: "Rénovation Extérieure",
-        description: "Transformation extérieure complète d'une villa de luxe avec architecture classique, matériaux premium et aménagement paysager élégant. Vues panoramiques et éléments de design sophistiqués.",
-        highlights: ["Architecture classique", "Matériaux premium", "Vues panoramiques"]
+        description: "Transformation extérieure complète avec design moderne, fenêtres rénovées et aménagement paysager contemporain. Attention aux détails et exécution professionnelle.",
+        highlights: ["Design moderne", "Fenêtres rénovées", "Exécution professionnelle"]
       }
     ]
   },
