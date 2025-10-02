@@ -140,31 +140,31 @@ const en = {
     projects: [
       {
         id: 1,
-        title: "Luxury Villa Renovation - Cologny",
+        title: "Luxury Villa with Lake View - Cologny",
         category: "Complete Renovation",
-        description: "Complete transformation of a 400m² villa with high-end finishes, panoramic terrace and landscaped garden.",
-        highlights: ["6-month renovation", "Premium materials", "Custom design"]
+        description: "Stunning villa renovation with panoramic lake views, elegant arched architecture, and premium landscaping. Features classical design elements with modern amenities.",
+        highlights: ["Lake Geneva views", "Classical architecture", "Premium finishes"]
       },
       {
         id: 2,
-        title: "Modern Kitchen Renovation - Geneva",
+        title: "Modern Kitchen & Dining Renovation - Geneva",
         category: "Interior Renovation",
-        description: "Complete kitchen and dining area modernization with contemporary design, premium appliances and elegant finishes.",
-        highlights: ["Modern appliances", "Elegant finishes", "Open concept"]
+        description: "Complete transformation of kitchen and dining space with contemporary design, high-end appliances, and sophisticated lighting. Features open-concept layout with elegant finishes.",
+        highlights: ["Contemporary design", "High-end appliances", "Elegant lighting"]
       },
       {
         id: 3,
-        title: "Commercial Construction - Geneva Center",
+        title: "Large-Scale Construction Project - Geneva Center",
         category: "Construction",
-        description: "Large-scale commercial building construction with modern architectural elements and advanced infrastructure systems.",
-        highlights: ["Modern architecture", "Advanced systems", "Commercial grade"]
+        description: "Major commercial construction project showcasing our expertise in large-scale building. Features modern infrastructure, advanced systems, and professional construction management.",
+        highlights: ["Large-scale project", "Professional team", "Modern infrastructure"]
       },
       {
         id: 4,
-        title: "Exterior Renovation - Nyon",
+        title: "Exterior Renovation & Landscaping - Nyon",
         category: "Exterior Renovation",
-        description: "Complete exterior transformation with modern two-tone design, updated windows and contemporary landscaping.",
-        highlights: ["Modern design", "Updated windows", "Contemporary finish"]
+        description: "Complete exterior transformation with modern two-tone design, professional landscaping, and attention to detail. Features updated windows and contemporary exterior finishes.",
+        highlights: ["Two-tone design", "Professional landscaping", "Attention to detail"]
       }
     ]
   },
@@ -563,31 +563,31 @@ const fr = {
     projects: [
       {
         id: 1,
-        title: "Rénovation Villa de Luxe - Cologny",
+        title: "Villa de Luxe avec Vue sur le Lac - Cologny",
         category: "Rénovation Complète",
-        description: "Transformation complète d'une villa de 400m² avec finitions haut de gamme, terrasse panoramique et jardin paysager.",
-        highlights: ["Rénovation 6 mois", "Matériaux premium", "Design sur mesure"]
+        description: "Rénovation exceptionnelle d'une villa avec vue panoramique sur le lac, architecture élégante en arcades et aménagement paysager premium. Allie éléments classiques et équipements modernes.",
+        highlights: ["Vue sur le Léman", "Architecture classique", "Finitions premium"]
       },
       {
         id: 2,
-        title: "Rénovation Cuisine Moderne - Genève",
+        title: "Rénovation Cuisine & Salle à Manger Moderne - Genève",
         category: "Rénovation Intérieure",
-        description: "Modernisation complète de la cuisine et salle à manger avec design contemporain, électroménagers premium et finitions élégantes.",
-        highlights: ["Électroménagers modernes", "Finitions élégantes", "Concept ouvert"]
+        description: "Transformation complète de l'espace cuisine et salle à manger avec design contemporain, électroménagers haut de gamme et éclairage sophistiqué. Concept ouvert avec finitions élégantes.",
+        highlights: ["Design contemporain", "Électroménagers haut de gamme", "Éclairage élégant"]
       },
       {
         id: 3,
-        title: "Construction Commerciale - Centre Genève",
+        title: "Projet de Construction d'Envergure - Centre Genève",
         category: "Construction",
-        description: "Construction d'immeuble commercial de grande envergure avec éléments architecturaux modernes et systèmes d'infrastructure avancés.",
-        highlights: ["Architecture moderne", "Systèmes avancés", "Qualité commerciale"]
+        description: "Projet de construction commerciale majeur démontrant notre expertise en construction de grande envergure. Infrastructure moderne, systèmes avancés et gestion professionnelle.",
+        highlights: ["Projet d'envergure", "Équipe professionnelle", "Infrastructure moderne"]
       },
       {
         id: 4,
-        title: "Rénovation Extérieure - Nyon",
+        title: "Rénovation Extérieure & Aménagement Paysager - Nyon",
         category: "Rénovation Extérieure",
-        description: "Transformation extérieure complète avec design moderne bicolore, fenêtres rénovées et aménagement paysager contemporain.",
-        highlights: ["Design moderne", "Fenêtres rénovées", "Finition contemporaine"]
+        description: "Transformation extérieure complète avec design moderne bicolore, aménagement paysager professionnel et attention aux détails. Fenêtres rénovées et finitions extérieures contemporaines.",
+        highlights: ["Design bicolore", "Aménagement professionnel", "Attention aux détails"]
       }
     ]
   },
