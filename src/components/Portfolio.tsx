@@ -1,14 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ArrowRight } from "lucide-react";
-import before1 from "@/assets/service-construction.jpg";
-import after1 from "@/assets/hero-home.jpg";
-import before2 from "@/assets/service-garden.jpg";
-import after2 from "@/assets/service-maintenance.jpg";
-import before3 from "@/assets/service-maintenance.jpg";
-import after3 from "@/assets/service-construction.jpg";
-import before4 from "@/assets/service-garden.jpg";
-import after4 from "@/assets/hero-home.jpg";
+import before1 from "@/assets/portfolio-construction-before.jpg";
+import after1 from "@/assets/portfolio-construction-after.jpg";
+import before2 from "@/assets/portfolio-interior-before.jpg";
+import after2 from "@/assets/portfolio-interior-after.jpg";
+import before3 from "@/assets/portfolio-kitchen-before.jpg";
+import after3 from "@/assets/portfolio-kitchen-after.jpg";
+import before4 from "@/assets/portfolio-exterior-before.jpg";
+import after4 from "@/assets/portfolio-exterior-after.jpg";
 
 import useLocale from "@/lib/useLocale";
 
