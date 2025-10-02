@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import before1 from "@/assets/stock_images/villa_before_renovation.png";
 import after1 from "@/assets/stock_images/luxury_villa_lake_view.png";
-import before2 from "@/assets/stock_images/interior_before_renovation.png";
-import after2 from "@/assets/stock_images/modern_kitchen_renovation.png";
+import before2 from "@/assets/stock_images/luxury_penthouse_int_63c96942.jpg";
+import after2 from "@/assets/stock_images/luxury_penthouse_int_c5775bd2.jpg";
 import before3 from "@/assets/stock_images/construction_before_renovation.png";
 import after3 from "@/assets/stock_images/construction_site_workers.png";
-import before4 from "@/assets/stock_images/exterior_before_renovation.png";
-import after4 from "@/assets/stock_images/exterior_renovation_work.png";
+import before4 from "@/assets/stock_images/luxury_villa_exterio_636a2745.jpg";
+import after4 from "@/assets/stock_images/luxury_villa_exterio_b3fa6be6.jpg";
 
 import { useLocale } from "@/lib/locale-context";
 

@@ -147,10 +147,10 @@ const en = {
       },
       {
         id: 2,
-        title: "Modern Kitchen & Dining Renovation - Geneva",
+        title: "Luxury Penthouse Renovation - Geneva Center",
         category: "Interior Renovation",
-        description: "Complete transformation of kitchen and dining space with contemporary design, high-end appliances, and sophisticated lighting. Features open-concept layout with elegant finishes.",
-        highlights: ["Contemporary design", "High-end appliances", "Elegant lighting"]
+        description: "Complete modernization of a penthouse with open kitchen, marble floors and integrated home automation system. Features advanced automation and Italian marble finishes.",
+        highlights: ["Advanced automation", "Italian marble", "Modern design"]
       },
       {
         id: 3,
@@ -161,10 +161,10 @@ const en = {
       },
       {
         id: 4,
-        title: "Exterior Renovation & Landscaping - Nyon",
+        title: "Luxury Villa Exterior Renovation - Cologny",
         category: "Exterior Renovation",
-        description: "Complete exterior transformation with modern two-tone design, professional landscaping, and attention to detail. Features updated windows and contemporary exterior finishes.",
-        highlights: ["Two-tone design", "Professional landscaping", "Attention to detail"]
+        description: "Complete exterior transformation of a luxury villa with classical architecture, premium materials, and elegant landscaping. Features panoramic views and sophisticated design elements.",
+        highlights: ["Classical architecture", "Premium materials", "Panoramic views"]
       }
     ]
   },
@@ -570,10 +570,10 @@ const fr = {
       },
       {
         id: 2,
-        title: "Rénovation Cuisine & Salle à Manger Moderne - Genève",
+        title: "Rénovation Penthouse de Luxe - Centre Genève",
         category: "Rénovation Intérieure",
-        description: "Transformation complète de l'espace cuisine et salle à manger avec design contemporain, électroménagers haut de gamme et éclairage sophistiqué. Concept ouvert avec finitions élégantes.",
-        highlights: ["Design contemporain", "Électroménagers haut de gamme", "Éclairage élégant"]
+        description: "Modernisation complète d'un penthouse avec cuisine ouverte, sols en marbre et système domotique intégré. Domotique avancée et finitions en marbre italien.",
+        highlights: ["Domotique avancée", "Marbre italien", "Design moderne"]
       },
       {
         id: 3,
@@ -584,10 +584,10 @@ const fr = {
       },
       {
         id: 4,
-        title: "Rénovation Extérieure & Aménagement Paysager - Nyon",
+        title: "Rénovation Extérieure Villa de Luxe - Cologny",
         category: "Rénovation Extérieure",
-        description: "Transformation extérieure complète avec design moderne bicolore, aménagement paysager professionnel et attention aux détails. Fenêtres rénovées et finitions extérieures contemporaines.",
-        highlights: ["Design bicolore", "Aménagement professionnel", "Attention aux détails"]
+        description: "Transformation extérieure complète d'une villa de luxe avec architecture classique, matériaux premium et aménagement paysager élégant. Vues panoramiques et éléments de design sophistiqués.",
+        highlights: ["Architecture classique", "Matériaux premium", "Vues panoramiques"]
       }
     ]
   },
