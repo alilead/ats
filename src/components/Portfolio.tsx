@@ -1,14 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ArrowRight } from "lucide-react";
-import before1 from "@/assets/stock_images/portfolio_villa_before.jpeg";
-import after1 from "@/assets/stock_images/portfolio_villa_after.jpeg";
-import before2 from "@/assets/stock_images/portfolio_kitchen_before.jpeg";
-import after2 from "@/assets/stock_images/portfolio_kitchen_after.jpeg";
-import before3 from "@/assets/stock_images/portfolio_construction_before.jpeg";
-import after3 from "@/assets/stock_images/portfolio_construction_after.jpeg";
-import before4 from "@/assets/stock_images/portfolio_exterior_before.jpeg";
-import after4 from "@/assets/stock_images/portfolio_exterior_after.jpeg";
+import before1 from "@/assets/stock_images/whatsapp_1_before.jpeg";
+import after1 from "@/assets/stock_images/whatsapp_1_after.jpeg";
+import before2 from "@/assets/stock_images/whatsapp_2_before.jpeg";
+import after2 from "@/assets/stock_images/whatsapp_2_after.jpeg";
+import before3 from "@/assets/stock_images/whatsapp_3_before.jpeg";
+import after3 from "@/assets/stock_images/whatsapp_3_after.jpeg";
+import before4 from "@/assets/stock_images/whatsapp_4_before.jpeg";
+import after4 from "@/assets/stock_images/whatsapp_4_after.jpeg";
 
 import { useLocale } from "@/lib/locale-context";
 
