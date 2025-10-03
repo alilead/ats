@@ -140,31 +140,31 @@ const en = {
     projects: [
       {
         id: 1,
-        title: "Luxury Villa Renovation - Cologny",
-        category: "Complete Renovation",
-        description: "Complete transformation of a prestigious villa with high-end finishes, modern amenities and elegant design elements. Features premium materials and sophisticated architectural details.",
-        highlights: ["Premium materials", "Modern amenities", "Sophisticated design"]
+        title: "Construction Project - Geneva",
+        category: "Construction",
+        description: "Professional construction project showcasing quality workmanship and attention to detail. Modern construction techniques with premium materials and expert execution.",
+        highlights: ["Quality workmanship", "Modern techniques", "Expert execution"]
       },
       {
         id: 2,
-        title: "Modern Kitchen & Living Space - Geneva",
-        category: "Interior Renovation",
-        description: "Contemporary kitchen and living area renovation with sleek design, premium finishes and integrated modern appliances. Open-concept layout with elegant lighting and sophisticated styling.",
-        highlights: ["Sleek design", "Premium finishes", "Open concept"]
+        title: "Renovation Project - Cologny",
+        category: "Renovation",
+        description: "Complete renovation project demonstrating transformation and improvement. Professional renovation services with modern solutions and quality finishes.",
+        highlights: ["Complete transformation", "Modern solutions", "Quality finishes"]
       },
       {
         id: 3,
-        title: "Commercial Office Renovation - Geneva",
-        category: "Commercial Renovation",
-        description: "Professional office space transformation with modern design elements, efficient layouts and contemporary finishes. Enhanced workspace functionality with premium materials.",
-        highlights: ["Modern design", "Efficient layouts", "Premium materials"]
+        title: "Building Project - Geneva",
+        category: "Construction",
+        description: "Professional building project with modern construction methods and quality materials. Expert project management ensuring successful completion.",
+        highlights: ["Modern methods", "Quality materials", "Expert management"]
       },
       {
         id: 4,
-        title: "Luxury Bathroom Renovation - Geneva",
-        category: "Interior Renovation",
-        description: "High-end bathroom transformation with premium fixtures, elegant marble finishes and modern spa-like amenities. Sophisticated design with luxury materials and contemporary styling.",
-        highlights: ["Premium fixtures", "Marble finishes", "Spa-like amenities"]
+        title: "Renovation Work - Nyon",
+        category: "Renovation",
+        description: "Professional renovation work showcasing before and after transformation. Quality renovation services with attention to detail and customer satisfaction.",
+        highlights: ["Before/after transformation", "Quality services", "Customer satisfaction"]
       }
     ]
   },
@@ -563,31 +563,31 @@ const fr = {
     projects: [
       {
         id: 1,
-        title: "Rénovation Villa de Luxe - Cologny",
-        category: "Rénovation Complète",
-        description: "Transformation complète d'une villa prestigieuse avec finitions haut de gamme, équipements modernes et éléments de design élégants. Matériaux premium et détails architecturaux sophistiqués.",
-        highlights: ["Matériaux premium", "Équipements modernes", "Design sophistiqué"]
+        title: "Projet de Construction - Genève",
+        category: "Construction",
+        description: "Projet de construction professionnel mettant en valeur la qualité d'exécution et l'attention aux détails. Techniques de construction modernes avec matériaux premium et exécution experte.",
+        highlights: ["Qualité d'exécution", "Techniques modernes", "Exécution experte"]
       },
       {
         id: 2,
-        title: "Cuisine & Espace de Vie Moderne - Genève",
-        category: "Rénovation Intérieure",
-        description: "Rénovation contemporaine de cuisine et espace de vie avec design épuré, finitions premium et électroménagers modernes intégrés. Concept ouvert avec éclairage élégant et style sophistiqué.",
-        highlights: ["Design épuré", "Finitions premium", "Concept ouvert"]
+        title: "Projet de Rénovation - Cologny",
+        category: "Rénovation",
+        description: "Projet de rénovation complet démontrant transformation et amélioration. Services de rénovation professionnels avec solutions modernes et finitions de qualité.",
+        highlights: ["Transformation complète", "Solutions modernes", "Finitions de qualité"]
       },
       {
         id: 3,
-        title: "Rénovation Bureau Commercial - Genève",
-        category: "Rénovation Commerciale",
-        description: "Transformation d'espace de bureau professionnel avec éléments de design moderne, agencements efficaces et finitions contemporaines. Fonctionnalité améliorée avec matériaux premium.",
-        highlights: ["Design moderne", "Agencements efficaces", "Matériaux premium"]
+        title: "Projet de Bâtiment - Genève",
+        category: "Construction",
+        description: "Projet de construction professionnel avec méthodes de construction modernes et matériaux de qualité. Gestion de projet experte garantissant une réalisation réussie.",
+        highlights: ["Méthodes modernes", "Matériaux de qualité", "Gestion experte"]
       },
       {
         id: 4,
-        title: "Rénovation Salle de Bain de Luxe - Genève",
-        category: "Rénovation Intérieure",
-        description: "Transformation haut de gamme de salle de bain avec équipements premium, finitions en marbre élégantes et équipements spa modernes. Design sophistiqué avec matériaux de luxe et style contemporain.",
-        highlights: ["Équipements premium", "Finitions en marbre", "Équipements spa"]
+        title: "Travaux de Rénovation - Nyon",
+        category: "Rénovation",
+        description: "Travaux de rénovation professionnels mettant en valeur la transformation avant/après. Services de rénovation de qualité avec attention aux détails et satisfaction client.",
+        highlights: ["Transformation avant/après", "Services de qualité", "Satisfaction client"]
       }
     ]
   },
