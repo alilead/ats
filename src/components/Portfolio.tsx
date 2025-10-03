@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ArrowRight } from "lucide-react";
-import before1 from "@/assets/stock_images/ats_photo_05.jpg";
-import after1 from "@/assets/stock_images/ats_photo_06.jpg";
+import before1 from "@/assets/stock_images/ats_photo_06.jpg";
+import after1 from "@/assets/stock_images/ats_photo_05.jpg";
 import before2 from "@/assets/stock_images/ats_photo_02.jpg";
 import after2 from "@/assets/stock_images/ats_photo_03.jpg";
 import before3 from "@/assets/stock_images/ats_photo_08.jpg";
