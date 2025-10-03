@@ -140,17 +140,17 @@ const en = {
     projects: [
       {
         id: 1,
-        title: "Luxury Villa Renovation - Cologny",
-        category: "Complete Renovation",
-        description: "Complete transformation of a prestigious villa with high-end finishes, modern amenities and elegant design elements. Features premium materials and sophisticated architectural details.",
-        highlights: ["Premium materials", "Modern amenities", "Sophisticated design"]
-      },
-      {
-        id: 2,
         title: "Modern Kitchen & Living Space - Geneva",
         category: "Interior Renovation",
         description: "Contemporary kitchen and living area renovation with sleek design, premium finishes and integrated modern appliances. Open-concept layout with elegant lighting and sophisticated styling.",
         highlights: ["Sleek design", "Premium finishes", "Open concept"]
+      },
+      {
+        id: 2,
+        title: "Luxury Villa Renovation - Cologny",
+        category: "Complete Renovation",
+        description: "Complete transformation of a prestigious villa with high-end finishes, modern amenities and elegant design elements. Features premium materials and sophisticated architectural details.",
+        highlights: ["Premium materials", "Modern amenities", "Sophisticated design"]
       },
       {
         id: 3,
@@ -563,17 +563,17 @@ const fr = {
     projects: [
       {
         id: 1,
-        title: "Rénovation Villa de Luxe - Cologny",
-        category: "Rénovation Complète",
-        description: "Transformation complète d'une villa prestigieuse avec finitions haut de gamme, équipements modernes et éléments de design élégants. Matériaux premium et détails architecturaux sophistiqués.",
-        highlights: ["Matériaux premium", "Équipements modernes", "Design sophistiqué"]
-      },
-      {
-        id: 2,
         title: "Cuisine & Espace de Vie Moderne - Genève",
         category: "Rénovation Intérieure",
         description: "Rénovation contemporaine de cuisine et espace de vie avec design épuré, finitions premium et électroménagers modernes intégrés. Concept ouvert avec éclairage élégant et style sophistiqué.",
         highlights: ["Design épuré", "Finitions premium", "Concept ouvert"]
+      },
+      {
+        id: 2,
+        title: "Rénovation Villa de Luxe - Cologny",
+        category: "Rénovation Complète",
+        description: "Transformation complète d'une villa prestigieuse avec finitions haut de gamme, équipements modernes et éléments de design élégants. Matériaux premium et détails architecturaux sophistiqués.",
+        highlights: ["Matériaux premium", "Équipements modernes", "Design sophistiqué"]
       },
       {
         id: 3,
