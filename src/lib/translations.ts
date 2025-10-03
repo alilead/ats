@@ -140,31 +140,31 @@ const en = {
     projects: [
       {
         id: 1,
-        title: "Modern Villa Construction - Geneva",
-        category: "New Construction",
-        description: "Contemporary villa construction featuring clean architectural lines, premium materials and energy-efficient design. Modern living spaces with integrated smart home technology.",
-        highlights: ["Contemporary design", "Energy efficient", "Smart home integration"]
+        title: "Luxury Villa Renovation - Cologny",
+        category: "Complete Renovation",
+        description: "Complete transformation of a prestigious villa with high-end finishes, modern amenities and elegant design elements. Features premium materials and sophisticated architectural details.",
+        highlights: ["Premium materials", "Modern amenities", "Sophisticated design"]
       },
       {
         id: 2,
-        title: "Luxury Kitchen Renovation - Cologny",
+        title: "Modern Kitchen & Living Space - Geneva",
         category: "Interior Renovation",
-        description: "High-end kitchen transformation with custom cabinetry, premium appliances and elegant stone finishes. Open-plan design with sophisticated lighting and modern amenities.",
-        highlights: ["Custom cabinetry", "Premium appliances", "Stone finishes"]
+        description: "Contemporary kitchen and living area renovation with sleek design, premium finishes and integrated modern appliances. Open-concept layout with elegant lighting and sophisticated styling.",
+        highlights: ["Sleek design", "Premium finishes", "Open concept"]
       },
       {
         id: 3,
-        title: "Commercial Building Project - Geneva",
-        category: "Construction",
-        description: "Modern commercial building construction with sustainable materials and advanced building systems. Professional project management ensuring quality and timely delivery.",
-        highlights: ["Sustainable materials", "Advanced systems", "Timely delivery"]
+        title: "Commercial Office Renovation - Geneva",
+        category: "Commercial Renovation",
+        description: "Professional office space transformation with modern design elements, efficient layouts and contemporary finishes. Enhanced workspace functionality with premium materials.",
+        highlights: ["Modern design", "Efficient layouts", "Premium materials"]
       },
       {
         id: 4,
-        title: "Exterior Facade Renovation - Nyon",
-        category: "Exterior Renovation",
-        description: "Complete facade renovation with contemporary design elements, updated windows and modern cladding materials. Enhanced curb appeal with professional landscaping.",
-        highlights: ["Contemporary design", "Modern cladding", "Enhanced curb appeal"]
+        title: "Exterior & Garden Renovation - Nyon",
+        category: "Exterior & Landscaping",
+        description: "Complete exterior transformation with modern facade design, updated landscaping and contemporary outdoor features. Professional execution with attention to detail and curb appeal.",
+        highlights: ["Modern facade", "Updated landscaping", "Professional execution"]
       }
     ]
   },
@@ -563,31 +563,31 @@ const fr = {
     projects: [
       {
         id: 1,
-        title: "Construction Villa Moderne - Genève",
-        category: "Construction Neuve",
-        description: "Construction de villa contemporaine aux lignes architecturales épurées, matériaux premium et design éco-énergétique. Espaces de vie modernes avec technologie domotique intégrée.",
-        highlights: ["Design contemporain", "Éco-énergétique", "Domotique intégrée"]
+        title: "Rénovation Villa de Luxe - Cologny",
+        category: "Rénovation Complète",
+        description: "Transformation complète d'une villa prestigieuse avec finitions haut de gamme, équipements modernes et éléments de design élégants. Matériaux premium et détails architecturaux sophistiqués.",
+        highlights: ["Matériaux premium", "Équipements modernes", "Design sophistiqué"]
       },
       {
         id: 2,
-        title: "Rénovation Cuisine de Luxe - Cologny",
+        title: "Cuisine & Espace de Vie Moderne - Genève",
         category: "Rénovation Intérieure",
-        description: "Transformation haut de gamme de cuisine avec mobilier sur mesure, électroménagers premium et finitions en pierre élégantes. Concept ouvert avec éclairage sophistiqué et équipements modernes.",
-        highlights: ["Mobilier sur mesure", "Électroménagers premium", "Finitions en pierre"]
+        description: "Rénovation contemporaine de cuisine et espace de vie avec design épuré, finitions premium et électroménagers modernes intégrés. Concept ouvert avec éclairage élégant et style sophistiqué.",
+        highlights: ["Design épuré", "Finitions premium", "Concept ouvert"]
       },
       {
         id: 3,
-        title: "Projet Bâtiment Commercial - Genève",
-        category: "Construction",
-        description: "Construction de bâtiment commercial moderne avec matériaux durables et systèmes de construction avancés. Gestion professionnelle de projet garantissant qualité et livraison dans les temps.",
-        highlights: ["Matériaux durables", "Systèmes avancés", "Livraison dans les temps"]
+        title: "Rénovation Bureau Commercial - Genève",
+        category: "Rénovation Commerciale",
+        description: "Transformation d'espace de bureau professionnel avec éléments de design moderne, agencements efficaces et finitions contemporaines. Fonctionnalité améliorée avec matériaux premium.",
+        highlights: ["Design moderne", "Agencements efficaces", "Matériaux premium"]
       },
       {
         id: 4,
-        title: "Rénovation Façade Extérieure - Nyon",
-        category: "Rénovation Extérieure",
-        description: "Rénovation complète de façade avec éléments de design contemporain, fenêtres rénovées et matériaux de revêtement modernes. Amélioration de l'attrait visuel avec aménagement paysager professionnel.",
-        highlights: ["Design contemporain", "Revêtement moderne", "Attrait visuel amélioré"]
+        title: "Rénovation Extérieure & Jardin - Nyon",
+        category: "Extérieur & Paysagisme",
+        description: "Transformation extérieure complète avec design de façade moderne, aménagement paysager rénové et éléments extérieurs contemporains. Exécution professionnelle avec attention aux détails et attrait visuel.",
+        highlights: ["Façade moderne", "Aménagement rénové", "Exécution professionnelle"]
       }
     ]
   },
