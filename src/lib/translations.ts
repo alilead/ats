@@ -161,10 +161,10 @@ const en = {
       },
       {
         id: 4,
-        title: "Exterior & Garden Renovation - Nyon",
-        category: "Exterior & Landscaping",
-        description: "Complete exterior transformation with modern facade design, updated landscaping and contemporary outdoor features. Professional execution with attention to detail and curb appeal.",
-        highlights: ["Modern facade", "Updated landscaping", "Professional execution"]
+        title: "Luxury Bathroom Renovation - Geneva",
+        category: "Interior Renovation",
+        description: "High-end bathroom transformation with premium fixtures, elegant marble finishes and modern spa-like amenities. Sophisticated design with luxury materials and contemporary styling.",
+        highlights: ["Premium fixtures", "Marble finishes", "Spa-like amenities"]
       }
     ]
   },
@@ -584,10 +584,10 @@ const fr = {
       },
       {
         id: 4,
-        title: "Rénovation Extérieure & Jardin - Nyon",
-        category: "Extérieur & Paysagisme",
-        description: "Transformation extérieure complète avec design de façade moderne, aménagement paysager rénové et éléments extérieurs contemporains. Exécution professionnelle avec attention aux détails et attrait visuel.",
-        highlights: ["Façade moderne", "Aménagement rénové", "Exécution professionnelle"]
+        title: "Rénovation Salle de Bain de Luxe - Genève",
+        category: "Rénovation Intérieure",
+        description: "Transformation haut de gamme de salle de bain avec équipements premium, finitions en marbre élégantes et équipements spa modernes. Design sophistiqué avec matériaux de luxe et style contemporain.",
+        highlights: ["Équipements premium", "Finitions en marbre", "Équipements spa"]
       }
     ]
   },

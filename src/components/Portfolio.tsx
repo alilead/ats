@@ -7,8 +7,8 @@ import before2 from "@/assets/stock_images/ats_photo_07.jpg";
 import after2 from "@/assets/stock_images/ats_photo_10.jpg";
 import before3 from "@/assets/stock_images/ats_photo_08.jpg";
 import after3 from "@/assets/stock_images/ats_photo_09.jpg";
-import before4 from "@/assets/stock_images/ats_photo_11.jpg";
-import after4 from "@/assets/stock_images/ats_photo_12.jpg";
+import before4 from "@/assets/stock_images/ats_photo_02.jpg";
+import after4 from "@/assets/stock_images/ats_photo_03.jpg";
 
 import { useLocale } from "@/lib/locale-context";
 
